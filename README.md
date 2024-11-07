@@ -3,7 +3,8 @@ This study examines the transition from DevOps to BizDevOps through the use of a
 
 ## Structure
 - We have developed a document that details the reference architecture, which you can access [here](/BizDevOps-RA.pdf).
-- We have developed a web version of the reference architecture, which you can visit from [here]([/BizDevOps-RA.pdf](https://guillermofuentesuclm.github.io/BizDevOps-RA/)).
+- We have developed a web version of the reference architecture, which you can visit from [here](https://guillermofuentesuclm.github.io/BizDevOps-RA/).
+- We have made the BizDevOps reference architecture available in both [Archi tool format](/BizDevOps%20Reference%20Arhictecture.archimate) and [Open Exchange format](/BizDevOps%20Reference%20Arhictecture.xml).
 
 ## Contacts
 
