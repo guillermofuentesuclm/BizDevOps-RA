@@ -24,12 +24,7 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.12565593
 abstract: >-
-  This study investigates the transition from DevOps to
-  BizDevOps, focusing on the utilization of business
-  capabilities to improve IT and business alignment. The
-  goal is to develop a structured approach that facilitates
-  this transition and ensures better coherence between IT
-  operations and business strategies.
+  This study examines the transition from DevOps to BizDevOps through the use of a reference architecture, emphasizing the role of business capabilities in enhancing IT and business alignment. The objective is to develop a structured approach that facilitates this transition, ensuring greater coherence between IT operations and business strategies.
 keywords:
   - BizDevOps
   - Reference Architecture

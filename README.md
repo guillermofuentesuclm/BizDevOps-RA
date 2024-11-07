@@ -1,7 +1,9 @@
 # BizDevOps Reference Architecture
-This study investigates the transition from DevOps to BizDevOps
+This study examines the transition from DevOps to BizDevOps through the use of a reference architecture, emphasizing the role of business capabilities in enhancing IT and business alignment. The objective is to develop a structured approach that facilitates this transition, ensuring greater coherence between IT operations and business strategies.
 
-
+## Structure
+- We have developed a document that details the reference architecture, which you can access [here](/BizDevOps-RA.pdf).
+- We have developed a web version of the reference architecture, which you can visit from [here]([/BizDevOps-RA.pdf](https://guillermofuentesuclm.github.io/BizDevOps-RA/)).
 
 ## Contacts
 
