@@ -11,10 +11,9 @@ Together, this reference architecture is an artifact that could be useful for ad
   <metadata>
     <schema>Dublin Core</schema>
     <schemaversion>1.1</schemaversion>
-    <dc:title>Reference Architecure for BizDevOps</dc:title>
-    <dc:creator>Guillermo Fuentes-Quijada, Francisco Ruiz-González, Angélica Caro</dc:creator>
-    <dc:subject>Reference Architecure</dc:subject>
-    <dc:description>Building Blocks and Viewpoints for BizDevOps</dc:description>
+    <dc:title>Enterprise Reference Architecture for BizDevOps</dc:title>
+    <dc:creator>Guillermo Fuentes-Quijada, Francisco Ruiz-González, Angélica Caro Gutiérrez</dc:creator>
+    <dc:language>en</dc:language>
   </metadata>
   <elements>
     <element identifier="id-aadcc376717c4cf9b0590277330c78aa" xsi:type="CourseOfAction">
@@ -52,8 +51,8 @@ ABB Name: BDO:BizDevOpsCapability</documentation>
       </properties>
     </element>
     <element identifier="id-f08562098c0a436697102ff1045eb5d1" xsi:type="BusinessRole">
-      <name xml:lang="en">Product Owner (Alignment Manager)</name>
-      <documentation xml:lang="en">Definition: In BizDevOps, this role is pivotal in ensuring that the product aligns with business needs and creates added value. The primary focus of the Product Owner shifts towards facilitating IT-business alignment, emphasizing their responsibility to align IT strategies closely with business objectives. This redefined focus expands their traditional role of bridging the gap between business stakeholders and the IT team, ensuring that the product delivers maximum value in line with business priorities.&#xD;
+      <name xml:lang="en">Alignment Manager</name>
+      <documentation xml:lang="en">Definition: In BizDevOps, this role is pivotal in ensuring that the product aligns with business needs and creates added value. The primary focus of the Alignment Manager shifts towards facilitating IT-business alignment, emphasizing their responsibility to align IT strategies closely with business objectives. This redefined focus expands their traditional role of bridging the gap between business stakeholders and the IT team, ensuring that the product delivers maximum value in line with business priorities.&#xD;
 &#xD;
 ABB Name: BDO:AlignmentManager</documentation>
       <properties>
@@ -359,6 +358,23 @@ ABB Name: BDO:SwDevelopmentProcess</documentation>
         </property>
       </properties>
     </element>
+    <element identifier="id-f83dc7eb36d84702a9c11b9154646bed" xsi:type="BusinessRole">
+      <name xml:lang="en">Product Owner</name>
+      <documentation xml:lang="en">Definition: A role responsible for defining and communicating product vision to meet business needs.&#xD;
+&#xD;
+ABB Name:  BDO:ProductOwner</documentation>
+      <properties>
+        <property propertyDefinitionRef="propid-1">
+          <value xml:lang="en">BDO:ProductOwner</value>
+        </property>
+        <property propertyDefinitionRef="propid-2">
+          <value xml:lang="en">01/12/2024</value>
+        </property>
+        <property propertyDefinitionRef="propid-3">
+          <value xml:lang="en">A role responsible for defining and communicating product vision to meet business needs.</value>
+        </property>
+      </properties>
+    </element>
     <element identifier="id-d4a68b6adf9640be99b111b3793f536b" xsi:type="ApplicationService">
       <name xml:lang="en">MVP Application Service</name>
       <documentation xml:lang="en">Definition: An application service associated with an MVP business process exposes the services offered by an application, which are necessary to support the initial and optimized version of a business process.&#xD;
@@ -429,7 +445,7 @@ ABB Name: BDO:MVPApplicationFunction</documentation>
     </element>
     <element identifier="id-7e7aaaecd8b64f56a41a834b5c6de293" xsi:type="TechnologyService">
       <name xml:lang="en">BizDevOps Bus Service</name>
-      <documentation xml:lang="en">Definition:  A Infrastructure Service is a foundational technology service that provides the necessary computing, storage, networking, and automation resources. It supports the continuous integration, delivery, and deployment of application components, ensuring efficient and reliable operation of the MVP Product and BizDevOps Software Development Function.&#xD;
+      <documentation xml:lang="en">Definition: The BizDevOps Bus Service is a Technology Service, serving as a foundational component for organizations adopting the BizDevOps approach. This service provides an integrated set of tools and practices to support collaboration between business, development, and operations, ensuring alignment and continuous delivery of value.&#xD;
 &#xD;
 ABB Name: BDO:BizDevOpsBusTechService</documentation>
       <properties>
@@ -440,7 +456,7 @@ ABB Name: BDO:BizDevOpsBusTechService</documentation>
           <value xml:lang="en">10/06/2024</value>
         </property>
         <property propertyDefinitionRef="propid-3">
-          <value xml:lang="en">A Infrastructure Service is a foundational technology service that provides the necessary computing, storage, networking, and automation resources. It supports the continuous integration, delivery, and deployment of application components, ensuring efficient and reliable operation of the MVP Product and BizDevOps Software Development Function.</value>
+          <value xml:lang="en">The BizDevOps Bus Service is a Technology Service, serving as a foundational component for organizations adopting the BizDevOps approach. This service provides an integrated set of tools and practices to support collaboration between business, development, and operations, ensuring alignment and continuous delivery of value.</value>
         </property>
       </properties>
     </element>
@@ -562,6 +578,111 @@ ABB Name: BDO:Path</documentation>
           <value xml:lang="en" />
         </property>
       </properties>
+    </element>
+    <element identifier="id-945ed3fc520e448e998989df76737347" xsi:type="TechnologyService">
+      <name xml:lang="en">IT Governance and IT/Business Alignment Service</name>
+      <documentation xml:lang="en">Description: Ensures alignment between business strategic objectives and technological capabilities through governance and enterprise architecture practices.&#xD;
+&#xD;
+Example:&#xD;
+ - Use of ArchiMate notation to model and visualize IT/Business alignment using tools like Archi.&#xD;
+- Definition of architectural policies and principles to guide the implementation of solutions, ensuring consistency with organizational goals.&#xD;
+&#xD;
+Value Added:&#xD;
+- Facilitates strategic planning and traceability of technological initiatives based on business outcomes.&#xD;
+- Enhances stakeholder communication through standardized models.</documentation>
+    </element>
+    <element identifier="id-49398bbd07664333b432f8701eadc58a" xsi:type="TechnologyService">
+      <name xml:lang="en">Documentation and Knowledge Management Service</name>
+      <documentation xml:lang="en">Description: Facilitates the creation, storage, and distribution of organizational documentation and knowledge.&#xD;
+&#xD;
+Example:&#xD;
+- Implementation of a platform like Confluence to centralize technical documentation, procedures, and organizational learnings.&#xD;
+- Integration with other tools for efficient search and retrieval of critical information.&#xD;
+&#xD;
+Value Added:&#xD;
+- Promotes knowledge reuse and reduces duplicated efforts.&#xD;
+- Enhances business continuity by providing easy access to key information.</documentation>
+    </element>
+    <element identifier="id-6250a649e0aa40c590ae73cd6a3b707b" xsi:type="TechnologyService">
+      <name xml:lang="en">Repository and Control Version Service</name>
+      <documentation xml:lang="en">Description: Provides centralized management of source code and version control to support collaborative work.&#xD;
+&#xD;
+Example:&#xD;
+- Use of tools like GitHub, GitLab, or Bitbucket to manage repositories, perform code reviews, and enable automated integrations.&#xD;
+&#xD;
+Value Added:&#xD;
+- Ensures traceability of changes and improves code quality through collaborative reviews.&#xD;
+- Facilitates continuous integration and teamwork in distributed environments.</documentation>
+    </element>
+    <element identifier="id-d0e6d34ad72449ea9b74a2b10cf27dc1" xsi:type="TechnologyService">
+      <name xml:lang="en">Monitoring and Logging Service</name>
+      <documentation xml:lang="en">Description: Provides capabilities to monitor and analyze the performance of systems, applications, and services.&#xD;
+&#xD;
+Example:&#xD;
+- Use of tools like Prometheus for metrics and alerts, and Grafana for data visualization.&#xD;
+- Implementation of solutions like ELK Stack (Elasticsearch, Logstash, Kibana) for log analysis.&#xD;
+&#xD;
+Value Added:&#xD;
+- Enables proactive problem identification and continuous optimization.&#xD;
+- Enhances end-user experience by ensuring service stability.</documentation>
+    </element>
+    <element identifier="id-d15ebb7f18e44eb1baa55b6bf7abc021" xsi:type="TechnologyService">
+      <name xml:lang="en">Agile Projects Management Service</name>
+      <documentation xml:lang="en">Description: Provides support for agile project management, promoting collaboration and adaptability through agile tools.&#xD;
+&#xD;
+Example:&#xD;
+- Use of Jira for task management, backlog prioritization, and real-time project tracking.&#xD;
+- Configuration of Kanban or Scrum boards to ensure transparency and progress monitoring.&#xD;
+&#xD;
+Value Added:&#xD;
+- Improves project visibility and enables data-driven decision-making.&#xD;
+- Allows rapid adaptation to changing business requirements.</documentation>
+    </element>
+    <element identifier="id-f8334d00ac5a47f5b794660ac904deb4" xsi:type="TechnologyService">
+      <name xml:lang="en">IDE Service</name>
+      <documentation xml:lang="en">Description: Offers integrated development environments that optimize developer productivity.&#xD;
+&#xD;
+Example:&#xD;
+- Use of IDEs like IntelliJ IDEA, Visual Studio Code, or Eclipse, configured with plugins for repository integration, testing tools, and CI/CD pipelines.&#xD;
+&#xD;
+Value Added:&#xD;
+- Boosts development efficiency by integrating multiple tools into a single environment.&#xD;
+- Facilitates collaboration among developers through standardized setups.</documentation>
+    </element>
+    <element identifier="id-3b738f5528e34629a7bfd287fb551075" xsi:type="TechnologyService">
+      <name xml:lang="en">Continuous Integration and Delivery Service</name>
+      <documentation xml:lang="en">Description: Supports automated pipelines for building, testing, and deploying software continuously.&#xD;
+&#xD;
+Example:&#xD;
+- Use of tools like Jenkins, GitLab CI/CD, or CircleCI to configure integration and deployment workflows.&#xD;
+- Implementation of automated tests and progressive deployments to development, staging, and production environments.&#xD;
+&#xD;
+Value Added:&#xD;
+- Accelerates software delivery without compromising quality.&#xD;
+- Facilitates rapid feedback and continuous iteration.</documentation>
+    </element>
+    <element identifier="id-d0e7787cbb034f31a70ffb8210d5804a" xsi:type="TechnologyService">
+      <name xml:lang="en">Infrastructure Automation Service</name>
+      <documentation xml:lang="en">Description: Automates the provisioning, configuration, and management of infrastructure using Infrastructure as Code (IaC) practices.&#xD;
+&#xD;
+Example:&#xD;
+- Use of tools like Terraform, Ansible, or AWS CloudFormation to deploy and manage dynamic and scalable infrastructures.&#xD;
+&#xD;
+Value Added:&#xD;
+- Reduces human errors and deployment times.&#xD;
+- Provides consistent and reproducible environments.</documentation>
+    </element>
+    <element identifier="id-925da16341df4c43a55de8e5e12c73ba" xsi:type="TechnologyService">
+      <name xml:lang="en">Testing Service</name>
+      <documentation xml:lang="en">Description: Automates functional, performance, and integration testing to ensure software quality.&#xD;
+&#xD;
+Example:&#xD;
+- Use of frameworks like Selenium for functional tests and JMeter for load testing.&#xD;
+- Integration with CI/CD pipelines to automatically execute tests on each commit.&#xD;
+&#xD;
+Value Added:&#xD;
+- Detects defects early, reducing associated resolution costs.&#xD;
+- Enhances confidence in the quality of deliveries.</documentation>
     </element>
     <element identifier="id-f0d499572d4c42e3bb67f3e800aa8fa9" xsi:type="Principle">
       <name xml:lang="en">Architecture Principle</name>
@@ -687,8 +808,8 @@ ABB Name: BDO:ITBizAlignmentDriver</documentation>
       </properties>
     </element>
     <element identifier="id-30e38322826f46c08da70c36575ef031" xsi:type="Assessment">
-      <name xml:lang="en">Agility is Maintained</name>
-      <documentation xml:lang="en">Definition: Agility is Maintained is an assessment indicating that the organization continues to operate with flexibility and responsiveness. It ensures that processes, teams, and technologies can quickly adapt to changes, meet evolving customer needs, and support continuous improvement and innovation.&#xD;
+      <name xml:lang="en">Agility is Maintained in the SW project</name>
+      <documentation xml:lang="en">Definition: Agility is Maintained in the SW project is an assessment indicating that the organization continues to operate with flexibility and responsiveness. It ensures that processes, teams, and technologies can quickly adapt to changes, meet evolving customer needs, and support continuous improvement and innovation.&#xD;
 &#xD;
 ABB Name: BDO:AgilityMaintainedAssessment&#xD;
 &#xD;
@@ -708,13 +829,13 @@ Metrics Examples:&#xD;
           <value xml:lang="en">10/06/2024</value>
         </property>
         <property propertyDefinitionRef="propid-3">
-          <value xml:lang="en">Agility is Maintained is an assessment indicating that the organization continues to operate with flexibility and responsiveness. It ensures that processes, teams, and technologies can quickly adapt to changes, meet evolving customer needs, and support continuous improvement and innovation.</value>
+          <value xml:lang="en">Agility is Maintained in the SW project is an assessment indicating that the organization continues to operate with flexibility and responsiveness. It ensures that processes, teams, and technologies can quickly adapt to changes, meet evolving customer needs, and support continuous improvement and innovation.</value>
         </property>
       </properties>
     </element>
     <element identifier="id-1122ada2614740b59fd593d09c853d04" xsi:type="Assessment">
-      <name xml:lang="en">IT and business are aligned</name>
-      <documentation xml:lang="en">Definition: IT and Business are Aligned is an assessment indicating that IT initiatives, resources, and strategies effectively support and enhance business goals. This alignment ensures cohesive operations, maximizes efficiency, and drives organizational success by ensuring that IT contributions are directly aligned with business needs and objectives.&#xD;
+      <name xml:lang="en">SW project is aligned with business</name>
+      <documentation xml:lang="en">Definition: SW project is aligned with business is an assessment indicating that IT initiatives, resources, and strategies effectively support and enhance business goals. This alignment ensures cohesive operations, maximizes efficiency, and drives organizational success by ensuring that IT contributions are directly aligned with business needs and objectives.&#xD;
 &#xD;
 ABB Name: BDO:ITBusinessAlignmentAssessment&#xD;
 &#xD;
@@ -730,7 +851,7 @@ Metrics Examples: (source: https://ieeexplore.ieee.org/document/9263839)&#xD;
           <value xml:lang="en">10/06/2024</value>
         </property>
         <property propertyDefinitionRef="propid-3">
-          <value xml:lang="en">IT and Business are Aligned is an assessment indicating that IT initiatives, resources, and strategies effectively support and enhance business goals. This alignment ensures cohesive operations, maximizes efficiency, and drives organizational success by ensuring that IT contributions are directly aligned with business needs and objectives.</value>
+          <value xml:lang="en">SW project is aligned with business is an assessment indicating that IT initiatives, resources, and strategies effectively support and enhance business goals. This alignment ensures cohesive operations, maximizes efficiency, and drives organizational success by ensuring that IT contributions are directly aligned with business needs and objectives.</value>
         </property>
       </properties>
     </element>
@@ -1088,14 +1209,9 @@ ABB Name: BDO:Location</documentation>
     <relationship identifier="id-daa77a74fae14350b620e09b33419994" source="id-8e8671ede39548799aaab9ea8d0628fe" target="id-3317f4e804fe435186b4bf90c0547c18" xsi:type="Realization">
       <name xml:lang="en">realization / align</name>
     </relationship>
-    <relationship identifier="id-c23287822fb44a418ed363ba16adb0f4" source="id-6a58ff3958dd4b7a9244536284baf035" target="id-d76710fad821415b9c9bd3c672d3025f" xsi:type="Composition" />
     <relationship identifier="id-80803ac465ff4a73858a02088d8b45c2" source="id-d76710fad821415b9c9bd3c672d3025f" target="id-ef6a312cd0c046e2b552e3dfb5967ae4" xsi:type="Composition">
       <name xml:lang="en">composed of</name>
       <documentation xml:lang="en">[BizDevOps Team] compose of [Agility Manager]</documentation>
-    </relationship>
-    <relationship identifier="id-759a980094a44227a20018fde21cd10b" source="id-d76710fad821415b9c9bd3c672d3025f" target="id-f08562098c0a436697102ff1045eb5d1" xsi:type="Composition">
-      <name xml:lang="en">composed of</name>
-      <documentation xml:lang="en">[BizDevOps Team] compose of [Product Owner]</documentation>
     </relationship>
     <relationship identifier="id-032db227cb2846c59b535c2af4d99ba8" source="id-6a58ff3958dd4b7a9244536284baf035" target="id-5d70cf00d62b4a74b65c86fa0ec721c7" xsi:type="Composition" />
     <relationship identifier="id-00e4f7d05e1c4a3abc37aaab36599aa2" source="id-6a58ff3958dd4b7a9244536284baf035" target="id-6d4e2d6c2b1244a4bfc2bd77ef1982aa" xsi:type="Composition" />
@@ -1145,7 +1261,7 @@ ABB Name: BDO:Location</documentation>
       <documentation xml:lang="en">This view presents the ABBs that guide the development of a software product with BizDevOps.</documentation>
     </relationship>
     <relationship identifier="id-cd5b89e2ef824b0a8a4d9a0d9f697b96" source="id-f08562098c0a436697102ff1045eb5d1" target="id-9b333271d7864cb589e044d629ed5e6c" xsi:type="Assignment">
-      <name xml:lang="en">Responsible for</name>
+      <name xml:lang="en">is responsible for</name>
       <documentation xml:lang="en">[Product Owner] is responsible for [Biz Cycle]</documentation>
     </relationship>
     <relationship identifier="id-c10912b0a43347aabd212fa3d3af7f35" source="id-6bd4226dfba84fcb930713dcbaaa6b9f" target="id-7d59f5d957834902998d179075c14e0d" xsi:type="Realization">
@@ -1194,7 +1310,7 @@ ABB Name: BDO:Location</documentation>
       <documentation xml:lang="en">[Business Need] composed for [Non-Functional Requirement]</documentation>
     </relationship>
     <relationship identifier="id-84a10777012e414cae917dd744b3b2bd" source="id-ef6a312cd0c046e2b552e3dfb5967ae4" target="id-6c02bcaa80204bb6a5c0f075d3ad5c9b" xsi:type="Assignment">
-      <name xml:lang="en">Responsible for</name>
+      <name xml:lang="en">is responsible for</name>
       <documentation xml:lang="en">[Agility Manager] is responsible for [Dev and Ops Cycles]</documentation>
     </relationship>
     <relationship identifier="id-1c2db8a4c678430a8212efc60b9f98c2" source="id-beb8a56cf9ba4e6ba539717980f63c12" target="id-6bd4226dfba84fcb930713dcbaaa6b9f" xsi:type="Influence" modifier="+/-">
@@ -1314,6 +1430,23 @@ A successful construction of software systems is influenced by a good applicatio
       <name xml:lang="en">serve</name>
       <documentation xml:lang="en">[BizDevOps Bus Technology Service] serve [BizDevOps Software Development Function]</documentation>
     </relationship>
+    <relationship identifier="id-0e8cdcae410f40db84c5d7a85ccb5650" source="id-f83dc7eb36d84702a9c11b9154646bed" target="id-f08562098c0a436697102ff1045eb5d1" xsi:type="Aggregation">
+      <name xml:lang="en">assumes the responsibility of</name>
+      <documentation xml:lang="en">[Product Owner] assumes the responsibility of [Alignment Manager]</documentation>
+    </relationship>
+    <relationship identifier="id-6698738353884fc5bf133f96e05f85c7" source="id-d76710fad821415b9c9bd3c672d3025f" target="id-f83dc7eb36d84702a9c11b9154646bed" xsi:type="Composition">
+      <name xml:lang="en">composed of</name>
+      <documentation xml:lang="en">[BizDevOps Team] compose of [Product Owner]</documentation>
+    </relationship>
+    <relationship identifier="id-c4be1115b93c45c89a508f7b12770e9a" source="id-7e7aaaecd8b64f56a41a834b5c6de293" target="id-945ed3fc520e448e998989df76737347" xsi:type="Composition" />
+    <relationship identifier="id-f31744ba6295431d9082b145bfa9553e" source="id-7e7aaaecd8b64f56a41a834b5c6de293" target="id-49398bbd07664333b432f8701eadc58a" xsi:type="Composition" />
+    <relationship identifier="id-e97d1f21fd094b3395a5b37a2cfa43ec" source="id-7e7aaaecd8b64f56a41a834b5c6de293" target="id-6250a649e0aa40c590ae73cd6a3b707b" xsi:type="Composition" />
+    <relationship identifier="id-4b8e7ec845b048d1b90ef07f5cb6b932" source="id-7e7aaaecd8b64f56a41a834b5c6de293" target="id-d0e6d34ad72449ea9b74a2b10cf27dc1" xsi:type="Composition" />
+    <relationship identifier="id-cf85a0c1d3b544f99b09e71fe25b9c30" source="id-7e7aaaecd8b64f56a41a834b5c6de293" target="id-d15ebb7f18e44eb1baa55b6bf7abc021" xsi:type="Composition" />
+    <relationship identifier="id-061f6825392544aa805fe5c6d7bbd2bb" source="id-7e7aaaecd8b64f56a41a834b5c6de293" target="id-f8334d00ac5a47f5b794660ac904deb4" xsi:type="Composition" />
+    <relationship identifier="id-614180dd129e4913bc2325b96b27943a" source="id-7e7aaaecd8b64f56a41a834b5c6de293" target="id-3b738f5528e34629a7bfd287fb551075" xsi:type="Composition" />
+    <relationship identifier="id-592d3f0dd3a74992af648677d60a0f31" source="id-7e7aaaecd8b64f56a41a834b5c6de293" target="id-d0e7787cbb034f31a70ffb8210d5804a" xsi:type="Composition" />
+    <relationship identifier="id-da475d71ad5e47c6a63df085967da39b" source="id-7e7aaaecd8b64f56a41a834b5c6de293" target="id-925da16341df4c43a55de8e5e12c73ba" xsi:type="Composition" />
   </relationships>
   <organizations>
     <item>
@@ -1340,6 +1473,7 @@ A successful construction of software systems is influenced by a good applicatio
       <item identifierRef="id-9ccf09ffb6b24eb8a4569b193672f33b" />
       <item identifierRef="id-99b30d5264a646f39f428215d03b96d2" />
       <item identifierRef="id-a19839e7c4204bb5ad760d96c293b752" />
+      <item identifierRef="id-f83dc7eb36d84702a9c11b9154646bed" />
     </item>
     <item>
       <label xml:lang="en">Application</label>
@@ -1358,6 +1492,15 @@ A successful construction of software systems is influenced by a good applicatio
       <item identifierRef="id-9363f7c1f41e43fd83c93841836a1500" />
       <item identifierRef="id-a33cc596a8dd4e25bb948074a2ab5d8a" />
       <item identifierRef="id-c9426286e2c04000aa03c40f4d019fea" />
+      <item identifierRef="id-945ed3fc520e448e998989df76737347" />
+      <item identifierRef="id-49398bbd07664333b432f8701eadc58a" />
+      <item identifierRef="id-6250a649e0aa40c590ae73cd6a3b707b" />
+      <item identifierRef="id-d0e6d34ad72449ea9b74a2b10cf27dc1" />
+      <item identifierRef="id-d15ebb7f18e44eb1baa55b6bf7abc021" />
+      <item identifierRef="id-f8334d00ac5a47f5b794660ac904deb4" />
+      <item identifierRef="id-3b738f5528e34629a7bfd287fb551075" />
+      <item identifierRef="id-d0e7787cbb034f31a70ffb8210d5804a" />
+      <item identifierRef="id-925da16341df4c43a55de8e5e12c73ba" />
     </item>
     <item>
       <label xml:lang="en">Motivation</label>
@@ -1424,9 +1567,7 @@ A successful construction of software systems is influenced by a good applicatio
       <item identifierRef="id-dbef633ca29342308c719f5c451e91ad" />
       <item identifierRef="id-f3c56a28a1c44e8e91200fa96c945333" />
       <item identifierRef="id-daa77a74fae14350b620e09b33419994" />
-      <item identifierRef="id-c23287822fb44a418ed363ba16adb0f4" />
       <item identifierRef="id-80803ac465ff4a73858a02088d8b45c2" />
-      <item identifierRef="id-759a980094a44227a20018fde21cd10b" />
       <item identifierRef="id-032db227cb2846c59b535c2af4d99ba8" />
       <item identifierRef="id-00e4f7d05e1c4a3abc37aaab36599aa2" />
       <item identifierRef="id-90e27dc602d04594a5b405d890b4e3c1" />
@@ -1501,6 +1642,17 @@ A successful construction of software systems is influenced by a good applicatio
       <item identifierRef="id-7e5a6332f9854f7f8f9e81f15d173c09" />
       <item identifierRef="id-64d475d7de7b44f7bd513a83060d2b75" />
       <item identifierRef="id-bcdee2780fb5437a8619394c933d325a" />
+      <item identifierRef="id-0e8cdcae410f40db84c5d7a85ccb5650" />
+      <item identifierRef="id-6698738353884fc5bf133f96e05f85c7" />
+      <item identifierRef="id-c4be1115b93c45c89a508f7b12770e9a" />
+      <item identifierRef="id-f31744ba6295431d9082b145bfa9553e" />
+      <item identifierRef="id-e97d1f21fd094b3395a5b37a2cfa43ec" />
+      <item identifierRef="id-4b8e7ec845b048d1b90ef07f5cb6b932" />
+      <item identifierRef="id-cf85a0c1d3b544f99b09e71fe25b9c30" />
+      <item identifierRef="id-061f6825392544aa805fe5c6d7bbd2bb" />
+      <item identifierRef="id-614180dd129e4913bc2325b96b27943a" />
+      <item identifierRef="id-592d3f0dd3a74992af648677d60a0f31" />
+      <item identifierRef="id-da475d71ad5e47c6a63df085967da39b" />
     </item>
     <item>
       <label xml:lang="en">Views</label>
@@ -1510,6 +1662,7 @@ A successful construction of software systems is influenced by a good applicatio
       <item identifierRef="id-0e9d2e66f76c43e1bb91758a692b326b" />
       <item identifierRef="id-30d2f6f5193144ddb4ec9d57ec43d197" />
       <item identifierRef="id-245340692646409694cb646ef003994c" />
+      <item identifierRef="id-99fc496d1ba94b1aad99efaf4397d227" />
     </item>
   </organizations>
   <propertyDefinitions>
@@ -1544,254 +1697,245 @@ The [Business Need] fulfill the [Enterprise Objective], allowing organizations t
             <value xml:lang="en">BizDevOps Alignment View</value>
           </property>
         </properties>
-        <node identifier="id-444de6f547744660ac1cb80728cddc25" elementRef="id-1e851b836e9c4be09c39ba7591ffc6b1" xsi:type="Element" x="90" y="72" w="141" h="55">
+        <node identifier="id-444de6f547744660ac1cb80728cddc25" elementRef="id-1e851b836e9c4be09c39ba7591ffc6b1" xsi:type="Element" x="36" y="63" w="141" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-77efa2139c944600aaf6ba94709cd437" elementRef="id-6bd4226dfba84fcb930713dcbaaa6b9f" xsi:type="Element" x="89" y="240" w="143" h="55">
+        <node identifier="id-77efa2139c944600aaf6ba94709cd437" elementRef="id-6bd4226dfba84fcb930713dcbaaa6b9f" xsi:type="Element" x="35" y="243" w="143" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-55747d35193845d9a4ea3690c4373cc8" elementRef="id-6a58ff3958dd4b7a9244536284baf035" xsi:type="Element" x="336" y="0" w="1153" h="781">
+        <node identifier="id-55747d35193845d9a4ea3690c4373cc8" elementRef="id-6a58ff3958dd4b7a9244536284baf035" xsi:type="Element" x="192" y="12" w="805" h="901">
           <style>
             <fillColor r="217" g="255" b="217" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <node identifier="id-bf0355658e6f472da7ab7425a6e881e0" elementRef="id-003c255b3b96425fb0db14aba7045164" xsi:type="Element" x="588" y="348" w="120" h="55">
+          <node identifier="id-bf0355658e6f472da7ab7425a6e881e0" elementRef="id-003c255b3b96425fb0db14aba7045164" xsi:type="Element" x="396" y="360" w="120" h="55">
             <style>
               <fillColor r="255" g="255" b="181" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-3825f3f9e8844cbcbaabc01e20e72ef4" elementRef="id-aadcc376717c4cf9b0590277330c78aa" xsi:type="Element" x="1030" y="242" w="145" h="55">
+          <node identifier="id-3825f3f9e8844cbcbaabc01e20e72ef4" elementRef="id-aadcc376717c4cf9b0590277330c78aa" xsi:type="Element" x="706" y="254" w="145" h="55">
             <style>
               <fillColor r="245" g="222" b="170" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-17d4b3aed22e473eb9f2b986af810bbe" elementRef="id-7e7aaaecd8b64f56a41a834b5c6de293" xsi:type="Element" x="720" y="708" w="336" h="55">
+          <node identifier="id-17d4b3aed22e473eb9f2b986af810bbe" elementRef="id-7e7aaaecd8b64f56a41a834b5c6de293" xsi:type="Element" x="396" y="828" w="336" h="55">
             <style>
               <fillColor r="201" g="231" b="183" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-d806f2b1009a4e81810795e43c82f9b2" elementRef="id-ef6a312cd0c046e2b552e3dfb5967ae4" xsi:type="Element" x="1116" y="36" w="120" h="55">
+          <node identifier="id-d806f2b1009a4e81810795e43c82f9b2" elementRef="id-ef6a312cd0c046e2b552e3dfb5967ae4" xsi:type="Element" x="816" y="48" w="133" h="55">
             <style>
               <fillColor r="255" g="255" b="181" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-2b90ba00367b4525b12bb807c533d90f" elementRef="id-a19839e7c4204bb5ad760d96c293b752" xsi:type="Element" x="756" y="240" w="181" h="59">
+          <node identifier="id-2b90ba00367b4525b12bb807c533d90f" elementRef="id-a19839e7c4204bb5ad760d96c293b752" xsi:type="Element" x="432" y="252" w="181" h="59">
             <style>
               <fillColor r="255" g="255" b="181" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-7732106bbee04e94a8744498a5efa147" elementRef="id-e46c4d49fbf74605a2a54de1c36c9628" xsi:type="Element" x="588" y="444" w="120" h="55">
+          <node identifier="id-7732106bbee04e94a8744498a5efa147" elementRef="id-e46c4d49fbf74605a2a54de1c36c9628" xsi:type="Element" x="396" y="516" w="120" h="55">
             <style>
               <fillColor r="255" g="255" b="181" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-267dc8bfa44246449ac74f27ae10f709" elementRef="id-3edb685929bc40a9b14baae6944ef7f3" xsi:type="Element" x="588" y="132" w="120" h="55">
+          <node identifier="id-267dc8bfa44246449ac74f27ae10f709" elementRef="id-3edb685929bc40a9b14baae6944ef7f3" xsi:type="Element" x="396" y="144" w="120" h="55">
             <style>
               <fillColor r="255" g="255" b="181" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-4c4dc73967b148cfb71036df6c84e02f" elementRef="id-f08562098c0a436697102ff1045eb5d1" xsi:type="Element" x="972" y="36" w="133" h="55">
+          <node identifier="id-4c4dc73967b148cfb71036df6c84e02f" elementRef="id-f08562098c0a436697102ff1045eb5d1" xsi:type="Element" x="648" y="48" w="133" h="55">
             <style>
               <fillColor r="255" g="255" b="181" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-cff774287d074c0aaeaf0d5dacb4857a" elementRef="id-6de4871a45ba41c791cc6b9cd94f5dca" xsi:type="Element" x="588" y="36" w="330" h="55">
+          <node identifier="id-cff774287d074c0aaeaf0d5dacb4857a" elementRef="id-6de4871a45ba41c791cc6b9cd94f5dca" xsi:type="Element" x="264" y="48" w="330" h="55">
             <style>
               <fillColor r="245" g="222" b="170" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-c6eb29c1bcff448c979acfe4c2e4c1b7" elementRef="id-73c2bb6ee61c4813871768b5a98b261a" xsi:type="Element" x="588" y="240" w="120" h="55">
+          <node identifier="id-c6eb29c1bcff448c979acfe4c2e4c1b7" elementRef="id-73c2bb6ee61c4813871768b5a98b261a" xsi:type="Element" x="264" y="252" w="120" h="55">
             <style>
               <fillColor r="255" g="255" b="181" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-2c85aa310ea949caa881c7486c6c8fac" elementRef="id-d4a68b6adf9640be99b111b3793f536b" xsi:type="Element" x="720" y="516" w="120" h="55">
+          <node identifier="id-2c85aa310ea949caa881c7486c6c8fac" elementRef="id-d4a68b6adf9640be99b111b3793f536b" xsi:type="Element" x="396" y="594" w="120" h="55">
             <style>
               <fillColor r="181" g="255" b="255" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-8809828027b3467fb6375604ea85f7fb" elementRef="id-d65a0f7e32864742878a9c27c3a836a3" xsi:type="Element" x="936" y="606" w="120" h="55">
+          <node identifier="id-8809828027b3467fb6375604ea85f7fb" elementRef="id-d65a0f7e32864742878a9c27c3a836a3" xsi:type="Element" x="612" y="708" w="120" h="55">
             <style>
               <fillColor r="181" g="255" b="255" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-37880452203c49a8a928d20b8c46a960" elementRef="id-3317f4e804fe435186b4bf90c0547c18" xsi:type="Element" x="1164" y="444" w="120" h="55">
+          <node identifier="id-37880452203c49a8a928d20b8c46a960" elementRef="id-3317f4e804fe435186b4bf90c0547c18" xsi:type="Element" x="850" y="528" w="120" h="55">
             <style>
               <fillColor r="255" g="255" b="181" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-184a2f76b9394c71b3ac7798ec14e6c5" elementRef="id-8e8671ede39548799aaab9ea8d0628fe" xsi:type="Element" x="1164" y="606" w="120" h="55">
+          <node identifier="id-184a2f76b9394c71b3ac7798ec14e6c5" elementRef="id-8e8671ede39548799aaab9ea8d0628fe" xsi:type="Element" x="840" y="708" w="120" h="55">
             <style>
               <fillColor r="181" g="255" b="255" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-fdd628bae88a4ee5bf4a828046fc1950" elementRef="id-d76710fad821415b9c9bd3c672d3025f" xsi:type="Element" x="1344" y="36" w="120" h="55">
-            <style>
-              <fillColor r="255" g="255" b="181" a="100" />
-              <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
-                <color r="0" g="0" b="0" />
-              </font>
-            </style>
-          </node>
-          <node identifier="id-a40ff147435942a6ba47dd74bf3191b0" elementRef="id-5d70cf00d62b4a74b65c86fa0ec721c7" xsi:type="Element" x="1116" y="336" w="133" h="55">
+          <node identifier="id-a40ff147435942a6ba47dd74bf3191b0" elementRef="id-5d70cf00d62b4a74b65c86fa0ec721c7" xsi:type="Element" x="792" y="348" w="133" h="55">
             <style>
               <fillColor r="204" g="204" b="255" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-d11be0ee5d0746e682b35b1f12310638" elementRef="id-6d4e2d6c2b1244a4bfc2bd77ef1982aa" xsi:type="Element" x="960" y="336" w="132" h="55">
+          <node identifier="id-d11be0ee5d0746e682b35b1f12310638" elementRef="id-6d4e2d6c2b1244a4bfc2bd77ef1982aa" xsi:type="Element" x="636" y="348" w="132" h="55">
             <style>
               <fillColor r="204" g="204" b="255" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-c7c4617d2e6248a6871f11e65082f634" elementRef="id-30e38322826f46c08da70c36575ef031" xsi:type="Element" x="1344" y="264" w="120" h="55">
+          <node identifier="id-c7c4617d2e6248a6871f11e65082f634" elementRef="id-30e38322826f46c08da70c36575ef031" xsi:type="Element" x="793" y="432" w="132" h="55">
             <style>
               <fillColor r="204" g="204" b="255" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-a775deb652bc4df5bfe5a949e90b343b" elementRef="id-1122ada2614740b59fd593d09c853d04" xsi:type="Element" x="1344" y="384" w="120" h="55">
+          <node identifier="id-a775deb652bc4df5bfe5a949e90b343b" elementRef="id-1122ada2614740b59fd593d09c853d04" xsi:type="Element" x="636" y="432" w="132" h="55">
             <style>
               <fillColor r="204" g="204" b="255" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-acaaf9d05cc84ad98f410081168728a5" elementRef="id-de8808419c1b45c2abc2ec5853fa59ba" xsi:type="Element" x="372" y="210" w="120" h="55">
+          <node identifier="id-acaaf9d05cc84ad98f410081168728a5" elementRef="id-de8808419c1b45c2abc2ec5853fa59ba" xsi:type="Element" x="216" y="144" w="120" h="55">
             <style>
               <fillColor r="204" g="204" b="255" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-e2f746f8014f4e529f88abc2e3294764" elementRef="id-6c717a1c21f74c8b8aecc09b73edf046" xsi:type="Element" x="372" y="276" w="120" h="55">
+          <node identifier="id-e2f746f8014f4e529f88abc2e3294764" elementRef="id-6c717a1c21f74c8b8aecc09b73edf046" xsi:type="Element" x="216" y="360" w="120" h="55">
             <style>
               <fillColor r="204" g="204" b="255" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-d79d3ab4011143639c9a61eebfcffb4a" elementRef="id-9108d44573194dc1bc620b5ae5c71ac8" xsi:type="Element" x="720" y="606" w="120" h="55">
+          <node identifier="id-d79d3ab4011143639c9a61eebfcffb4a" elementRef="id-9108d44573194dc1bc620b5ae5c71ac8" xsi:type="Element" x="396" y="708" w="120" h="55">
             <style>
               <fillColor r="181" g="255" b="255" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-31a3e79a411e4ed5aa6917478c6b4a2f" elementRef="id-56a43d4adaed49d693335dc51889d01c" xsi:type="Element" x="1164" y="708" w="120" h="55">
+          <node identifier="id-31a3e79a411e4ed5aa6917478c6b4a2f" elementRef="id-56a43d4adaed49d693335dc51889d01c" xsi:type="Element" x="840" y="828" w="120" h="55">
             <style>
               <fillColor r="201" g="231" b="183" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
         </node>
-        <node identifier="id-e69af1b49ca14f358ff17e6ef24ada19" elementRef="id-7d59f5d957834902998d179075c14e0d" xsi:type="Element" x="90" y="144" w="141" h="55">
+        <node identifier="id-e69af1b49ca14f358ff17e6ef24ada19" elementRef="id-7d59f5d957834902998d179075c14e0d" xsi:type="Element" x="36" y="135" w="141" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-20e8a9118434459aafd3fad3f75a020c" elementRef="id-beb8a56cf9ba4e6ba539717980f63c12" xsi:type="Element" x="90" y="375" w="141" h="55">
+        <node identifier="id-20e8a9118434459aafd3fad3f75a020c" elementRef="id-beb8a56cf9ba4e6ba539717980f63c12" xsi:type="Element" x="36" y="435" w="141" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -1799,7 +1943,7 @@ The [Business Need] fulfill the [Enterprise Objective], allowing organizations t
         <connection identifier="id-032f30d1f57244e699dbe1ebdd638edf" relationshipRef="id-c10912b0a43347aabd212fa3d3af7f35" xsi:type="Relationship" source="id-77efa2139c944600aaf6ba94709cd437" target="id-e69af1b49ca14f358ff17e6ef24ada19">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -1807,32 +1951,34 @@ The [Business Need] fulfill the [Enterprise Objective], allowing organizations t
         <connection identifier="id-d1cf7aa980f44db68b544619185381cc" relationshipRef="id-b36bf5410c6e42d7bcab887598bdfe51" xsi:type="Relationship" source="id-77efa2139c944600aaf6ba94709cd437" target="id-acaaf9d05cc84ad98f410081168728a5">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
+          <bendpoint x="160" y="219" />
+          <bendpoint x="248" y="219" />
         </connection>
         <connection identifier="id-8c00a120af024fb0bbe4218cd07000ba" relationshipRef="id-bd856af91d0f4d2d9c0e2d9022ca7359" xsi:type="Relationship" source="id-77efa2139c944600aaf6ba94709cd437" target="id-e2f746f8014f4e529f88abc2e3294764">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
+          <bendpoint x="156" y="387" />
         </connection>
         <connection identifier="id-7ca7306eef14465e9c05bf8a9188efe1" relationshipRef="id-8a0e3021eab04afe9f026e6b827c2998" xsi:type="Relationship" source="id-3825f3f9e8844cbcbaabc01e20e72ef4" target="id-a40ff147435942a6ba47dd74bf3191b0">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="1152" y="313" />
         </connection>
         <connection identifier="id-88eebda0d1974302b96a003edb1362fb" relationshipRef="id-fa089c79719c4a3f8c7bbb331eddffbb" xsi:type="Relationship" source="id-3825f3f9e8844cbcbaabc01e20e72ef4" target="id-d11be0ee5d0746e682b35b1f12310638">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -1840,7 +1986,7 @@ The [Business Need] fulfill the [Enterprise Objective], allowing organizations t
         <connection identifier="id-ef305012a54a4dd7accd4bc5231123f5" relationshipRef="id-837fbbf359f649c197e91b89896a5a52" xsi:type="Relationship" source="id-17d4b3aed22e473eb9f2b986af810bbe" target="id-8809828027b3467fb6375604ea85f7fb">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -1848,7 +1994,7 @@ The [Business Need] fulfill the [Enterprise Objective], allowing organizations t
         <connection identifier="id-81c82000561d4089898562f1dc873bb0" relationshipRef="id-0be62047532d45babd09f96e89766430" xsi:type="Relationship" source="id-17d4b3aed22e473eb9f2b986af810bbe" target="id-d79d3ab4011143639c9a61eebfcffb4a">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -1856,35 +2002,35 @@ The [Business Need] fulfill the [Enterprise Objective], allowing organizations t
         <connection identifier="id-1cb2da9d1fd348ab8dad3a96b46e7a8a" relationshipRef="id-bcdee2780fb5437a8619394c933d325a" xsi:type="Relationship" source="id-17d4b3aed22e473eb9f2b986af810bbe" target="id-2b90ba00367b4525b12bb807c533d90f">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="888" y="505" />
+          <bendpoint x="564" y="571" />
         </connection>
         <connection identifier="id-95ba7d4f19564695b1d186e522a6f8ff" relationshipRef="id-90e27dc602d04594a5b405d890b4e3c1" xsi:type="Relationship" source="id-d806f2b1009a4e81810795e43c82f9b2" target="id-a40ff147435942a6ba47dd74bf3191b0">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="1200" y="217" />
+          <bendpoint x="891" y="229" />
         </connection>
         <connection identifier="id-842cb48ee05a4a53a2fec5cb98a4a3b5" relationshipRef="id-174c3412a7aa4680846057caf8206ef5" xsi:type="Relationship" source="id-2b90ba00367b4525b12bb807c533d90f" target="id-c6eb29c1bcff448c979acfe4c2e4c1b7">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="876" y="325" />
-          <bendpoint x="692" y="325" />
+          <bendpoint x="516" y="217" />
+          <bendpoint x="372" y="217" />
         </connection>
         <connection identifier="id-4d7af7e2434f4722af67452c90df85a5" relationshipRef="id-7895ff75d9014973b53af24f51fd57a4" xsi:type="Relationship" source="id-2b90ba00367b4525b12bb807c533d90f" target="id-3825f3f9e8844cbcbaabc01e20e72ef4">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -1892,16 +2038,16 @@ The [Business Need] fulfill the [Enterprise Objective], allowing organizations t
         <connection identifier="id-cdce3830e5b04d82ac4f7708d5fc0f43" relationshipRef="id-7a81e44713da4804b3790b1cd153795d" xsi:type="Relationship" source="id-2b90ba00367b4525b12bb807c533d90f" target="id-444de6f547744660ac1cb80728cddc25">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="840" y="109" />
+          <bendpoint x="576" y="115" />
         </connection>
         <connection identifier="id-54723023d60942bb9d687a8214290877" relationshipRef="id-228756c5ece341ffa5b0bea798ddf238" xsi:type="Relationship" source="id-7732106bbee04e94a8744498a5efa147" target="id-bf0355658e6f472da7ab7425a6e881e0">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -1909,7 +2055,7 @@ The [Business Need] fulfill the [Enterprise Objective], allowing organizations t
         <connection identifier="id-8951a04a0fbd4a068d289b22bae799f0" relationshipRef="id-f3c56a28a1c44e8e91200fa96c945333" xsi:type="Relationship" source="id-7732106bbee04e94a8744498a5efa147" target="id-37880452203c49a8a928d20b8c46a960">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -1917,68 +2063,73 @@ The [Business Need] fulfill the [Enterprise Objective], allowing organizations t
         <connection identifier="id-d3225b3644694b41a973ae895c33b2d1" relationshipRef="id-a52f8d2cc6594ba093585dd499b56cb4" xsi:type="Relationship" source="id-4c4dc73967b148cfb71036df6c84e02f" target="id-d11be0ee5d0746e682b35b1f12310638">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="1011" y="217" />
+          <bendpoint x="672" y="231" />
         </connection>
         <connection identifier="id-f8a63a538ea14bd8a8237332fc247c02" relationshipRef="id-b9b6519ccf88483f9af062ff796ae710" xsi:type="Relationship" source="id-cff774287d074c0aaeaf0d5dacb4857a" target="id-3825f3f9e8844cbcbaabc01e20e72ef4">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="936" y="61" />
-          <bendpoint x="936" y="157" />
-          <bendpoint x="1104" y="157" />
+          <bendpoint x="612" y="73" />
+          <bendpoint x="612" y="169" />
+          <bendpoint x="780" y="169" />
         </connection>
         <connection identifier="id-cd3d969d1eca4e04800ba3445e18c27a" relationshipRef="id-e8e9101ccfa0411f8f6bacca8144d387" xsi:type="Relationship" source="id-c6eb29c1bcff448c979acfe4c2e4c1b7" target="id-acaaf9d05cc84ad98f410081168728a5">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
+          <bendpoint x="288" y="241" />
         </connection>
         <connection identifier="id-11fd8645886146c0b3239e403a045474" relationshipRef="id-07414351f0eb4e0a93732a66b448cfec" xsi:type="Relationship" source="id-c6eb29c1bcff448c979acfe4c2e4c1b7" target="id-e2f746f8014f4e529f88abc2e3294764">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
+          <bendpoint x="288" y="325" />
         </connection>
         <connection identifier="id-f41d7d26f72c46d9b117ea9ce35326d4" relationshipRef="id-a791c0e87fc04b869765c64eb78360b5" xsi:type="Relationship" source="id-c6eb29c1bcff448c979acfe4c2e4c1b7" target="id-bf0355658e6f472da7ab7425a6e881e0">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
+          <bendpoint x="360" y="387" />
         </connection>
         <connection identifier="id-c3aa456fcbf8468d8713a556f695e238" relationshipRef="id-da3cbdbff29f4c42b7d0a3357a0eefc5" xsi:type="Relationship" source="id-c6eb29c1bcff448c979acfe4c2e4c1b7" target="id-267dc8bfa44246449ac74f27ae10f709">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
+          <bendpoint x="360" y="181" />
         </connection>
         <connection identifier="id-9cf1232e6d064db28d8ae7a36a70d42a" relationshipRef="id-c4df8ab214414fc3b0a4fcdc42851dee" xsi:type="Relationship" source="id-2c85aa310ea949caa881c7486c6c8fac" target="id-7732106bbee04e94a8744498a5efa147">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="648" y="546" />
+          <bendpoint x="360" y="629" />
+          <bendpoint x="360" y="555" />
         </connection>
         <connection identifier="id-429b82cd201e414b8fa9d7da0cbd91d5" relationshipRef="id-dbef633ca29342308c719f5c451e91ad" xsi:type="Relationship" source="id-8809828027b3467fb6375604ea85f7fb" target="id-184a2f76b9394c71b3ac7798ec14e6c5">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -1986,7 +2137,7 @@ The [Business Need] fulfill the [Enterprise Objective], allowing organizations t
         <connection identifier="id-fb3aa077c68f48be9a5332736bcb94c1" relationshipRef="id-3fcc92a9b85447b7aaa55b8eca3c321f" xsi:type="Relationship" source="id-8809828027b3467fb6375604ea85f7fb" target="id-d79d3ab4011143639c9a61eebfcffb4a">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -1994,51 +2145,31 @@ The [Business Need] fulfill the [Enterprise Objective], allowing organizations t
         <connection identifier="id-c95b345920b948b3a815d35d43e84c66" relationshipRef="id-daa77a74fae14350b620e09b33419994" xsi:type="Relationship" source="id-184a2f76b9394c71b3ac7798ec14e6c5" target="id-37880452203c49a8a928d20b8c46a960">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-        </connection>
-        <connection identifier="id-8cfa447ffb7e4fe19beac7a6912b4651" relationshipRef="id-80803ac465ff4a73858a02088d8b45c2" xsi:type="Relationship" source="id-fdd628bae88a4ee5bf4a828046fc1950" target="id-d806f2b1009a4e81810795e43c82f9b2">
-          <style>
-            <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
-              <color r="0" g="0" b="0" />
-            </font>
-          </style>
-        </connection>
-        <connection identifier="id-386902a25d8848d8bc62d2fb787c4d6e" relationshipRef="id-759a980094a44227a20018fde21cd10b" xsi:type="Relationship" source="id-fdd628bae88a4ee5bf4a828046fc1950" target="id-4c4dc73967b148cfb71036df6c84e02f">
-          <style>
-            <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
-              <color r="0" g="0" b="0" />
-            </font>
-          </style>
-          <bendpoint x="1390" y="12" />
-          <bendpoint x="1052" y="12" />
         </connection>
         <connection identifier="id-a52cb54e4f1643d5bfdc6debbeea7381" relationshipRef="id-22b7e44ca2d04dd6b8bb50fd45b90916" xsi:type="Relationship" source="id-a40ff147435942a6ba47dd74bf3191b0" target="id-c7c4617d2e6248a6871f11e65082f634">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="1392" y="361" />
         </connection>
         <connection identifier="id-9776a650a9b146f995cf09d389e22f25" relationshipRef="id-ae662cbd308842afb4e857be60a23504" xsi:type="Relationship" source="id-d11be0ee5d0746e682b35b1f12310638" target="id-a775deb652bc4df5bfe5a949e90b343b">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="1032" y="421" />
         </connection>
         <connection identifier="id-881c4e65f2cf416990be85ab6f0d22c0" relationshipRef="id-61fe2c98dfb34945989b98c3d2af2de1" xsi:type="Relationship" source="id-d79d3ab4011143639c9a61eebfcffb4a" target="id-2c85aa310ea949caa881c7486c6c8fac">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2046,7 +2177,7 @@ The [Business Need] fulfill the [Enterprise Objective], allowing organizations t
         <connection identifier="id-4eb2b4d1de9342779fb5f4b64d58148b" relationshipRef="id-d6e5698c557846c9a525517e0aa00b9e" xsi:type="Relationship" source="id-31a3e79a411e4ed5aa6917478c6b4a2f" target="id-8809828027b3467fb6375604ea85f7fb">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2054,7 +2185,7 @@ The [Business Need] fulfill the [Enterprise Objective], allowing organizations t
         <connection identifier="id-f85a9ca7ecb04a5491dd9ef99f7a9b5e" relationshipRef="id-7e5a6332f9854f7f8f9e81f15d173c09" xsi:type="Relationship" source="id-31a3e79a411e4ed5aa6917478c6b4a2f" target="id-17d4b3aed22e473eb9f2b986af810bbe">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2062,7 +2193,7 @@ The [Business Need] fulfill the [Enterprise Objective], allowing organizations t
         <connection identifier="id-9c3be1d691244020b72446801f0299dd" relationshipRef="id-1c2db8a4c678430a8212efc60b9f98c2" xsi:type="Relationship" source="id-20e8a9118434459aafd3fad3f75a020c" target="id-77efa2139c944600aaf6ba94709cd437">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2090,182 +2221,191 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
             <value xml:lang="en">BizDevOps Process View</value>
           </property>
         </properties>
-        <node identifier="id-fd9cc4aca5e8432db94d68eae73b4344" elementRef="id-a19839e7c4204bb5ad760d96c293b752" xsi:type="Element" x="144" y="288" w="1009" h="253">
+        <node identifier="id-fd9cc4aca5e8432db94d68eae73b4344" elementRef="id-a19839e7c4204bb5ad760d96c293b752" xsi:type="Element" x="60" y="288" w="721" h="253">
           <style>
             <fillColor r="255" g="255" b="181" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <node identifier="id-4509d7f56fbd43f18153cb355ed2b92a" elementRef="id-9b333271d7864cb589e044d629ed5e6c" xsi:type="Element" x="192" y="336" w="469" h="181">
+          <node identifier="id-4509d7f56fbd43f18153cb355ed2b92a" elementRef="id-9b333271d7864cb589e044d629ed5e6c" xsi:type="Element" x="84" y="336" w="457" h="181">
             <style>
               <fillColor r="255" g="255" b="255" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
-            <node identifier="id-12df0fd889a54996bf93765f2f3f2929" elementRef="id-7df6ea2d1f274331b12e00df9bb08987" xsi:type="Element" x="504" y="360" w="120" h="55">
+            <node identifier="id-12df0fd889a54996bf93765f2f3f2929" elementRef="id-7df6ea2d1f274331b12e00df9bb08987" xsi:type="Element" x="396" y="360" w="120" h="55">
               <style>
                 <fillColor r="255" g="255" b="181" a="100" />
                 <lineColor r="92" g="92" b="92" a="100" />
-                <font name="Lucida Grande" size="12">
+                <font name="Segoe UI" size="9">
                   <color r="0" g="0" b="0" />
                 </font>
               </style>
             </node>
-            <node identifier="id-843931e341da4bca823671fa55e395ed" elementRef="id-5df261a45886447f9a76acb8d03c6c75" xsi:type="Element" x="360" y="360" w="120" h="55">
+            <node identifier="id-843931e341da4bca823671fa55e395ed" elementRef="id-5df261a45886447f9a76acb8d03c6c75" xsi:type="Element" x="252" y="360" w="120" h="55">
               <style>
                 <fillColor r="255" g="255" b="181" a="100" />
                 <lineColor r="92" g="92" b="92" a="100" />
-                <font name="Lucida Grande" size="12">
+                <font name="Segoe UI" size="9">
                   <color r="0" g="0" b="0" />
                 </font>
               </style>
             </node>
-            <node identifier="id-1890aeda88694883a2ba028fa11eb321" elementRef="id-f894051c3fb84e718bdd861b1a9ae396" xsi:type="Element" x="216" y="360" w="120" h="55">
+            <node identifier="id-1890aeda88694883a2ba028fa11eb321" elementRef="id-f894051c3fb84e718bdd861b1a9ae396" xsi:type="Element" x="108" y="360" w="120" h="55">
               <style>
                 <fillColor r="255" g="255" b="181" a="100" />
                 <lineColor r="92" g="92" b="92" a="100" />
-                <font name="Lucida Grande" size="12">
+                <font name="Segoe UI" size="9">
                   <color r="0" g="0" b="0" />
                 </font>
               </style>
             </node>
-            <node identifier="id-5487f62d96c84d1e9422eca7bb7ac192" elementRef="id-fcb092c385ab448ea15bcb8e233ed545" xsi:type="Element" x="216" y="444" w="408" h="55">
+            <node identifier="id-5487f62d96c84d1e9422eca7bb7ac192" elementRef="id-fcb092c385ab448ea15bcb8e233ed545" xsi:type="Element" x="108" y="444" w="408" h="55">
               <style>
                 <fillColor r="255" g="255" b="181" a="100" />
                 <lineColor r="92" g="92" b="92" a="100" />
-                <font name="Lucida Grande" size="12">
+                <font name="Segoe UI" size="9">
                   <color r="0" g="0" b="0" />
                 </font>
               </style>
             </node>
           </node>
-          <node identifier="id-3d4cae1357404615a10a0f2ebb737bf6" elementRef="id-6c02bcaa80204bb6a5c0f075d3ad5c9b" xsi:type="Element" x="696" y="336" w="409" h="181">
+          <node identifier="id-3d4cae1357404615a10a0f2ebb737bf6" elementRef="id-6c02bcaa80204bb6a5c0f075d3ad5c9b" xsi:type="Element" x="600" y="336" w="157" h="181">
             <style>
               <fillColor r="255" g="255" b="255" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
-            <node identifier="id-ed8b891a12b44893a80f7a8866ad2fe6" elementRef="id-a34273183294404faf951ead605d3e36" xsi:type="Element" x="744" y="360" w="120" h="55">
+            <node identifier="id-ed8b891a12b44893a80f7a8866ad2fe6" elementRef="id-a34273183294404faf951ead605d3e36" xsi:type="Element" x="624" y="360" w="120" h="55">
               <style>
                 <fillColor r="255" g="255" b="181" a="100" />
                 <lineColor r="92" g="92" b="92" a="100" />
-                <font name="Lucida Grande" size="12">
+                <font name="Segoe UI" size="9">
                   <color r="0" g="0" b="0" />
                 </font>
               </style>
             </node>
-            <node identifier="id-bf4a6dfab5a74f8db16b0e07758a5594" elementRef="id-6a2e3182834b4bb69f39fe1562278748" xsi:type="Element" x="948" y="360" w="120" h="55">
+            <node identifier="id-bf4a6dfab5a74f8db16b0e07758a5594" elementRef="id-6a2e3182834b4bb69f39fe1562278748" xsi:type="Element" x="624" y="444" w="120" h="55">
               <style>
                 <fillColor r="255" g="255" b="181" a="100" />
                 <lineColor r="92" g="92" b="92" a="100" />
-                <font name="Lucida Grande" size="12">
+                <font name="Segoe UI" size="9">
                   <color r="0" g="0" b="0" />
                 </font>
               </style>
             </node>
           </node>
         </node>
-        <node identifier="id-7bf5a0027ed1469b9552d4b4adcd28d1" elementRef="id-d76710fad821415b9c9bd3c672d3025f" xsi:type="Element" x="492" y="624" w="313" h="55">
+        <node identifier="id-7bf5a0027ed1469b9552d4b4adcd28d1" elementRef="id-d76710fad821415b9c9bd3c672d3025f" xsi:type="Element" x="372" y="672" w="121" h="55">
           <style>
             <fillColor r="255" g="255" b="181" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-c252a26499274b2eae91a83d9a84ba67" elementRef="id-f08562098c0a436697102ff1045eb5d1" xsi:type="Element" x="180" y="600" w="193" h="55">
+        <node identifier="id-c252a26499274b2eae91a83d9a84ba67" elementRef="id-f08562098c0a436697102ff1045eb5d1" xsi:type="Element" x="132" y="576" w="120" h="55">
           <style>
             <fillColor r="255" g="255" b="181" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-e92e1f82d3c847a99350e4c2f095db49" elementRef="id-ef6a312cd0c046e2b552e3dfb5967ae4" xsi:type="Element" x="948" y="600" w="181" h="55">
+        <node identifier="id-e92e1f82d3c847a99350e4c2f095db49" elementRef="id-ef6a312cd0c046e2b552e3dfb5967ae4" xsi:type="Element" x="605" y="576" w="133" h="55">
           <style>
             <fillColor r="255" g="255" b="181" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-12fa3fa6509148fbbac76a04a202f452" elementRef="id-1362add8a5f84a4c8b15ae1946ed2edd" xsi:type="Element" x="432" y="0" w="433" h="181">
+        <node identifier="id-12fa3fa6509148fbbac76a04a202f452" elementRef="id-1362add8a5f84a4c8b15ae1946ed2edd" xsi:type="Element" x="180" y="0" w="433" h="181">
           <style>
             <fillColor r="0" g="255" b="128" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <node identifier="id-3e8c136bb1284cb9ba0cd98c81a4b2f6" elementRef="id-9ccf09ffb6b24eb8a4569b193672f33b" xsi:type="Element" x="480" y="24" w="120" h="55">
+          <node identifier="id-3e8c136bb1284cb9ba0cd98c81a4b2f6" elementRef="id-9ccf09ffb6b24eb8a4569b193672f33b" xsi:type="Element" x="228" y="24" w="120" h="55">
             <style>
               <fillColor r="255" g="255" b="181" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-d664b7e315d34fb88481365dcba46a3c" elementRef="id-9a1c599326714f49a6625346e6d584f4" xsi:type="Element" x="696" y="24" w="120" h="55">
+          <node identifier="id-d664b7e315d34fb88481365dcba46a3c" elementRef="id-9a1c599326714f49a6625346e6d584f4" xsi:type="Element" x="444" y="24" w="120" h="55">
             <style>
               <fillColor r="204" g="204" b="255" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
-          <node identifier="id-8c9caf44b29f45f08833a06ddbf2a6d3" elementRef="id-b961159f05b94ada898851c95d61ba25" xsi:type="Element" x="540" y="108" w="205" h="55">
+          <node identifier="id-8c9caf44b29f45f08833a06ddbf2a6d3" elementRef="id-b961159f05b94ada898851c95d61ba25" xsi:type="Element" x="288" y="108" w="205" h="55">
             <style>
               <fillColor r="204" g="204" b="255" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
           </node>
         </node>
-        <node identifier="id-ce83edf734284ab18c4ee4ce2da23781" elementRef="id-5d70cf00d62b4a74b65c86fa0ec721c7" xsi:type="Element" x="864" y="204" w="120" h="55">
+        <node identifier="id-ce83edf734284ab18c4ee4ce2da23781" elementRef="id-5d70cf00d62b4a74b65c86fa0ec721c7" xsi:type="Element" x="612" y="192" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-4c5f64f2c765406490570d9de08b0940" elementRef="id-6d4e2d6c2b1244a4bfc2bd77ef1982aa" xsi:type="Element" x="336" y="204" w="120" h="55">
+        <node identifier="id-4c5f64f2c765406490570d9de08b0940" elementRef="id-6d4e2d6c2b1244a4bfc2bd77ef1982aa" xsi:type="Element" x="84" y="192" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-8cea26f7426a45e6ae0e5d17e49f698d" elementRef="id-b00a001215ff4cc6bf7f66ab1b00aac1" xsi:type="Element" x="960" y="108" w="145" h="55">
+        <node identifier="id-8cea26f7426a45e6ae0e5d17e49f698d" elementRef="id-b00a001215ff4cc6bf7f66ab1b00aac1" xsi:type="Element" x="636" y="108" w="145" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-c37c9544c99c44d98de43f4f81ea0e4f" elementRef="id-1e851b836e9c4be09c39ba7591ffc6b1" xsi:type="Element" x="708" y="192" w="120" h="55">
+        <node identifier="id-c37c9544c99c44d98de43f4f81ea0e4f" elementRef="id-1e851b836e9c4be09c39ba7591ffc6b1" xsi:type="Element" x="456" y="192" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </node>
+        <node identifier="id-2ee82fbfcff449ba8cb497139c8f23d8" elementRef="id-f83dc7eb36d84702a9c11b9154646bed" xsi:type="Element" x="132" y="672" w="120" h="55">
+          <style>
+            <fillColor r="255" g="255" b="181" a="100" />
+            <lineColor r="92" g="92" b="92" a="100" />
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2273,7 +2413,7 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-6cc77c3c4dc64118a9da23a383399000" relationshipRef="id-7a81e44713da4804b3790b1cd153795d" xsi:type="Relationship" source="id-fd9cc4aca5e8432db94d68eae73b4344" target="id-c37c9544c99c44d98de43f4f81ea0e4f">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2281,7 +2421,7 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-cb8ae44a44a44a4f99c5da3bfed77616" relationshipRef="id-e9f3ad83b52947fe9fbd7d6079550083" xsi:type="Relationship" source="id-12df0fd889a54996bf93765f2f3f2929" target="id-ed8b891a12b44893a80f7a8866ad2fe6">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2289,7 +2429,7 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-a861ec40e2eb454ea8ba5c56df76009f" relationshipRef="id-384c8f3590c34ce8a3503cc0f85b7b9b" xsi:type="Relationship" source="id-843931e341da4bca823671fa55e395ed" target="id-12df0fd889a54996bf93765f2f3f2929">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2297,7 +2437,7 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-ef9db034d3f2499982827ca1ba72f7b5" relationshipRef="id-d35d6fe0541f41bb8db1516ae4ee2059" xsi:type="Relationship" source="id-1890aeda88694883a2ba028fa11eb321" target="id-843931e341da4bca823671fa55e395ed">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2305,7 +2445,7 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-d6e6994e1714470382f60232726dad92" relationshipRef="id-84dbe476c4204a1682a5486cf441b550" xsi:type="Relationship" source="id-5487f62d96c84d1e9422eca7bb7ac192" target="id-1890aeda88694883a2ba028fa11eb321">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2313,17 +2453,17 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-8e23886d65a24aafa813915a38a084b4" relationshipRef="id-038e520ea40a4cf8b5682ff9190827d2" xsi:type="Relationship" source="id-3d4cae1357404615a10a0f2ebb737bf6" target="id-3e8c136bb1284cb9ba0cd98c81a4b2f6">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="852" y="276" />
-          <bendpoint x="504" y="276" />
+          <bendpoint x="620" y="276" />
+          <bendpoint x="262" y="276" />
         </connection>
         <connection identifier="id-660a84c93734469d98400a9475e6379b" relationshipRef="id-1d5e517e7c064bc58475d9d1854d6542" xsi:type="Relationship" source="id-ed8b891a12b44893a80f7a8866ad2fe6" target="id-bf4a6dfab5a74f8db16b0e07758a5594">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2331,24 +2471,15 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-0101648006914fa58ca6f02af13ae2bc" relationshipRef="id-90a2ce6367cf484faa8127c844295bef" xsi:type="Relationship" source="id-bf4a6dfab5a74f8db16b0e07758a5594" target="id-5487f62d96c84d1e9422eca7bb7ac192">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="1020" y="468" />
         </connection>
         <connection identifier="id-f564e409db3a441d8fdc39faa75b2020" relationshipRef="id-90a5dd9eee8c4280a1d3ecc6a35b5276" xsi:type="Relationship" source="id-7bf5a0027ed1469b9552d4b4adcd28d1" target="id-fd9cc4aca5e8432db94d68eae73b4344">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
-              <color r="0" g="0" b="0" />
-            </font>
-          </style>
-        </connection>
-        <connection identifier="id-b337e7fd47a7481a809cfc8d4600f817" relationshipRef="id-759a980094a44227a20018fde21cd10b" xsi:type="Relationship" source="id-7bf5a0027ed1469b9552d4b4adcd28d1" target="id-c252a26499274b2eae91a83d9a84ba67">
-          <style>
-            <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2356,7 +2487,16 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-f4e12d55eb05421eb955ffb3a618732f" relationshipRef="id-80803ac465ff4a73858a02088d8b45c2" xsi:type="Relationship" source="id-7bf5a0027ed1469b9552d4b4adcd28d1" target="id-e92e1f82d3c847a99350e4c2f095db49">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+          <bendpoint x="672" y="696" />
+        </connection>
+        <connection identifier="id-f1c44000c69c471186b2276ad918946d" relationshipRef="id-6698738353884fc5bf133f96e05f85c7" xsi:type="Relationship" source="id-7bf5a0027ed1469b9552d4b4adcd28d1" target="id-2ee82fbfcff449ba8cb497139c8f23d8">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2364,7 +2504,7 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-1a618668adc8488a97ab27ebde91c34f" relationshipRef="id-cd5b89e2ef824b0a8a4d9a0d9f697b96" xsi:type="Relationship" source="id-c252a26499274b2eae91a83d9a84ba67" target="id-4509d7f56fbd43f18153cb355ed2b92a">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2372,17 +2512,17 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-8c7c91f259d14a5986009f6b4b4407f5" relationshipRef="id-a52f8d2cc6594ba093585dd499b56cb4" xsi:type="Relationship" source="id-c252a26499274b2eae91a83d9a84ba67" target="id-4c5f64f2c765406490570d9de08b0940">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="84" y="644" />
-          <bendpoint x="84" y="208" />
+          <bendpoint x="36" y="596" />
+          <bendpoint x="36" y="220" />
         </connection>
         <connection identifier="id-fe8d9f66daf34be692fac8b0ca8f5d82" relationshipRef="id-84a10777012e414cae917dd744b3b2bd" xsi:type="Relationship" source="id-e92e1f82d3c847a99350e4c2f095db49" target="id-3d4cae1357404615a10a0f2ebb737bf6">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2390,17 +2530,17 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-103251cf316748d2994bbeedcda38f86" relationshipRef="id-90e27dc602d04594a5b405d890b4e3c1" xsi:type="Relationship" source="id-e92e1f82d3c847a99350e4c2f095db49" target="id-ce83edf734284ab18c4ee4ce2da23781">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="1200" y="644" />
-          <bendpoint x="1200" y="208" />
+          <bendpoint x="804" y="600" />
+          <bendpoint x="804" y="216" />
         </connection>
         <connection identifier="id-c2165477ee114122a927e62b7987170e" relationshipRef="id-9b0d53dfe9eb426ebd3498a51f76cf31" xsi:type="Relationship" source="id-3e8c136bb1284cb9ba0cd98c81a4b2f6" target="id-8c9caf44b29f45f08833a06ddbf2a6d3">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2408,7 +2548,7 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-1be2d2da454f4929911488939aeace31" relationshipRef="id-cdb5dd7ef0c445d19f5cabd427bf4d78" xsi:type="Relationship" source="id-d664b7e315d34fb88481365dcba46a3c" target="id-8c9caf44b29f45f08833a06ddbf2a6d3">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2416,16 +2556,16 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-e7f8734e424542a3a5d50eb8298634b6" relationshipRef="id-84da5939cb2b4bfd9cb42d1b9249a5fc" xsi:type="Relationship" source="id-d664b7e315d34fb88481365dcba46a3c" target="id-c37c9544c99c44d98de43f4f81ea0e4f">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="804" y="108" />
+          <bendpoint x="552" y="108" />
         </connection>
         <connection identifier="id-5aa640010ec142a19f76a86899313032" relationshipRef="id-99c54383116e4723812bd44c956942c6" xsi:type="Relationship" source="id-ce83edf734284ab18c4ee4ce2da23781" target="id-3d4cae1357404615a10a0f2ebb737bf6">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2433,7 +2573,7 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-479b57fbd6554301bb26df10d66918dc" relationshipRef="id-575ccdb682d448368301030118d559ea" xsi:type="Relationship" source="id-4c5f64f2c765406490570d9de08b0940" target="id-4509d7f56fbd43f18153cb355ed2b92a">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2441,7 +2581,15 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <connection identifier="id-4cb027bc0ebd4770be5a2d9cc7fdb6ab" relationshipRef="id-fefb495ff1f841df94ff117b175b326b" xsi:type="Relationship" source="id-8cea26f7426a45e6ae0e5d17e49f698d" target="id-8c9caf44b29f45f08833a06ddbf2a6d3">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-998390bd726a413cb00d338d98c72b98" relationshipRef="id-0e8cdcae410f40db84c5d7a85ccb5650" xsi:type="Relationship" source="id-2ee82fbfcff449ba8cb497139c8f23d8" target="id-c252a26499274b2eae91a83d9a84ba67">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2475,110 +2623,110 @@ These principles collectively ensure that the BizDevOps framework is robust, fle
             <value xml:lang="en">BizDevOps Principles View</value>
           </property>
         </properties>
-        <node identifier="id-90f6763d6d2f43f292f7245139e7d8e1" elementRef="id-1e851b836e9c4be09c39ba7591ffc6b1" xsi:type="Element" x="600" y="266" w="120" h="55">
+        <node identifier="id-90f6763d6d2f43f292f7245139e7d8e1" elementRef="id-1e851b836e9c4be09c39ba7591ffc6b1" xsi:type="Element" x="312" y="168" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-e0254f8971f64500970a655e28261c50" elementRef="id-1fab151c6d7c4e0ca9b0857875a0d43a" xsi:type="Element" x="144" y="432" w="120" h="55">
+        <node identifier="id-e0254f8971f64500970a655e28261c50" elementRef="id-1fab151c6d7c4e0ca9b0857875a0d43a" xsi:type="Element" x="120" y="418" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-403f81f688e8418590a535ba789f6587" elementRef="id-3ed9f5ddb899446a95d776bf9451bfea" xsi:type="Element" x="276" y="432" w="120" h="55">
+        <node identifier="id-403f81f688e8418590a535ba789f6587" elementRef="id-3ed9f5ddb899446a95d776bf9451bfea" xsi:type="Element" x="252" y="418" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-a33804fbc7984e43b339750dbff3d933" elementRef="id-9987886f5f934cb3b39537285a16a6b1" xsi:type="Element" x="408" y="432" w="120" h="55">
+        <node identifier="id-a33804fbc7984e43b339750dbff3d933" elementRef="id-9987886f5f934cb3b39537285a16a6b1" xsi:type="Element" x="120" y="334" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-eed69b11eddf42298a474c3f753adbb4" elementRef="id-c644b158eca74afc8cb8d9d5b9109a62" xsi:type="Element" x="540" y="432" w="120" h="55">
+        <node identifier="id-eed69b11eddf42298a474c3f753adbb4" elementRef="id-c644b158eca74afc8cb8d9d5b9109a62" xsi:type="Element" x="252" y="334" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-ca2be4d8b78c49dbb38ae2dda59e94c3" elementRef="id-2210391fb73641d8a8b633571aa69a57" xsi:type="Element" x="672" y="432" w="120" h="55">
+        <node identifier="id-ca2be4d8b78c49dbb38ae2dda59e94c3" elementRef="id-2210391fb73641d8a8b633571aa69a57" xsi:type="Element" x="384" y="334" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-f50923993e524c49a47c9b77116e4c03" elementRef="id-11a2b6a8926e4f0da156e948e2141656" xsi:type="Element" x="804" y="432" w="120" h="55">
+        <node identifier="id-f50923993e524c49a47c9b77116e4c03" elementRef="id-11a2b6a8926e4f0da156e948e2141656" xsi:type="Element" x="516" y="334" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-2957b1a479374fbcaa663db2ab07fe11" elementRef="id-5cd738654e314996ba901b9de73984d6" xsi:type="Element" x="936" y="432" w="120" h="55">
+        <node identifier="id-2957b1a479374fbcaa663db2ab07fe11" elementRef="id-5cd738654e314996ba901b9de73984d6" xsi:type="Element" x="384" y="418" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-615ff852c4c54af9b4e669e0bc21c000" elementRef="id-e17f136c4d344e14b5b2cb578a9ce6f4" xsi:type="Element" x="1068" y="432" w="120" h="55">
+        <node identifier="id-615ff852c4c54af9b4e669e0bc21c000" elementRef="id-e17f136c4d344e14b5b2cb578a9ce6f4" xsi:type="Element" x="516" y="418" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-a9fad2c2d464431b9e3b3b22c29f1afb" elementRef="id-f0d499572d4c42e3bb67f3e800aa8fa9" xsi:type="Element" x="600" y="144" w="120" h="55">
+        <node identifier="id-a9fad2c2d464431b9e3b3b22c29f1afb" elementRef="id-f0d499572d4c42e3bb67f3e800aa8fa9" xsi:type="Element" x="312" y="46" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-315ad8f2997b4f65b1fba2ad13f4b48d" elementRef="id-6bd4226dfba84fcb930713dcbaaa6b9f" xsi:type="Element" x="817" y="144" w="120" h="55">
+        <node identifier="id-315ad8f2997b4f65b1fba2ad13f4b48d" elementRef="id-6bd4226dfba84fcb930713dcbaaa6b9f" xsi:type="Element" x="529" y="46" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-03465cfa1fab4d28bcc3a200974a711a" elementRef="id-9a1c599326714f49a6625346e6d584f4" xsi:type="Element" x="395" y="144" w="120" h="55">
+        <node identifier="id-03465cfa1fab4d28bcc3a200974a711a" elementRef="id-9a1c599326714f49a6625346e6d584f4" xsi:type="Element" x="107" y="46" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2586,7 +2734,7 @@ These principles collectively ensure that the BizDevOps framework is robust, fle
         <connection identifier="id-6aee66512f2d4afa81321c8e8f5f8a85" relationshipRef="id-a020de5fdacc412c8aaaf9b69a35d6d0" xsi:type="Relationship" source="id-90f6763d6d2f43f292f7245139e7d8e1" target="id-a9fad2c2d464431b9e3b3b22c29f1afb">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2594,34 +2742,37 @@ These principles collectively ensure that the BizDevOps framework is robust, fle
         <connection identifier="id-90d3aaccb1da4721af4fb9affa7fa202" relationshipRef="id-2d5091a3d54946b3b480ab12d6cc749d" xsi:type="Relationship" source="id-e0254f8971f64500970a655e28261c50" target="id-90f6763d6d2f43f292f7245139e7d8e1">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="204" y="276" />
+          <bendpoint x="72" y="442" />
+          <bendpoint x="72" y="190" />
         </connection>
         <connection identifier="id-134dbe77a39d41e69b5b1d8899cd8edb" relationshipRef="id-47a14dfe57374f56944d703a1e2ecd56" xsi:type="Relationship" source="id-403f81f688e8418590a535ba789f6587" target="id-90f6763d6d2f43f292f7245139e7d8e1">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="324" y="300" />
+          <bendpoint x="312" y="502" />
+          <bendpoint x="96" y="502" />
+          <bendpoint x="96" y="202" />
         </connection>
         <connection identifier="id-d82a6e6907f946e99ce39db53c560570" relationshipRef="id-7b6d787a9c3440a6850531cd9132b20e" xsi:type="Relationship" source="id-a33804fbc7984e43b339750dbff3d933" target="id-90f6763d6d2f43f292f7245139e7d8e1">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="468" y="372" />
+          <bendpoint x="180" y="274" />
         </connection>
         <connection identifier="id-74fdb5e2ece94d26975ee0d06fdef283" relationshipRef="id-56304a1207c143278ef773c2546f83d0" xsi:type="Relationship" source="id-eed69b11eddf42298a474c3f753adbb4" target="id-90f6763d6d2f43f292f7245139e7d8e1">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2629,7 +2780,7 @@ These principles collectively ensure that the BizDevOps framework is robust, fle
         <connection identifier="id-d16721d6f7f84be89f25d71011d24a0f" relationshipRef="id-01f9cd74df804a228d725d01c9971d0e" xsi:type="Relationship" source="id-ca2be4d8b78c49dbb38ae2dda59e94c3" target="id-90f6763d6d2f43f292f7245139e7d8e1">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2637,34 +2788,37 @@ These principles collectively ensure that the BizDevOps framework is robust, fle
         <connection identifier="id-d7e05b37993b4b71975e7351d3f8754a" relationshipRef="id-339ddc02eb774a13b5456d0d6ef37c24" xsi:type="Relationship" source="id-f50923993e524c49a47c9b77116e4c03" target="id-90f6763d6d2f43f292f7245139e7d8e1">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="864" y="372" />
+          <bendpoint x="576" y="274" />
         </connection>
         <connection identifier="id-6ca347f4ce414692a8a4cf812a64094f" relationshipRef="id-deebfb3c4b394d8694489c54b7fd1957" xsi:type="Relationship" source="id-2957b1a479374fbcaa663db2ab07fe11" target="id-90f6763d6d2f43f292f7245139e7d8e1">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="996" y="300" />
+          <bendpoint x="444" y="502" />
+          <bendpoint x="648" y="502" />
+          <bendpoint x="648" y="202" />
         </connection>
         <connection identifier="id-d0cea5278b9b4de5ba33739206cc8a73" relationshipRef="id-f7ec17142c4044eca14b107ce7116057" xsi:type="Relationship" source="id-615ff852c4c54af9b4e669e0bc21c000" target="id-90f6763d6d2f43f292f7245139e7d8e1">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-          <bendpoint x="1128" y="276" />
+          <bendpoint x="672" y="442" />
+          <bendpoint x="672" y="190" />
         </connection>
         <connection identifier="id-a2298f7594664296ba988823c411837b" relationshipRef="id-fb25aff0ff084d1493c56da6e6245870" xsi:type="Relationship" source="id-a9fad2c2d464431b9e3b3b22c29f1afb" target="id-315ad8f2997b4f65b1fba2ad13f4b48d">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2672,7 +2826,7 @@ These principles collectively ensure that the BizDevOps framework is robust, fle
         <connection identifier="id-2518589a477f4c3db328a21fe5955aea" relationshipRef="id-84da5939cb2b4bfd9cb42d1b9249a5fc" xsi:type="Relationship" source="id-03465cfa1fab4d28bcc3a200974a711a" target="id-90f6763d6d2f43f292f7245139e7d8e1">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2691,7 +2845,7 @@ Porpurse:
           <style>
             <fillColor r="181" g="255" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2700,7 +2854,7 @@ Porpurse:
           <style>
             <fillColor r="181" g="255" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2709,7 +2863,7 @@ Porpurse:
           <style>
             <fillColor r="181" g="255" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2718,7 +2872,7 @@ Porpurse:
           <style>
             <fillColor r="255" g="255" b="181" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2727,7 +2881,7 @@ Porpurse:
           <style>
             <fillColor r="201" g="231" b="183" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2736,7 +2890,7 @@ Porpurse:
           <style>
             <fillColor r="255" g="255" b="181" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2744,7 +2898,7 @@ Porpurse:
             <style>
               <fillColor r="255" g="255" b="181" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
@@ -2753,7 +2907,7 @@ Porpurse:
             <style>
               <fillColor r="255" g="255" b="181" a="100" />
               <lineColor r="92" g="92" b="92" a="100" />
-              <font name="Lucida Grande" size="12">
+              <font name="Segoe UI" size="9">
                 <color r="0" g="0" b="0" />
               </font>
             </style>
@@ -2763,7 +2917,7 @@ Porpurse:
           <style>
             <fillColor r="255" g="255" b="181" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2772,7 +2926,7 @@ Porpurse:
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2781,7 +2935,7 @@ Porpurse:
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2790,7 +2944,7 @@ Porpurse:
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2799,7 +2953,7 @@ Porpurse:
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2808,7 +2962,7 @@ Porpurse:
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2816,7 +2970,7 @@ Porpurse:
         <connection identifier="id-031565035faf40ddad3725efeee47cfe" relationshipRef="id-c4df8ab214414fc3b0a4fcdc42851dee" xsi:type="Relationship" source="id-2fe37661ccc341b1b58a420a4c1e68a2" target="id-3f6ed9319e874146994f2800a94705ce">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2824,7 +2978,7 @@ Porpurse:
         <connection identifier="id-c0f8dfbc51bd49d5aef68d6c4c3dc942" relationshipRef="id-1da9484e4e274334a4e575ae9993dc47" xsi:type="Relationship" source="id-17f83900c39747f291e74b9773e0b7d9" target="id-2fe37661ccc341b1b58a420a4c1e68a2">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2832,7 +2986,7 @@ Porpurse:
         <connection identifier="id-a158d3e5852d45ec96c221eec73dce3a" relationshipRef="id-dbef633ca29342308c719f5c451e91ad" xsi:type="Relationship" source="id-17f83900c39747f291e74b9773e0b7d9" target="id-04373dc5fe7b47638bd6bfa173f5249f">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2840,7 +2994,7 @@ Porpurse:
         <connection identifier="id-c2fa4dbd93454d098d999c6fb651a3b8" relationshipRef="id-daa77a74fae14350b620e09b33419994" xsi:type="Relationship" source="id-04373dc5fe7b47638bd6bfa173f5249f" target="id-d47a499e756a488ea8ede27f636b40da">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2848,7 +3002,7 @@ Porpurse:
         <connection identifier="id-c770fd684724481b9626115647effeea" relationshipRef="id-837fbbf359f649c197e91b89896a5a52" xsi:type="Relationship" source="id-9215e1fa6e32487dbbd7f518769be008" target="id-17f83900c39747f291e74b9773e0b7d9">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2856,7 +3010,7 @@ Porpurse:
         <connection identifier="id-1d00a7e0d92d47d4a2bea6a76154336b" relationshipRef="id-e8e9101ccfa0411f8f6bacca8144d387" xsi:type="Relationship" source="id-142b032f79f047cdbcf5fea1fc09cce5" target="id-4c8a097ad91e4519bec76c9af2fb8517">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2864,7 +3018,7 @@ Porpurse:
         <connection identifier="id-18f88dd999cf4380b91498694c83b7d3" relationshipRef="id-07414351f0eb4e0a93732a66b448cfec" xsi:type="Relationship" source="id-142b032f79f047cdbcf5fea1fc09cce5" target="id-e7e267fdcb7d4924987895f39685c8ad">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2873,7 +3027,7 @@ Porpurse:
         <connection identifier="id-9cd9f1e696b14cea813943663e38f9de" relationshipRef="id-228756c5ece341ffa5b0bea798ddf238" xsi:type="Relationship" source="id-3f6ed9319e874146994f2800a94705ce" target="id-d83047a65866486c875fee9f237485d8">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2881,7 +3035,7 @@ Porpurse:
         <connection identifier="id-3721a9f2fdcb44a1a2591f8730444f56" relationshipRef="id-f3c56a28a1c44e8e91200fa96c945333" xsi:type="Relationship" source="id-3f6ed9319e874146994f2800a94705ce" target="id-d47a499e756a488ea8ede27f636b40da">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2889,7 +3043,7 @@ Porpurse:
         <connection identifier="id-0cdaf4a6a0b34214ab2077a51ed2b71a" relationshipRef="id-1c2db8a4c678430a8212efc60b9f98c2" xsi:type="Relationship" source="id-62914003316c401ebd38cdd220d42e36" target="id-fe71b91010db4154949a82ebe0e0249f">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2897,7 +3051,7 @@ Porpurse:
         <connection identifier="id-6d51b0c044ea41d88e79649f71db9ecb" relationshipRef="id-c10912b0a43347aabd212fa3d3af7f35" xsi:type="Relationship" source="id-fe71b91010db4154949a82ebe0e0249f" target="id-5cf71a1a377a49489ffe44a6f2c53c6a">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2905,7 +3059,7 @@ Porpurse:
         <connection identifier="id-07c79486543545dc9806084456136be3" relationshipRef="id-b36bf5410c6e42d7bcab887598bdfe51" xsi:type="Relationship" source="id-fe71b91010db4154949a82ebe0e0249f" target="id-4c8a097ad91e4519bec76c9af2fb8517">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2914,7 +3068,7 @@ Porpurse:
         <connection identifier="id-4b29dfe4023a452cad71d36e7f8d51c2" relationshipRef="id-bd856af91d0f4d2d9c0e2d9022ca7359" xsi:type="Relationship" source="id-fe71b91010db4154949a82ebe0e0249f" target="id-e7e267fdcb7d4924987895f39685c8ad">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2937,7 +3091,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
           <style>
             <fillColor r="201" g="231" b="183" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2946,7 +3100,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
           <style>
             <fillColor r="181" g="255" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2955,7 +3109,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
           <style>
             <fillColor r="181" g="255" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2964,7 +3118,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
           <style>
             <fillColor r="255" g="255" b="181" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2973,7 +3127,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
           <style>
             <fillColor r="201" g="231" b="183" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2982,7 +3136,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
           <style>
             <fillColor r="201" g="231" b="183" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -2991,7 +3145,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
           <style>
             <fillColor r="201" g="231" b="183" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3000,7 +3154,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
           <style>
             <fillColor r="201" g="231" b="183" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3009,7 +3163,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
           <style>
             <fillColor r="201" g="231" b="183" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3018,7 +3172,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
           <style>
             <fillColor r="237" g="207" b="226" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3027,7 +3181,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
           <style>
             <fillColor r="201" g="231" b="183" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3036,7 +3190,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
           <style>
             <fillColor r="201" g="231" b="183" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3044,7 +3198,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-c34badc11b0240caac53e76e91713917" relationshipRef="id-837fbbf359f649c197e91b89896a5a52" xsi:type="Relationship" source="id-d588126483f34ad48243ce8ebe920eac" target="id-d43ebf4ae4e6407da41192e22b8bcd76">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3052,7 +3206,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-92fc0151c9fc47fca951a60a8717e9b0" relationshipRef="id-0be62047532d45babd09f96e89766430" xsi:type="Relationship" source="id-d588126483f34ad48243ce8ebe920eac" target="id-5ac98fa24c654d909a6df23a2409648d">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3060,7 +3214,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-1ee31cc6ed124109a8761ee8c4050387" relationshipRef="id-507f4ac4c8864126a262af338fdeeb60" xsi:type="Relationship" source="id-d588126483f34ad48243ce8ebe920eac" target="id-aeaf49633ac94b1eb12b4366e625fd14">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3069,7 +3223,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-a8a83f63b23e4010ac7c7656b3339b91" relationshipRef="id-3fcc92a9b85447b7aaa55b8eca3c321f" xsi:type="Relationship" source="id-d43ebf4ae4e6407da41192e22b8bcd76" target="id-5ac98fa24c654d909a6df23a2409648d">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3077,7 +3231,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-c8b80c285277406f86e6f8a3efef9352" relationshipRef="id-e697f75e23d54535a0f64887e27b94cd" xsi:type="Relationship" source="id-d1141c164c1946568b7c676830e1a010" target="id-d43ebf4ae4e6407da41192e22b8bcd76">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3085,7 +3239,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-9eaac81ed5454bc094cde014bc9aeb5c" relationshipRef="id-b5f7df2a558a468c99ebceda15d02e75" xsi:type="Relationship" source="id-7f481cb74af844e4969d4ae352acedb6" target="id-f7fc707921854f12a7c5601f44591ba1">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3094,7 +3248,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-415341df471540ba9f644c0af390c33d" relationshipRef="id-d6e5698c557846c9a525517e0aa00b9e" xsi:type="Relationship" source="id-7f481cb74af844e4969d4ae352acedb6" target="id-d43ebf4ae4e6407da41192e22b8bcd76">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3104,7 +3258,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-844276d2fea14c849b125aef8d40502e" relationshipRef="id-7e5a6332f9854f7f8f9e81f15d173c09" xsi:type="Relationship" source="id-7f481cb74af844e4969d4ae352acedb6" target="id-d588126483f34ad48243ce8ebe920eac">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3112,7 +3266,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-8da639334bd0445c82c3f7ae6e82fb4d" relationshipRef="id-592b13992e0947d88e4daad2e9fdec38" xsi:type="Relationship" source="id-aeaf49633ac94b1eb12b4366e625fd14" target="id-d588126483f34ad48243ce8ebe920eac">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3121,7 +3275,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-a65cd353250c4988b9c60da743fc5f69" relationshipRef="id-6aad5c944d884449b2b6786bc2579b37" xsi:type="Relationship" source="id-f7fc707921854f12a7c5601f44591ba1" target="id-7f481cb74af844e4969d4ae352acedb6">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3130,7 +3284,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-487500ec5a9a4375bb2f55f746e5b46a" relationshipRef="id-2164c86063634b0da0e80a9ba3e90410" xsi:type="Relationship" source="id-f7fc707921854f12a7c5601f44591ba1" target="id-aeaf49633ac94b1eb12b4366e625fd14">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3138,7 +3292,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-c5ef10c38e6a43d9bd58501e3f719a25" relationshipRef="id-f43cf9bf7ebb4ff5b6b93f2ac5f5c187" xsi:type="Relationship" source="id-f7fc707921854f12a7c5601f44591ba1" target="id-5fb398903c944d4fa500706f396ca31e">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3148,7 +3302,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-8766803990b047e28c787f52351f5fb4" relationshipRef="id-18618cb824664080a4bb890350537c12" xsi:type="Relationship" source="id-f7fc707921854f12a7c5601f44591ba1" target="id-35b285d51f154c7790b22a162471ea14">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3158,7 +3312,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-b5d1dc8621484039af08007a8592392a" relationshipRef="id-e58c1de921e140d88d3114f4705b5c8c" xsi:type="Relationship" source="id-5fb398903c944d4fa500706f396ca31e" target="id-35b285d51f154c7790b22a162471ea14">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3166,7 +3320,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-7a2e54fe4ea0400bb92f347ae0adb49a" relationshipRef="id-be156d34b1a643908cbb9bf963ef31d4" xsi:type="Relationship" source="id-2ba0a07e61be455b9894e35431bd0304" target="id-f7fc707921854f12a7c5601f44591ba1">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3176,7 +3330,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-d16cd590e31a44939e914b8f43ba9f4d" relationshipRef="id-96839d18b56340ef81f1e4a9d3143972" xsi:type="Relationship" source="id-d3634d0b0b194e5a85a07bb2dcb95371" target="id-5fb398903c944d4fa500706f396ca31e">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3184,7 +3338,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-b6b4861953ba4d869c03c32d2ecc6ba1" relationshipRef="id-456e533b6456442cb56e057cc013d4c5" xsi:type="Relationship" source="id-d3634d0b0b194e5a85a07bb2dcb95371" target="id-2cc52cdee2ec475b8de80eb61d44724c">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3192,7 +3346,7 @@ Narrative: An essential aspect in DevOps is the high importance of automation th
         <connection identifier="id-ecc691e0051745fa8ca3eff35a16a161" relationshipRef="id-eac93eb4fc09411eae37d1abd0750d87" xsi:type="Relationship" source="id-2cc52cdee2ec475b8de80eb61d44724c" target="id-f7fc707921854f12a7c5601f44591ba1">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3208,7 +3362,7 @@ The [Agility Manager] ensures that the team remains agile across all phases of t
 &#xD;
 In addition to these roles, the [BizDevOps Team] includes [DevOps Roles], which encompass IT development and operations, DevOps Architect, and other roles defined within the organization. These roles focus on automating and streamlining the integration and deployment processes, ensuring continuous delivery and operational efficiency. The collaboration among these roles is vital for achieving seamless software development and delivery.&#xD;
 &#xD;
-The [BizDevOps Team] operates under the influence of the drivers [IT/Business Alignment] and [Agile Software Development], ensuring that their efforts align with the broader business goals and agile practices. The effectiveness of these roles is assessed by the metrics [IT and Business are Aligned] and [Agility is Maintained], respectively, ensuring continuous improvement and alignment with business needs.&#xD;
+The [BizDevOps Team] operates under the influence of the drivers [IT/Business Alignment] and [Agile Software Development], ensuring that their efforts align with the broader business goals and agile practices. The effectiveness of these roles is assessed by the metrics SW project is aligned with business] and [Agility is Maintained in the SW project], respectively, ensuring continuous improvement and alignment with business needs.&#xD;
 &#xD;
 This structure enables the [BizDevOps Team] to effectively fulfill the [Business Need], ensuring that the organization achieves its [Enterprise Objective] through the BizDevOps approach. The principles of [Alignment] and [Agility] guide the roles and responsibilities within the team, fostering a collaborative environment that supports the strategic goals of the organization.</documentation>
         <properties>
@@ -3216,74 +3370,83 @@ This structure enables the [BizDevOps Team] to effectively fulfill the [Business
             <value xml:lang="en">BizDevOps People View</value>
           </property>
         </properties>
-        <node identifier="id-5dad906b4e7444cd8c457153c9ce24a3" elementRef="id-ef6a312cd0c046e2b552e3dfb5967ae4" xsi:type="Element" x="660" y="228" w="120" h="55">
+        <node identifier="id-5dad906b4e7444cd8c457153c9ce24a3" elementRef="id-ef6a312cd0c046e2b552e3dfb5967ae4" xsi:type="Element" x="438" y="49" w="120" h="55">
           <style>
             <fillColor r="255" g="255" b="181" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-91d57cd89c214859bfb1b064bf3a37e6" elementRef="id-d76710fad821415b9c9bd3c672d3025f" xsi:type="Element" x="522" y="95" w="120" h="55">
+        <node identifier="id-91d57cd89c214859bfb1b064bf3a37e6" elementRef="id-d76710fad821415b9c9bd3c672d3025f" xsi:type="Element" x="252" y="48" w="120" h="55">
           <style>
             <fillColor r="255" g="255" b="181" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-2d3c954d2e4e429fb002f0d1c63344fa" elementRef="id-f08562098c0a436697102ff1045eb5d1" xsi:type="Element" x="372" y="228" w="132" h="55">
+        <node identifier="id-2d3c954d2e4e429fb002f0d1c63344fa" elementRef="id-f08562098c0a436697102ff1045eb5d1" xsi:type="Element" x="66" y="205" w="132" h="55">
           <style>
             <fillColor r="255" g="255" b="181" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-d9642a98372d456db57ac7d31fb48898" elementRef="id-99b30d5264a646f39f428215d03b96d2" xsi:type="Element" x="522" y="312" w="120" h="55">
+        <node identifier="id-d9642a98372d456db57ac7d31fb48898" elementRef="id-99b30d5264a646f39f428215d03b96d2" xsi:type="Element" x="252" y="205" w="120" h="55">
           <style>
             <fillColor r="255" g="255" b="181" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-47ccf8132a104948a4e2f3bc94731e0a" elementRef="id-6d4e2d6c2b1244a4bfc2bd77ef1982aa" xsi:type="Element" x="144" y="228" w="120" h="55">
+        <node identifier="id-47ccf8132a104948a4e2f3bc94731e0a" elementRef="id-6d4e2d6c2b1244a4bfc2bd77ef1982aa" xsi:type="Element" x="72" y="325" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-8c35003b8d31473eb41993a381d34944" elementRef="id-5d70cf00d62b4a74b65c86fa0ec721c7" xsi:type="Element" x="888" y="228" w="132" h="55">
+        <node identifier="id-8c35003b8d31473eb41993a381d34944" elementRef="id-5d70cf00d62b4a74b65c86fa0ec721c7" xsi:type="Element" x="432" y="325" w="132" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-685a4fb035004e4aa7354da0a9751ad5" elementRef="id-30e38322826f46c08da70c36575ef031" xsi:type="Element" x="894" y="330" w="120" h="55">
+        <node identifier="id-685a4fb035004e4aa7354da0a9751ad5" elementRef="id-30e38322826f46c08da70c36575ef031" xsi:type="Element" x="432" y="427" w="132" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </node>
-        <node identifier="id-2677ab10427e45c9b6102e0e50fbd3c4" elementRef="id-1122ada2614740b59fd593d09c853d04" xsi:type="Element" x="144" y="330" w="120" h="55">
+        <node identifier="id-2677ab10427e45c9b6102e0e50fbd3c4" elementRef="id-1122ada2614740b59fd593d09c853d04" xsi:type="Element" x="72" y="427" w="120" h="55">
           <style>
             <fillColor r="204" g="204" b="255" a="100" />
             <lineColor r="92" g="92" b="92" a="100" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </node>
+        <node identifier="id-357adc2232314208bb951130c1de5091" elementRef="id-f83dc7eb36d84702a9c11b9154646bed" xsi:type="Element" x="72" y="48" w="120" h="55">
+          <style>
+            <fillColor r="255" g="255" b="181" a="100" />
+            <lineColor r="92" g="92" b="92" a="100" />
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3291,7 +3454,7 @@ This structure enables the [BizDevOps Team] to effectively fulfill the [Business
         <connection identifier="id-599a322f4d5e41a0b2797edf78fd92ef" relationshipRef="id-90e27dc602d04594a5b405d890b4e3c1" xsi:type="Relationship" source="id-5dad906b4e7444cd8c457153c9ce24a3" target="id-8c35003b8d31473eb41993a381d34944">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3299,31 +3462,35 @@ This structure enables the [BizDevOps Team] to effectively fulfill the [Business
         <connection identifier="id-bb61611414dc4303b9cf985158a0eca7" relationshipRef="id-80803ac465ff4a73858a02088d8b45c2" xsi:type="Relationship" source="id-91d57cd89c214859bfb1b064bf3a37e6" target="id-5dad906b4e7444cd8c457153c9ce24a3">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
-        </connection>
-        <connection identifier="id-c5cc58eed9d8438bb3d56ff3aff456dd" relationshipRef="id-759a980094a44227a20018fde21cd10b" xsi:type="Relationship" source="id-91d57cd89c214859bfb1b064bf3a37e6" target="id-2d3c954d2e4e429fb002f0d1c63344fa">
-          <style>
-            <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
-              <color r="0" g="0" b="0" />
-            </font>
-          </style>
+          <bendpoint x="342" y="133" />
+          <bendpoint x="462" y="133" />
         </connection>
         <connection identifier="id-4d46722bf45c4a0293d106b5b5ce58d4" relationshipRef="id-c22aea603de846e19459628ba6f813b1" xsi:type="Relationship" source="id-91d57cd89c214859bfb1b064bf3a37e6" target="id-d9642a98372d456db57ac7d31fb48898">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
         </connection>
+        <connection identifier="id-83f35df7f5754af1af8412e01f2d5f74" relationshipRef="id-6698738353884fc5bf133f96e05f85c7" xsi:type="Relationship" source="id-91d57cd89c214859bfb1b064bf3a37e6" target="id-357adc2232314208bb951130c1de5091">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Segoe UI" size="9">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+          <bendpoint x="282" y="133" />
+          <bendpoint x="174" y="133" />
+        </connection>
         <connection identifier="id-6426683e3c9b4cb39031be542dfd3061" relationshipRef="id-a52f8d2cc6594ba093585dd499b56cb4" xsi:type="Relationship" source="id-2d3c954d2e4e429fb002f0d1c63344fa" target="id-47ccf8132a104948a4e2f3bc94731e0a">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3331,7 +3498,7 @@ This structure enables the [BizDevOps Team] to effectively fulfill the [Business
         <connection identifier="id-b2e06b5f2457450ab1bd3594354759fd" relationshipRef="id-ae662cbd308842afb4e857be60a23504" xsi:type="Relationship" source="id-47ccf8132a104948a4e2f3bc94731e0a" target="id-2677ab10427e45c9b6102e0e50fbd3c4">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
@@ -3339,7 +3506,167 @@ This structure enables the [BizDevOps Team] to effectively fulfill the [Business
         <connection identifier="id-a96a5249584845bbb80673433a5577e8" relationshipRef="id-22b7e44ca2d04dd6b8bb50fd45b90916" xsi:type="Relationship" source="id-8c35003b8d31473eb41993a381d34944" target="id-685a4fb035004e4aa7354da0a9751ad5">
           <style>
             <lineColor r="0" g="0" b="0" />
-            <font name="Lucida Grande" size="12">
+            <font name="Segoe UI" size="9">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-c5cc58eed9d8438bb3d56ff3aff456dd" relationshipRef="id-0e8cdcae410f40db84c5d7a85ccb5650" xsi:type="Relationship" source="id-357adc2232314208bb951130c1de5091" target="id-2d3c954d2e4e429fb002f0d1c63344fa">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Segoe UI" size="9">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+      </view>
+      <view identifier="id-99fc496d1ba94b1aad99efaf4397d227" xsi:type="Diagram">
+        <name xml:lang="en">BizDevOps Services View</name>
+        <node identifier="id-e5fdc176539f4367a88d8ce2bc63bbdf" elementRef="id-7e7aaaecd8b64f56a41a834b5c6de293" xsi:type="Element" x="24" y="192" w="505" h="289">
+          <style>
+            <fillColor r="201" g="231" b="183" a="100" />
+            <lineColor r="92" g="92" b="92" a="100" />
+            <font name="Segoe UI" size="9">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+          <node identifier="id-313ec5dc13f74da094a8da1832641e0f" elementRef="id-945ed3fc520e448e998989df76737347" xsi:type="Element" x="36" y="216" w="145" h="73">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Segoe UI" size="9">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-8feab8b5af9647b988cbc3c694e1583a" elementRef="id-49398bbd07664333b432f8701eadc58a" xsi:type="Element" x="372" y="216" w="145" h="73">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Segoe UI" size="9">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-eecf06b58d2a4c22af0328938bb3ef01" elementRef="id-6250a649e0aa40c590ae73cd6a3b707b" xsi:type="Element" x="36" y="300" w="145" h="73">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Segoe UI" size="9">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-ca7a10616e6546e7aa6052847ce5857d" elementRef="id-d0e6d34ad72449ea9b74a2b10cf27dc1" xsi:type="Element" x="204" y="390" w="145" h="73">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Segoe UI" size="9">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-cc903454f3ed4c48a74a050dc23f285a" elementRef="id-d15ebb7f18e44eb1baa55b6bf7abc021" xsi:type="Element" x="204" y="216" w="145" h="73">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Segoe UI" size="9">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-f05adc9c5ff54693b0f4a19cada46dd3" elementRef="id-f8334d00ac5a47f5b794660ac904deb4" xsi:type="Element" x="204" y="300" w="145" h="73">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Segoe UI" size="9">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-0eec6083170641f0ac70d99e6bbb437d" elementRef="id-3b738f5528e34629a7bfd287fb551075" xsi:type="Element" x="36" y="390" w="145" h="73">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Segoe UI" size="9">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-abc5a42d8d2d4e7c834bc8600284302a" elementRef="id-d0e7787cbb034f31a70ffb8210d5804a" xsi:type="Element" x="372" y="390" w="145" h="73">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Segoe UI" size="9">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+          <node identifier="id-e21c5fd447d74513b20f275c1360f5db" elementRef="id-925da16341df4c43a55de8e5e12c73ba" xsi:type="Element" x="372" y="300" w="145" h="73">
+            <style>
+              <fillColor r="201" g="231" b="183" a="100" />
+              <lineColor r="92" g="92" b="92" a="100" />
+              <font name="Segoe UI" size="9">
+                <color r="0" g="0" b="0" />
+              </font>
+            </style>
+          </node>
+        </node>
+        <node identifier="id-42c200a6934f44bf96f8f064462775fc" elementRef="id-d65a0f7e32864742878a9c27c3a836a3" xsi:type="Element" x="264" y="86" w="120" h="55">
+          <style>
+            <fillColor r="181" g="255" b="255" a="100" />
+            <lineColor r="92" g="92" b="92" a="100" />
+            <font name="Segoe UI" size="9">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </node>
+        <node identifier="id-f0aaacfe2ac6496d9d428743cc548d81" elementRef="id-9108d44573194dc1bc620b5ae5c71ac8" xsi:type="Element" x="36" y="86" w="120" h="55">
+          <style>
+            <fillColor r="181" g="255" b="255" a="100" />
+            <lineColor r="92" g="92" b="92" a="100" />
+            <font name="Segoe UI" size="9">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </node>
+        <node identifier="id-b0296279ea724f4795793e74b8f559f4" elementRef="id-a19839e7c4204bb5ad760d96c293b752" xsi:type="Element" x="396" y="0" w="120" h="55">
+          <style>
+            <fillColor r="255" g="255" b="181" a="100" />
+            <lineColor r="92" g="92" b="92" a="100" />
+            <font name="Segoe UI" size="9">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </node>
+        <connection identifier="id-9e8a4a6c121e41ada67bad9c55f0ac5d" relationshipRef="id-837fbbf359f649c197e91b89896a5a52" xsi:type="Relationship" source="id-e5fdc176539f4367a88d8ce2bc63bbdf" target="id-42c200a6934f44bf96f8f064462775fc">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Segoe UI" size="9">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-eb86eac17ac54b128c032273541dbc3d" relationshipRef="id-0be62047532d45babd09f96e89766430" xsi:type="Relationship" source="id-e5fdc176539f4367a88d8ce2bc63bbdf" target="id-f0aaacfe2ac6496d9d428743cc548d81">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Segoe UI" size="9">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-b61969b52c464ff6b04f2cd81bb80b3b" relationshipRef="id-bcdee2780fb5437a8619394c933d325a" xsi:type="Relationship" source="id-e5fdc176539f4367a88d8ce2bc63bbdf" target="id-b0296279ea724f4795793e74b8f559f4">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Segoe UI" size="9">
+              <color r="0" g="0" b="0" />
+            </font>
+          </style>
+        </connection>
+        <connection identifier="id-de399ca43252485590572e1322eb51c0" relationshipRef="id-3fcc92a9b85447b7aaa55b8eca3c321f" xsi:type="Relationship" source="id-42c200a6934f44bf96f8f064462775fc" target="id-f0aaacfe2ac6496d9d428743cc548d81">
+          <style>
+            <lineColor r="0" g="0" b="0" />
+            <font name="Segoe UI" size="9">
               <color r="0" g="0" b="0" />
             </font>
           </style>
