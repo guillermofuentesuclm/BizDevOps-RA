@@ -682,7 +682,7 @@ ABB Name: BDO:BizDevOpsPrinciple</documentation>
     <element xsi:type="archimate:CompositionRelationship" id="id-f047a373c57441a29f31f60d226191a4" source="id-4e52b5e3f0f047329365be8f7c41a8e9" target="id-92b6c73cce414b8bbab9d6d9bd15e90d"/>
     <element xsi:type="archimate:CompositionRelationship" id="id-c5005f6e07354bc2b953045455e3dd49" source="id-4e52b5e3f0f047329365be8f7c41a8e9" target="id-32fb06e68c7244d88f1fbd4d4006ec6b"/>
     <element xsi:type="archimate:CompositionRelationship" id="id-a0e4d98903ac41d3a5c968e67fdc4dae" source="id-4e52b5e3f0f047329365be8f7c41a8e9" target="id-e5789e2ce1c248e7882bbf28c67d0464"/>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-f8a6843220524ba1a78470480a144d6b" source="id-48a4959c69bc4f3fa2c1e226f8d0a34a" target="id-a4b79de166c0427e922da4325202852d">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-f8a6843220524ba1a78470480a144d6b" source="id-48a4959c69bc4f3fa2c1e226f8d0a34a" target="id-a4b79de166c0427e922da4325202852d">
       <documentation>[Shift-Left] gives realization to [BizDevOps Principles]</documentation>
     </element>
     <element xsi:type="archimate:InfluenceRelationship" name="influences" id="id-638d050fa9624327abdcdfb5d5557231" source="id-34d675937db24a84820274636770e164" target="id-a4b79de166c0427e922da4325202852d" strength="+">
@@ -690,29 +690,29 @@ ABB Name: BDO:BizDevOpsPrinciple</documentation>
 &#xD;
 [BizDevOps Principles] are based on the [DevOps Principles]. They are considered part of their guidelines.</documentation>
     </element>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-9a8c514a23b64c37b7964aa91a4c61e9" source="id-cb17a93a4be34917ae3892ba5f1218c4" target="id-a4b79de166c0427e922da4325202852d">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-9a8c514a23b64c37b7964aa91a4c61e9" source="id-cb17a93a4be34917ae3892ba5f1218c4" target="id-a4b79de166c0427e922da4325202852d">
       <documentation>[Alignment] gives realization to [BizDevOps Principles]</documentation>
     </element>
     <element xsi:type="archimate:AggregationRelationship" name="build upon" id="id-deba7f274541483296f9de484b283ebd" source="id-a4b79de166c0427e922da4325202852d" target="id-0e24528854e64efabb5960840bc469bc">
       <documentation>[BizDevOps Principles] build upon [Architecture Principle] by integrating these guidelines into the collaborative processes of business, development, and operations.</documentation>
     </element>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-6cbe489578754998b055bd3287a0d0a9" source="id-6815b50b2db048a1ac38ce76059cd865" target="id-a4b79de166c0427e922da4325202852d">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-6cbe489578754998b055bd3287a0d0a9" source="id-6815b50b2db048a1ac38ce76059cd865" target="id-a4b79de166c0427e922da4325202852d">
       <documentation>[Agility] gives realization to [BizDevOps Principles]</documentation>
     </element>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-5d604023a45a4a57b487fc70d164bd0c" source="id-a993f050555845b991d6a2d50baea003" target="id-a4b79de166c0427e922da4325202852d">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-5d604023a45a4a57b487fc70d164bd0c" source="id-a993f050555845b991d6a2d50baea003" target="id-a4b79de166c0427e922da4325202852d">
       <documentation>[Integrated Team] gives realization to [BizDevOps Principles]</documentation>
     </element>
     <element xsi:type="archimate:InfluenceRelationship" name="influences" id="id-0774799114fb4853a75cd6094085d130" source="id-0e24528854e64efabb5960840bc469bc" target="id-f25ebcfcb5744fc6bb1fe48633103fe0"/>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-6468a669808c44eebfdf9203b64f6128" source="id-e6f1ba7c12ec4248b3a95e9b885e8270" target="id-a4b79de166c0427e922da4325202852d">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-6468a669808c44eebfdf9203b64f6128" source="id-e6f1ba7c12ec4248b3a95e9b885e8270" target="id-a4b79de166c0427e922da4325202852d">
       <documentation>[Business First] gives realization to [BizDevOps Principles]</documentation>
     </element>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-5f5f1746d89649aab1489d7b725a0032" source="id-4debfc677fd045aa803767c17a5ea7e2" target="id-a4b79de166c0427e922da4325202852d">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-5f5f1746d89649aab1489d7b725a0032" source="id-4debfc677fd045aa803767c17a5ea7e2" target="id-a4b79de166c0427e922da4325202852d">
       <documentation>[Systems Thinking] gives realization to [BizDevOps Principles]</documentation>
     </element>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-65078a3fad1142c591822aa9edba2f35" source="id-1c46b34920e549b98884ba2f997327f8" target="id-a4b79de166c0427e922da4325202852d">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-65078a3fad1142c591822aa9edba2f35" source="id-1c46b34920e549b98884ba2f997327f8" target="id-a4b79de166c0427e922da4325202852d">
       <documentation>[Customer Focus] gives realization to [BizDevOps Principles]</documentation>
     </element>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-a70668e1d1de4f0cbdf0182d92abe094" source="id-28b567045f914301b51da7621fff7c21" target="id-a4b79de166c0427e922da4325202852d">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-a70668e1d1de4f0cbdf0182d92abe094" source="id-28b567045f914301b51da7621fff7c21" target="id-a4b79de166c0427e922da4325202852d">
       <documentation>[Continuity in Everything] gives realization to [BizDevOps Principles]</documentation>
     </element>
     <element xsi:type="archimate:CompositionRelationship" id="id-0f467ab8db874703976ed540541bf32a" source="id-4e52b5e3f0f047329365be8f7c41a8e9" target="id-a4b79de166c0427e922da4325202852d"/>
@@ -1978,6 +1978,26 @@ A successful construction of software systems is influenced by a good applicatio
             <bounds x="360" y="210" width="145" height="73"/>
           </child>
         </child>
+      </child>
+    </element>
+    <element xsi:type="archimate:SketchModel" name="Proof of Concept" id="id-77623993b4aa4087aa470d407b2e826a" background="0">
+      <child xsi:type="archimate:DiagramModelReference" id="id-418ec621e9f0472db54a56b770d44cb3" model="id-49b362c088c545e893eb9c0626a6bdb1">
+        <bounds x="204" y="60" width="169" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramModelReference" id="id-658e8ceff19b4ce3bf975955e44e137e" model="id-8c6b6e452b4b4709b27886f40d016e0b">
+        <bounds x="48" y="180" width="151" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramModelReference" id="id-62f94edc38f74a1082bd12d48c0aa277" model="id-454e096404d24b3687f394348295bd75">
+        <bounds x="225" y="180" width="151" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramModelReference" id="id-6b83cdd5aa344d298c3411309542ad3d" model="id-c3ec81036dd145c19c613968330aa9dd">
+        <bounds x="132" y="264" width="151" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramModelReference" id="id-64d7c61532b54ac7b6210e0a3e4471dd" model="id-f9ebed2ea739415ab3808eaf10892bba">
+        <bounds x="396" y="180" width="151" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramModelReference" id="id-d9a0e5faf94649359df8d1ade98a7488" model="id-ba2e9285746142b4acc5ef39c50d8f27">
+        <bounds x="312" y="264" width="151" height="55"/>
       </child>
     </element>
   </folder>

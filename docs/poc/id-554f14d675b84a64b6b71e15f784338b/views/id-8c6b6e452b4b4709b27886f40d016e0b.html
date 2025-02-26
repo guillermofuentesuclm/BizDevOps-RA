@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>Alignment View - Implementation</title>
+
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.4.1.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>Alignment View - Implementation</b>
+
+            <!-- If a View with Viewpoint -->
+			   (<span class="i18n-viewpoint-"></span>)
+			   <a class="glyphicon glyphicon-info-sign" id="hint-viewpoint_" target="hint"></a>
+            <!-- Or if a model (i.e has Purpose method) -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+			   <img class="diagram" src="../images/id-8c6b6e452b4b4709b27886f40d016e0b.png" alt="Alignment View - Implementation" usemap="#id-8c6b6e452b4b4709b27886f40d016e0bmap"/>
+			   <map name="id-8c6b6e452b4b4709b27886f40d016e0bmap">
+				  				<area shape="rect" coords="831,670,1011,725" href="../elements/id-a399023ff7ea4694af53619f432b3ef5.html"  target="element">
+				  				<area shape="rect" coords="830,586,1010,653" href="../elements/id-a399023ff7ea4694af53619f432b3ef5.html"  target="element">
+				  				<area shape="rect" coords="830,502,1011,569" href="../elements/id-9911602d4d8a412a9379078dd0c774bc.html"  target="element">
+				  				<area shape="rect" coords="830,418,1011,485" href="../elements/id-4c07316220284667a6d432bb78484311.html"  target="element">
+				  				<area shape="rect" coords="830,250,1011,317" href="../elements/id-2bd2755509c94c16abf454a002db0e54.html"  target="element">
+				  				<area shape="rect" coords="830,334,1011,401" href="../elements/id-03ce5030c7474a8c8548366406622e47.html"  target="element">
+
+				  		<area shape="rect" coords="806,190,1023,743" href="../elements/id-d2747272dc8748e09647b6b329d8e146.html"  target="element">
+				  		<area shape="rect" coords="572,103,704,179" href="../elements/id-5510fd8dfe544ad6b00f25c2590bb21e.html"  target="element">
+				  		<area shape="rect" coords="278,94,423,179" href="../elements/id-584bb6d67d2349ce85ab2b891b8e9f1e.html"  target="element">
+				  		<area shape="rect" coords="578,10,698,65" href="../elements/id-6d9ce05252b349f99222c2830126ccf9.html"  target="element">
+				  		<area shape="rect" coords="10,10,130,65" href="../elements/id-57491fd102a84f7fb007b4a1bae2b96b.html"  target="element">
+				  				<area shape="rect" coords="478,1396,671,1451" href="../elements/id-4695032c62d248d3b1d7c685aa1c3a27.html"  target="element">
+				  				<area shape="rect" coords="473,922,671,977" href="../elements/id-ed97e4c130db4ee5a9b412e0e3a6a015.html"  target="element">
+				  				<area shape="rect" coords="727,1036,847,1091" href="../elements/id-19057048e7a64ee09dffb0a16b154445.html"  target="element">
+				  				<area shape="rect" coords="946,1036,1066,1091" href="../elements/id-67da45af635a4dcf9aeeda2b1de4f938.html"  target="element">
+				  				<area shape="rect" coords="723,1360,850,1415" href="../elements/id-e5789e2ce1c248e7882bbf28c67d0464.html"  target="element">
+				  				<area shape="rect" coords="888,1360,1027,1415" href="../elements/id-32fb06e68c7244d88f1fbd4d4006ec6b.html"  target="element">
+				  				<area shape="rect" coords="888,1252,1027,1307" href="../elements/id-92b6c73cce414b8bbab9d6d9bd15e90d.html"  target="element">
+				  				<area shape="rect" coords="723,1252,850,1307" href="../elements/id-59f1c07c667940229680c755e145ba70.html"  target="element">
+				  				<area shape="rect" coords="723,1162,850,1217" href="../elements/id-29d37b5c1e394d31900ca03fb2a39f6a.html"  target="element">
+				  				<area shape="rect" coords="790,922,917,977" href="../elements/id-aff389fd28994ab9bc613b1da586d4c8.html"  target="element">
+				  				<area shape="rect" coords="894,1162,1021,1217" href="../elements/id-92d9561cf5bb4f4d95ca9f9893f677da.html"  target="element">
+				  				<area shape="rect" coords="946,922,1066,977" href="../elements/id-ff47fc5667094621b77de85a8ff0ff8d.html"  target="element">
+				  				<area shape="rect" coords="163,1486,283,1541" href="../elements/id-1b4fd46de8744478bffae988c5d5e713.html"  target="element">
+				  				<area shape="rect" coords="16,1486,149,1541" href="../elements/id-289b9509c9284a05907882161314ab1f.html"  target="element">
+				  				<area shape="rect" coords="163,1396,283,1451" href="../elements/id-6589247bbd1a46388391fad72fec7de4.html"  target="element">
+				  				<area shape="rect" coords="171,922,275,977" href="../elements/id-0c15221655ac4a62b3b301ece638ef4b.html"  target="element">
+				  				<area shape="rect" coords="298,1486,431,1541" href="../elements/id-2df8f29b98e042978fd05fc7cc768bac.html"  target="element">
+				  				<area shape="rect" coords="52,1222,172,1277" href="../elements/id-6406598dc9c34adc867a9622e9890e2e.html"  target="element">
+				  				<area shape="rect" coords="161,1162,281,1217" href="../elements/id-a65deb84ccdf48bd8722bf75ed3c9d10.html"  target="element">
+				  				<area shape="rect" coords="473,1222,593,1277" href="../elements/id-1e645babb4f1453d910e83f1117dd985.html"  target="element">
+				  				<area shape="rect" coords="161,1306,281,1361" href="../elements/id-14b68e300b42477a89aa7cbec5e8a649.html"  target="element">
+				  				<area shape="rect" coords="262,1222,382,1277" href="../elements/id-cc494d9229da4f6d980a97aac4bb35f0.html"  target="element">
+				  				<area shape="rect" coords="34,1090,407,1145" href="../elements/id-cf9dc81b38a54b5c9403163b7ebd5114.html"  target="element">
+				  				<area shape="rect" coords="34,922,132,977" href="../elements/id-08d31e567d3349a69a9bf00cd2029a2c.html"  target="element">
+				  				<area shape="rect" coords="473,1126,671,1181" href="../elements/id-6efb2fbca5cf47e49d3c91729497223f.html"  target="element">
+				  				<area shape="rect" coords="473,1006,671,1061" href="../elements/id-0f0731b7e5bc49999d638c4acc0356e8.html"  target="element">
+				  				<area shape="rect" coords="473,1066,671,1121" href="../elements/id-dd8b8839d2ea4055b3d5c2258f7adeea.html"  target="element">
+				  				<area shape="rect" coords="300,1006,407,1061" href="../elements/id-bec43a9dea5c4e9d96cd346802f7cafc.html"  target="element">
+				  				<area shape="rect" coords="154,1006,287,1061" href="../elements/id-81766b76b8364f49ba42d358b9bdcfb6.html"  target="element">
+				  				<area shape="rect" coords="34,1006,143,1061" href="../elements/id-51460714fbbc431494e150bd5a6e288f.html"  target="element">
+
+				  		<area shape="rect" coords="10,898,1079,1559" href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html"  target="element">
+				  				<area shape="rect" coords="161,634,281,689" href="../elements/id-0ee2ee17729d4494aa6d65fd96dca802.html"  target="element">
+				  				<area shape="rect" coords="478,766,598,821" href="../elements/id-beea0c1fdc1a47e4bd91cd8562b69e92.html"  target="element">
+				  				<area shape="rect" coords="161,706,281,761" href="../elements/id-514d81a541f6424695871fa786183e8d.html"  target="element">
+				  				<area shape="rect" coords="262,766,395,821" href="../elements/id-bd09d8980551497f9e5c523366cecdd4.html"  target="element">
+				  				<area shape="rect" coords="45,766,178,821" href="../elements/id-50afaa6c14ae44378548b6cb4f22e788.html"  target="element">
+				  				<area shape="rect" coords="478,682,598,737" href="../elements/id-2cd8958dd11b4b66b86ec4986ed3c2d8.html"  target="element">
+				  				<area shape="rect" coords="58,472,178,527" href="../elements/id-74e1b6b176274ddaa6c26508909527fd.html"  target="element">
+				  				<area shape="rect" coords="161,406,281,461" href="../elements/id-0c41b30277f447d3938686918f6afd83.html"  target="element">
+				  				<area shape="rect" coords="478,472,598,527" href="../elements/id-9b8453890e974d32b9462777fb46b6ee.html"  target="element">
+				  				<area shape="rect" coords="161,556,281,611" href="../elements/id-202d6f68c60a451482e7725cff94ff63.html"  target="element">
+				  				<area shape="rect" coords="262,472,382,527" href="../elements/id-366f0410086c4c34ba4f8938f1b8bbe8.html"  target="element">
+				  				<area shape="rect" coords="34,334,407,389" href="../elements/id-d0e747ccf5d9492f8bd0f6699f8bab15.html"  target="element">
+				  				<area shape="rect" coords="478,598,598,653" href="../elements/id-47e558846c89495f9dd98f9c07ce72f7.html"  target="element">
+				  				<area shape="rect" coords="473,358,647,413" href="../elements/id-386ea3c3116a4eeb9b33cee649d9b164.html"  target="element">
+				  				<area shape="rect" coords="473,238,647,293" href="../elements/id-643f592792424faeb372cdef1dcdb4d2.html"  target="element">
+				  				<area shape="rect" coords="473,298,647,353" href="../elements/id-1565fbc8d4e64b7fb2920c8b075ee281.html"  target="element">
+				  				<area shape="rect" coords="300,238,407,293" href="../elements/id-ee74ffcabd564deb900f9c9bf8340309.html"  target="element">
+				  				<area shape="rect" coords="154,238,287,293" href="../elements/id-9ffc6c01b347414ba5f853b79041bc5e.html"  target="element">
+				  				<area shape="rect" coords="34,238,143,293" href="../elements/id-c389bfe06b97449f9af687157e5ecafa.html"  target="element">
+
+				  		<area shape="rect" coords="10,214,659,875" href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html"  target="element">
+
+			   </map>
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+					   <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-documentation"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+                    <!-- Analysis -->
+
+						<li role="presentation"><a href="#elements" aria-controls="elements" role="tab" data-toggle="tab" class="i18n-elements"></a></li>
+						<li role="presentation"><a href="#relationships" aria-controls="relationships" role="tab" data-toggle="tab" class="i18n-relationships"></a></li>
+                    <!-- Model, Query Tab -->
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<div class="convertlinks documentation" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="analysis">
+						<table class="table table-striped table-hover table-condensed" id="used-in-views">
+							<thead>
+								<tr><th colspan="2" class="i18n-used-in-views" /></tr>
+								<tr>
+									<th class="i18n-name"></th>
+									<th class="i18n-viewpoint"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+						<table class="table table-striped table-hover table-condensed" id="model-relations">
+							<thead>
+								<tr><th colspan="4" class="i18n-model-relations" /></tr>
+								<tr>
+									<th class="i18n-name"></th>
+									<th class="i18n-type"></th>
+									<th class="i18n-source"></th>
+									<th class="i18n-target"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="elements">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+									</tr>
+								</thead>
+								<tbody>
+											<tr>
+											    <td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+											    <td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element" class="i18n-elementtype-Grouping">
+											    </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-c389bfe06b97449f9af687157e5ecafa.html" target="element"> Issuing prepaid cards </a> </td>
+													    <td> <a href="../elements/id-c389bfe06b97449f9af687157e5ecafa.html" target="element" class="i18n-elementtype-BusinessService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-9ffc6c01b347414ba5f853b79041bc5e.html" target="element"> Tracking and reporting on transactions </a> </td>
+													    <td> <a href="../elements/id-9ffc6c01b347414ba5f853b79041bc5e.html" target="element" class="i18n-elementtype-BusinessService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-ee74ffcabd564deb900f9c9bf8340309.html" target="element"> Managing expense limits </a> </td>
+													    <td> <a href="../elements/id-ee74ffcabd564deb900f9c9bf8340309.html" target="element" class="i18n-elementtype-BusinessService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-1565fbc8d4e64b7fb2920c8b075ee281.html" target="element"> Monitoring/approval by the accounting departments </a> </td>
+													    <td> <a href="../elements/id-1565fbc8d4e64b7fb2920c8b075ee281.html" target="element" class="i18n-elementtype-BusinessService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-643f592792424faeb372cdef1dcdb4d2.html" target="element"> Manage payments and virtual-cards </a> </td>
+													    <td> <a href="../elements/id-643f592792424faeb372cdef1dcdb4d2.html" target="element" class="i18n-elementtype-BusinessService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-386ea3c3116a4eeb9b33cee649d9b164.html" target="element"> Manage the transactions, the balances, accept/decline authorizations </a> </td>
+													    <td> <a href="../elements/id-386ea3c3116a4eeb9b33cee649d9b164.html" target="element" class="i18n-elementtype-BusinessService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-47e558846c89495f9dd98f9c07ce72f7.html" target="element"> Release every two weeks </a> </td>
+													    <td> <a href="../elements/id-47e558846c89495f9dd98f9c07ce72f7.html" target="element" class="i18n-elementtype-Contract">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-d0e747ccf5d9492f8bd0f6699f8bab15.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+													    <td> <a href="../elements/id-d0e747ccf5d9492f8bd0f6699f8bab15.html" target="element" class="i18n-elementtype-BusinessProcess">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-366f0410086c4c34ba4f8938f1b8bbe8.html" target="element"> Front-End Service </a> </td>
+													    <td> <a href="../elements/id-366f0410086c4c34ba4f8938f1b8bbe8.html" target="element" class="i18n-elementtype-ApplicationService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-202d6f68c60a451482e7725cff94ff63.html" target="element"> Back-End Service </a> </td>
+													    <td> <a href="../elements/id-202d6f68c60a451482e7725cff94ff63.html" target="element" class="i18n-elementtype-ApplicationService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-9b8453890e974d32b9462777fb46b6ee.html" target="element"> Prepaid Card Information </a> </td>
+													    <td> <a href="../elements/id-9b8453890e974d32b9462777fb46b6ee.html" target="element" class="i18n-elementtype-DataObject">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-0c41b30277f447d3938686918f6afd83.html" target="element"> Prepaid Card Information </a> </td>
+													    <td> <a href="../elements/id-0c41b30277f447d3938686918f6afd83.html" target="element" class="i18n-elementtype-BusinessObject">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-74e1b6b176274ddaa6c26508909527fd.html" target="element"> Mobile Service </a> </td>
+													    <td> <a href="../elements/id-74e1b6b176274ddaa6c26508909527fd.html" target="element" class="i18n-elementtype-ApplicationService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-2cd8958dd11b4b66b86ec4986ed3c2d8.html" target="element"> SW Development Team </a> </td>
+													    <td> <a href="../elements/id-2cd8958dd11b4b66b86ec4986ed3c2d8.html" target="element" class="i18n-elementtype-BusinessRole">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-50afaa6c14ae44378548b6cb4f22e788.html" target="element"> High availability </a> </td>
+													    <td> <a href="../elements/id-50afaa6c14ae44378548b6cb4f22e788.html" target="element" class="i18n-elementtype-Requirement">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-bd09d8980551497f9e5c523366cecdd4.html" target="element"> Zero downtime during maintenance and releases </a> </td>
+													    <td> <a href="../elements/id-bd09d8980551497f9e5c523366cecdd4.html" target="element" class="i18n-elementtype-Requirement">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-514d81a541f6424695871fa786183e8d.html" target="element"> PCI DSS compliance </a> </td>
+													    <td> <a href="../elements/id-514d81a541f6424695871fa786183e8d.html" target="element" class="i18n-elementtype-Constraint">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-beea0c1fdc1a47e4bd91cd8562b69e92.html" target="element"> Headquarter </a> </td>
+													    <td> <a href="../elements/id-beea0c1fdc1a47e4bd91cd8562b69e92.html" target="element" class="i18n-elementtype-Location">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-0ee2ee17729d4494aa6d65fd96dca802.html" target="element"> Back-End Component </a> </td>
+													    <td> <a href="../elements/id-0ee2ee17729d4494aa6d65fd96dca802.html" target="element" class="i18n-elementtype-ApplicationComponent">
+													    </a> </td>
+													</tr>
+
+											
+											<tr>
+											    <td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+											    <td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element" class="i18n-elementtype-Grouping">
+											    </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-51460714fbbc431494e150bd5a6e288f.html" target="element"> Issuing prepaid cards </a> </td>
+													    <td> <a href="../elements/id-51460714fbbc431494e150bd5a6e288f.html" target="element" class="i18n-elementtype-BusinessService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-81766b76b8364f49ba42d358b9bdcfb6.html" target="element"> Tracking and reporting on transactions </a> </td>
+													    <td> <a href="../elements/id-81766b76b8364f49ba42d358b9bdcfb6.html" target="element" class="i18n-elementtype-BusinessService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-bec43a9dea5c4e9d96cd346802f7cafc.html" target="element"> Managing expense limits </a> </td>
+													    <td> <a href="../elements/id-bec43a9dea5c4e9d96cd346802f7cafc.html" target="element" class="i18n-elementtype-BusinessService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-dd8b8839d2ea4055b3d5c2258f7adeea.html" target="element"> Monitoring/approval by the accounting departments </a> </td>
+													    <td> <a href="../elements/id-dd8b8839d2ea4055b3d5c2258f7adeea.html" target="element" class="i18n-elementtype-BusinessService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-0f0731b7e5bc49999d638c4acc0356e8.html" target="element"> Manage payments and virtual-cards </a> </td>
+													    <td> <a href="../elements/id-0f0731b7e5bc49999d638c4acc0356e8.html" target="element" class="i18n-elementtype-BusinessService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-6efb2fbca5cf47e49d3c91729497223f.html" target="element"> Manage the transactions, the balances, accept/decline authorizations </a> </td>
+													    <td> <a href="../elements/id-6efb2fbca5cf47e49d3c91729497223f.html" target="element" class="i18n-elementtype-BusinessService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-08d31e567d3349a69a9bf00cd2029a2c.html" target="element"> Release every two weeks </a> </td>
+													    <td> <a href="../elements/id-08d31e567d3349a69a9bf00cd2029a2c.html" target="element" class="i18n-elementtype-Contract">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-cf9dc81b38a54b5c9403163b7ebd5114.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+													    <td> <a href="../elements/id-cf9dc81b38a54b5c9403163b7ebd5114.html" target="element" class="i18n-elementtype-BusinessProcess">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-cc494d9229da4f6d980a97aac4bb35f0.html" target="element"> Front-End Servic </a> </td>
+													    <td> <a href="../elements/id-cc494d9229da4f6d980a97aac4bb35f0.html" target="element" class="i18n-elementtype-ApplicationService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-14b68e300b42477a89aa7cbec5e8a649.html" target="element"> Back-End Service </a> </td>
+													    <td> <a href="../elements/id-14b68e300b42477a89aa7cbec5e8a649.html" target="element" class="i18n-elementtype-ApplicationService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-1e645babb4f1453d910e83f1117dd985.html" target="element"> Prepaid Card Information </a> </td>
+													    <td> <a href="../elements/id-1e645babb4f1453d910e83f1117dd985.html" target="element" class="i18n-elementtype-DataObject">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-a65deb84ccdf48bd8722bf75ed3c9d10.html" target="element"> Prepaid Card Information </a> </td>
+													    <td> <a href="../elements/id-a65deb84ccdf48bd8722bf75ed3c9d10.html" target="element" class="i18n-elementtype-BusinessObject">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-6406598dc9c34adc867a9622e9890e2e.html" target="element"> Mobile Service </a> </td>
+													    <td> <a href="../elements/id-6406598dc9c34adc867a9622e9890e2e.html" target="element" class="i18n-elementtype-ApplicationService">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-2df8f29b98e042978fd05fc7cc768bac.html" target="element"> Zero downtime during maintenance and releases (copy) </a> </td>
+													    <td> <a href="../elements/id-2df8f29b98e042978fd05fc7cc768bac.html" target="element" class="i18n-elementtype-Requirement">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-0c15221655ac4a62b3b301ece638ef4b.html" target="element"> Prepaid Cards MVP </a> </td>
+													    <td> <a href="../elements/id-0c15221655ac4a62b3b301ece638ef4b.html" target="element" class="i18n-elementtype-Product">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-6589247bbd1a46388391fad72fec7de4.html" target="element"> Back-End Component </a> </td>
+													    <td> <a href="../elements/id-6589247bbd1a46388391fad72fec7de4.html" target="element" class="i18n-elementtype-ApplicationComponent">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-289b9509c9284a05907882161314ab1f.html" target="element"> High availability </a> </td>
+													    <td> <a href="../elements/id-289b9509c9284a05907882161314ab1f.html" target="element" class="i18n-elementtype-Requirement">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-1b4fd46de8744478bffae988c5d5e713.html" target="element"> PCI DSS compliance </a> </td>
+													    <td> <a href="../elements/id-1b4fd46de8744478bffae988c5d5e713.html" target="element" class="i18n-elementtype-Constraint">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-ff47fc5667094621b77de85a8ff0ff8d.html" target="element"> Headquarter </a> </td>
+													    <td> <a href="../elements/id-ff47fc5667094621b77de85a8ff0ff8d.html" target="element" class="i18n-elementtype-Location">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-92d9561cf5bb4f4d95ca9f9893f677da.html" target="element"> Agility Manager </a> </td>
+													    <td> <a href="../elements/id-92d9561cf5bb4f4d95ca9f9893f677da.html" target="element" class="i18n-elementtype-BusinessRole">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-aff389fd28994ab9bc613b1da586d4c8.html" target="element"> BizDevOps Team </a> </td>
+													    <td> <a href="../elements/id-aff389fd28994ab9bc613b1da586d4c8.html" target="element" class="i18n-elementtype-BusinessRole">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-29d37b5c1e394d31900ca03fb2a39f6a.html" target="element"> Alignment Manager </a> </td>
+													    <td> <a href="../elements/id-29d37b5c1e394d31900ca03fb2a39f6a.html" target="element" class="i18n-elementtype-BusinessRole">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-59f1c07c667940229680c755e145ba70.html" target="element"> IT/Business Alignment </a> </td>
+													    <td> <a href="../elements/id-59f1c07c667940229680c755e145ba70.html" target="element" class="i18n-elementtype-Driver">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-92b6c73cce414b8bbab9d6d9bd15e90d.html" target="element"> Agile Software Development </a> </td>
+													    <td> <a href="../elements/id-92b6c73cce414b8bbab9d6d9bd15e90d.html" target="element" class="i18n-elementtype-Driver">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-32fb06e68c7244d88f1fbd4d4006ec6b.html" target="element"> Agility is Maintained </a> </td>
+													    <td> <a href="../elements/id-32fb06e68c7244d88f1fbd4d4006ec6b.html" target="element" class="i18n-elementtype-Assessment">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-e5789e2ce1c248e7882bbf28c67d0464.html" target="element"> IT and business are aligned </a> </td>
+													    <td> <a href="../elements/id-e5789e2ce1c248e7882bbf28c67d0464.html" target="element" class="i18n-elementtype-Assessment">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-67da45af635a4dcf9aeeda2b1de4f938.html" target="element"> Scrum Master </a> </td>
+													    <td> <a href="../elements/id-67da45af635a4dcf9aeeda2b1de4f938.html" target="element" class="i18n-elementtype-BusinessRole">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-19057048e7a64ee09dffb0a16b154445.html" target="element"> Product Owner </a> </td>
+													    <td> <a href="../elements/id-19057048e7a64ee09dffb0a16b154445.html" target="element" class="i18n-elementtype-BusinessRole">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-ed97e4c130db4ee5a9b412e0e3a6a015.html" target="element"> BizDevOps Software Development Function </a> </td>
+													    <td> <a href="../elements/id-ed97e4c130db4ee5a9b412e0e3a6a015.html" target="element" class="i18n-elementtype-BusinessFunction">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-4695032c62d248d3b1d7c685aa1c3a27.html" target="element"> BizDevOps Bus Service </a> </td>
+													    <td> <a href="../elements/id-4695032c62d248d3b1d7c685aa1c3a27.html" target="element" class="i18n-elementtype-TechnologyService">
+													    </a> </td>
+													</tr>
+
+											
+											<tr>
+											    <td> <a href="../elements/id-57491fd102a84f7fb007b4a1bae2b96b.html" target="element"> Baseline (As-Is) </a> </td>
+											    <td> <a href="../elements/id-57491fd102a84f7fb007b4a1bae2b96b.html" target="element" class="i18n-elementtype-Plateau">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-6d9ce05252b349f99222c2830126ccf9.html" target="element"> Using BizDevOps (To-Be) </a> </td>
+											    <td> <a href="../elements/id-6d9ce05252b349f99222c2830126ccf9.html" target="element" class="i18n-elementtype-Plateau">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-584bb6d67d2349ce85ab2b891b8e9f1e.html" target="element"> Incorporate IT/Business alignment without sacrificing agility </a> </td>
+											    <td> <a href="../elements/id-584bb6d67d2349ce85ab2b891b8e9f1e.html" target="element" class="i18n-elementtype-Gap">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-5510fd8dfe544ad6b00f25c2590bb21e.html" target="element"> SW development with IT/Business alignment without compromising agility </a> </td>
+											    <td> <a href="../elements/id-5510fd8dfe544ad6b00f25c2590bb21e.html" target="element" class="i18n-elementtype-Deliverable">
+											    </a> </td>
+											</tr>
+
+											<tr>
+											    <td> <a href="../elements/id-d2747272dc8748e09647b6b329d8e146.html" target="element"> Adopting BizDevOps software development approach </a> </td>
+											    <td> <a href="../elements/id-d2747272dc8748e09647b6b329d8e146.html" target="element" class="i18n-elementtype-WorkPackage">
+											    </a> </td>
+											</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-03ce5030c7474a8c8548366406622e47.html" target="element"> Establish a BizDevOps Team </a> </td>
+													    <td> <a href="../elements/id-03ce5030c7474a8c8548366406622e47.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-2bd2755509c94c16abf454a002db0e54.html" target="element"> Adopt BizDevOps Principles </a> </td>
+													    <td> <a href="../elements/id-2bd2755509c94c16abf454a002db0e54.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-4c07316220284667a6d432bb78484311.html" target="element"> Evaluation of IT/Business alignment and maintenance of agility </a> </td>
+													    <td> <a href="../elements/id-4c07316220284667a6d432bb78484311.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-9911602d4d8a412a9379078dd0c774bc.html" target="element"> Adopting software development processes from the BizDevOps approach </a> </td>
+													    <td> <a href="../elements/id-9911602d4d8a412a9379078dd0c774bc.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-a399023ff7ea4694af53619f432b3ef5.html" target="element"> Adopting BizDevOps Services Needed </a> </td>
+													    <td> <a href="../elements/id-a399023ff7ea4694af53619f432b3ef5.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+													<tr>
+													    <td> <a href="../elements/id-a399023ff7ea4694af53619f432b3ef5.html" target="element"> Adopting BizDevOps Services Needed </a> </td>
+													    <td> <a href="../elements/id-a399023ff7ea4694af53619f432b3ef5.html" target="element" class="i18n-elementtype-WorkPackage">
+													    </a> </td>
+													</tr>
+
+											
+
+								</tbody>
+							</table>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="relationships">
+							<table class="table table-striped table-hover table-condensed">
+								<thead>
+									<tr>
+										<th class="i18n-name"></th>
+										<th class="i18n-type"></th>
+										<th class="i18n-source"></th>
+										<th class="i18n-target"></th>
+									</tr>
+								</thead>
+								<tbody>
+																	<tr>
+																		<td> <a href="../elements/id-1eace6b56ec449f2939c8c22b84f0d22.html" target="element"> current state </a> </td>
+																		<td> <a href="../elements/id-1eace6b56ec449f2939c8c22b84f0d22.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-57491fd102a84f7fb007b4a1bae2b96b.html" target="element"> Baseline (As-Is) </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-282d3b6339ba49dcb2907a1d83ed45fa.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-282d3b6339ba49dcb2907a1d83ed45fa.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-c389bfe06b97449f9af687157e5ecafa.html" target="element"> Issuing prepaid cards </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-ae5f3327ffa0447cbc3d4f155d07d4cf.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-ae5f3327ffa0447cbc3d4f155d07d4cf.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-9ffc6c01b347414ba5f853b79041bc5e.html" target="element"> Tracking and reporting on transactions </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-b2a078d8da8d4a65b32c0d85057b7920.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-b2a078d8da8d4a65b32c0d85057b7920.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-ee74ffcabd564deb900f9c9bf8340309.html" target="element"> Managing expense limits </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-c314b703186b4dde99f0ab4551f00d17.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-c314b703186b4dde99f0ab4551f00d17.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-1565fbc8d4e64b7fb2920c8b075ee281.html" target="element"> Monitoring/approval by the accounting departments </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-8bcbf13dfdd54fcc971567c9c0875e66.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-8bcbf13dfdd54fcc971567c9c0875e66.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-643f592792424faeb372cdef1dcdb4d2.html" target="element"> Manage payments and virtual-cards </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-acacffc47ec54afdaf5ccaab2631494a.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-acacffc47ec54afdaf5ccaab2631494a.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-386ea3c3116a4eeb9b33cee649d9b164.html" target="element"> Manage the transactions, the balances, accept/decline authorizations </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-e4059843c23848a6a392f7156895eb4d.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-e4059843c23848a6a392f7156895eb4d.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-47e558846c89495f9dd98f9c07ce72f7.html" target="element"> Release every two weeks </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-ae19ad4e380241eb91adc9c3f34f0f89.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-ae19ad4e380241eb91adc9c3f34f0f89.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-d0e747ccf5d9492f8bd0f6699f8bab15.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-5b3e4e264bf542d38048b72f49944a0f.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-5b3e4e264bf542d38048b72f49944a0f.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-366f0410086c4c34ba4f8938f1b8bbe8.html" target="element"> Front-End Service </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-a1f81e17e6b94471835c4f0640c8ecf5.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-a1f81e17e6b94471835c4f0640c8ecf5.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-202d6f68c60a451482e7725cff94ff63.html" target="element"> Back-End Service </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-fa94aa0c3f244ff7884783fc6787fbd6.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-fa94aa0c3f244ff7884783fc6787fbd6.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-9b8453890e974d32b9462777fb46b6ee.html" target="element"> Prepaid Card Information </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-fafe7038902a4fe5baac27b7bdaeb5f2.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-fafe7038902a4fe5baac27b7bdaeb5f2.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-0c41b30277f447d3938686918f6afd83.html" target="element"> Prepaid Card Information </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-2e73dfd6c1814148b9fc7c4a8824a004.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-2e73dfd6c1814148b9fc7c4a8824a004.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-74e1b6b176274ddaa6c26508909527fd.html" target="element"> Mobile Service </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-f2ef1e55f1184b9e829d496417416cdc.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-f2ef1e55f1184b9e829d496417416cdc.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-2cd8958dd11b4b66b86ec4986ed3c2d8.html" target="element"> SW Development Team </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-22e7816521af44de93810ab52cda8ab7.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-22e7816521af44de93810ab52cda8ab7.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-50afaa6c14ae44378548b6cb4f22e788.html" target="element"> High availability </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-59cb0757edba44098a26a0bc1af2b607.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-59cb0757edba44098a26a0bc1af2b607.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-bd09d8980551497f9e5c523366cecdd4.html" target="element"> Zero downtime during maintenance and releases </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-b8f3ebf999f74614a6a315b140227710.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-b8f3ebf999f74614a6a315b140227710.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-514d81a541f6424695871fa786183e8d.html" target="element"> PCI DSS compliance </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-2de5486ed1744865ba722f68b1df73d7.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-2de5486ed1744865ba722f68b1df73d7.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-beea0c1fdc1a47e4bd91cd8562b69e92.html" target="element"> Headquarter </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-6606bc7771c3436a8f10864294d82848.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-6606bc7771c3436a8f10864294d82848.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-d0e747ccf5d9492f8bd0f6699f8bab15.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-2ec4080349174d87bbbbc7ee75609e83.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-2ec4080349174d87bbbbc7ee75609e83.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-6b4f8d356c4c45d7952b0f5445a0be58.html" target="element"> As-Is </a> </td>
+																		<td> <a href="../elements/id-0ee2ee17729d4494aa6d65fd96dca802.html" target="element"> Back-End Component </a> </td>
+																	</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-15bcc799fddb4da69eb9e63f3609974d.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-15bcc799fddb4da69eb9e63f3609974d.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-47e558846c89495f9dd98f9c07ce72f7.html" target="element"> Release every two weeks </a> </td>
+																				<td> <a href="../elements/id-0c41b30277f447d3938686918f6afd83.html" target="element"> Prepaid Card Information </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-f4670044bd91451bb9c5364036b60bfa.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-f4670044bd91451bb9c5364036b60bfa.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-d0e747ccf5d9492f8bd0f6699f8bab15.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																				<td> <a href="../elements/id-c389bfe06b97449f9af687157e5ecafa.html" target="element"> Issuing prepaid cards </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-560e1a1019b74f2094a27273aed4a271.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-560e1a1019b74f2094a27273aed4a271.html" target="element" class="i18n-elementtype-AccessRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-d0e747ccf5d9492f8bd0f6699f8bab15.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																				<td> <a href="../elements/id-0c41b30277f447d3938686918f6afd83.html" target="element"> Prepaid Card Information </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-b0c8e7c04bc74273ae914cd795251d7f.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-b0c8e7c04bc74273ae914cd795251d7f.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-d0e747ccf5d9492f8bd0f6699f8bab15.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																				<td> <a href="../elements/id-643f592792424faeb372cdef1dcdb4d2.html" target="element"> Manage payments and virtual-cards </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-d1e736836cd64aa787a5d658fd16a469.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-d1e736836cd64aa787a5d658fd16a469.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-d0e747ccf5d9492f8bd0f6699f8bab15.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																				<td> <a href="../elements/id-9ffc6c01b347414ba5f853b79041bc5e.html" target="element"> Tracking and reporting on transactions </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-39ca54ec23aa47968e782f2ef0c8379a.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-39ca54ec23aa47968e782f2ef0c8379a.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-d0e747ccf5d9492f8bd0f6699f8bab15.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																				<td> <a href="../elements/id-ee74ffcabd564deb900f9c9bf8340309.html" target="element"> Managing expense limits </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-825cc049621a413f906f13286312362e.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-825cc049621a413f906f13286312362e.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-d0e747ccf5d9492f8bd0f6699f8bab15.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																				<td> <a href="../elements/id-1565fbc8d4e64b7fb2920c8b075ee281.html" target="element"> Monitoring/approval by the accounting departments </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-3a437046590b4b31bf10ffd25167b7bb.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-3a437046590b4b31bf10ffd25167b7bb.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-d0e747ccf5d9492f8bd0f6699f8bab15.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																				<td> <a href="../elements/id-386ea3c3116a4eeb9b33cee649d9b164.html" target="element"> Manage the transactions, the balances, accept/decline authorizations </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-574ceab9113a4c0783b797d7001b2c04.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-574ceab9113a4c0783b797d7001b2c04.html" target="element" class="i18n-elementtype-ServingRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-366f0410086c4c34ba4f8938f1b8bbe8.html" target="element"> Front-End Service </a> </td>
+																				<td> <a href="../elements/id-d0e747ccf5d9492f8bd0f6699f8bab15.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-f98938e6a29848d2bc4fa548bd2aaef0.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-f98938e6a29848d2bc4fa548bd2aaef0.html" target="element" class="i18n-elementtype-ServingRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-202d6f68c60a451482e7725cff94ff63.html" target="element"> Back-End Service </a> </td>
+																				<td> <a href="../elements/id-366f0410086c4c34ba4f8938f1b8bbe8.html" target="element"> Front-End Service </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-40f1e65ae2f8431faa5444aec1ffc8de.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-40f1e65ae2f8431faa5444aec1ffc8de.html" target="element" class="i18n-elementtype-ServingRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-202d6f68c60a451482e7725cff94ff63.html" target="element"> Back-End Service </a> </td>
+																				<td> <a href="../elements/id-74e1b6b176274ddaa6c26508909527fd.html" target="element"> Mobile Service </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-303b4fa694e4412baf106e5ec379fdf2.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-303b4fa694e4412baf106e5ec379fdf2.html" target="element" class="i18n-elementtype-AccessRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-202d6f68c60a451482e7725cff94ff63.html" target="element"> Back-End Service </a> </td>
+																				<td> <a href="../elements/id-9b8453890e974d32b9462777fb46b6ee.html" target="element"> Prepaid Card Information </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-5386c219e646401cb1f7e2ed05c595a7.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-5386c219e646401cb1f7e2ed05c595a7.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-9b8453890e974d32b9462777fb46b6ee.html" target="element"> Prepaid Card Information </a> </td>
+																				<td> <a href="../elements/id-0c41b30277f447d3938686918f6afd83.html" target="element"> Prepaid Card Information </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-d2313d51f42b4ffd946f522e61df7118.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-d2313d51f42b4ffd946f522e61df7118.html" target="element" class="i18n-elementtype-ServingRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-74e1b6b176274ddaa6c26508909527fd.html" target="element"> Mobile Service </a> </td>
+																				<td> <a href="../elements/id-d0e747ccf5d9492f8bd0f6699f8bab15.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-55abcf82bc5f4237a9ca0dd2f0235f87.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-55abcf82bc5f4237a9ca0dd2f0235f87.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-2cd8958dd11b4b66b86ec4986ed3c2d8.html" target="element"> SW Development Team </a> </td>
+																				<td> <a href="../elements/id-47e558846c89495f9dd98f9c07ce72f7.html" target="element"> Release every two weeks </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-9586d2bc0b8e49328352972d496fdb6f.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-9586d2bc0b8e49328352972d496fdb6f.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-50afaa6c14ae44378548b6cb4f22e788.html" target="element"> High availability </a> </td>
+																				<td> <a href="../elements/id-202d6f68c60a451482e7725cff94ff63.html" target="element"> Back-End Service </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-f2d1e7d2bc8f49a782427b472a252977.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-f2d1e7d2bc8f49a782427b472a252977.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-50afaa6c14ae44378548b6cb4f22e788.html" target="element"> High availability </a> </td>
+																				<td> <a href="../elements/id-366f0410086c4c34ba4f8938f1b8bbe8.html" target="element"> Front-End Service </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-07e018d9b80a4c9e9b6a00b5a99b589b.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-07e018d9b80a4c9e9b6a00b5a99b589b.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-50afaa6c14ae44378548b6cb4f22e788.html" target="element"> High availability </a> </td>
+																				<td> <a href="../elements/id-74e1b6b176274ddaa6c26508909527fd.html" target="element"> Mobile Service </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-23a6b91e6adb4e9d80e8d40c86e3f449.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-23a6b91e6adb4e9d80e8d40c86e3f449.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-bd09d8980551497f9e5c523366cecdd4.html" target="element"> Zero downtime during maintenance and releases </a> </td>
+																				<td> <a href="../elements/id-366f0410086c4c34ba4f8938f1b8bbe8.html" target="element"> Front-End Service </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-6245166b373044e281ed63bbc96e4ce0.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-6245166b373044e281ed63bbc96e4ce0.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-bd09d8980551497f9e5c523366cecdd4.html" target="element"> Zero downtime during maintenance and releases </a> </td>
+																				<td> <a href="../elements/id-74e1b6b176274ddaa6c26508909527fd.html" target="element"> Mobile Service </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-ca4ee19fc6d64cbca844cb4f07360e36.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-ca4ee19fc6d64cbca844cb4f07360e36.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-bd09d8980551497f9e5c523366cecdd4.html" target="element"> Zero downtime during maintenance and releases </a> </td>
+																				<td> <a href="../elements/id-202d6f68c60a451482e7725cff94ff63.html" target="element"> Back-End Service </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-5b49290099814a5cbda247eda872fea4.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-5b49290099814a5cbda247eda872fea4.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-514d81a541f6424695871fa786183e8d.html" target="element"> PCI DSS compliance </a> </td>
+																				<td> <a href="../elements/id-202d6f68c60a451482e7725cff94ff63.html" target="element"> Back-End Service </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-6fecfe75d8e54e98ad9e46c8d1d75dce.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-6fecfe75d8e54e98ad9e46c8d1d75dce.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-beea0c1fdc1a47e4bd91cd8562b69e92.html" target="element"> Headquarter </a> </td>
+																				<td> <a href="../elements/id-2cd8958dd11b4b66b86ec4986ed3c2d8.html" target="element"> SW Development Team </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-dda205cf25cf426aa49a39d6d913e35e.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-dda205cf25cf426aa49a39d6d913e35e.html" target="element" class="i18n-elementtype-ServingRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-0ee2ee17729d4494aa6d65fd96dca802.html" target="element"> Back-End Component </a> </td>
+																				<td> <a href="../elements/id-202d6f68c60a451482e7725cff94ff63.html" target="element"> Back-End Service </a> </td>
+																			</tr>
+
+											
+																	<tr>
+																		<td> <a href="../elements/id-5dafd36f80044768824e5a7ad017f590.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-5dafd36f80044768824e5a7ad017f590.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-2df8f29b98e042978fd05fc7cc768bac.html" target="element"> Zero downtime during maintenance and releases (copy) </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-f4fe487b3d5a4420838e196735a79a75.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-f4fe487b3d5a4420838e196735a79a75.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-6406598dc9c34adc867a9622e9890e2e.html" target="element"> Mobile Service </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-c13ae5f2537746b7ac0cf882a7023aca.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-c13ae5f2537746b7ac0cf882a7023aca.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-a65deb84ccdf48bd8722bf75ed3c9d10.html" target="element"> Prepaid Card Information </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-596a53579e7d48f98259938f6540f7d1.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-596a53579e7d48f98259938f6540f7d1.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-1e645babb4f1453d910e83f1117dd985.html" target="element"> Prepaid Card Information </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-a10058a212314d919e27101d2e6dc44b.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-a10058a212314d919e27101d2e6dc44b.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-14b68e300b42477a89aa7cbec5e8a649.html" target="element"> Back-End Service </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-66e2f2beaee142a6921b87d02b70aaaa.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-66e2f2beaee142a6921b87d02b70aaaa.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-cc494d9229da4f6d980a97aac4bb35f0.html" target="element"> Front-End Servic </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-76398d33cc0f4d0282f5959e6589e5e6.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-76398d33cc0f4d0282f5959e6589e5e6.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-cf9dc81b38a54b5c9403163b7ebd5114.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-4b58240481b546048885c7cceb6e02a4.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-4b58240481b546048885c7cceb6e02a4.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-08d31e567d3349a69a9bf00cd2029a2c.html" target="element"> Release every two weeks </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-0dc02063783e4f3b86972f1c477583ae.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-0dc02063783e4f3b86972f1c477583ae.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-6efb2fbca5cf47e49d3c91729497223f.html" target="element"> Manage the transactions, the balances, accept/decline authorizations </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-e81b52db0513443e9c52140c636ad4e3.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-e81b52db0513443e9c52140c636ad4e3.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-0f0731b7e5bc49999d638c4acc0356e8.html" target="element"> Manage payments and virtual-cards </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-df91aa1ba2c841f0ad6f4e6ff10b4daf.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-df91aa1ba2c841f0ad6f4e6ff10b4daf.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-dd8b8839d2ea4055b3d5c2258f7adeea.html" target="element"> Monitoring/approval by the accounting departments </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-73ceff24dac44876b81ddfdfcd8df56a.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-73ceff24dac44876b81ddfdfcd8df56a.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-bec43a9dea5c4e9d96cd346802f7cafc.html" target="element"> Managing expense limits </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-d7a9830d64c14ecf982a453d5d690555.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-d7a9830d64c14ecf982a453d5d690555.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-81766b76b8364f49ba42d358b9bdcfb6.html" target="element"> Tracking and reporting on transactions </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-ce999e2a8a2a48d08d6758906b6513a4.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-ce999e2a8a2a48d08d6758906b6513a4.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-51460714fbbc431494e150bd5a6e288f.html" target="element"> Issuing prepaid cards </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-2ab6940cf16c4200b4acbcd22930ae53.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-2ab6940cf16c4200b4acbcd22930ae53.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-0c15221655ac4a62b3b301ece638ef4b.html" target="element"> Prepaid Cards MVP </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-fbe90346b7924b599495bdc845462a37.html" target="element"> desired state </a> </td>
+																		<td> <a href="../elements/id-fbe90346b7924b599495bdc845462a37.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-5510fd8dfe544ad6b00f25c2590bb21e.html" target="element"> SW development with IT/Business alignment without compromising agility </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-bf6cf5494756448982bec012e9e24492.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-bf6cf5494756448982bec012e9e24492.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-6589247bbd1a46388391fad72fec7de4.html" target="element"> Back-End Component </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-db3b1cfe5e4246fa91a81fe81a9f1bc5.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-db3b1cfe5e4246fa91a81fe81a9f1bc5.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-289b9509c9284a05907882161314ab1f.html" target="element"> High availability </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-85c825dbcbe3405b948ce9fee6ed87f3.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-85c825dbcbe3405b948ce9fee6ed87f3.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-1b4fd46de8744478bffae988c5d5e713.html" target="element"> PCI DSS compliance </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-67517c4ed3cf42a0a0589c80926c11ca.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-67517c4ed3cf42a0a0589c80926c11ca.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-92d9561cf5bb4f4d95ca9f9893f677da.html" target="element"> Agility Manager </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-b4085c66c07f483f84796e48a87a026c.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-b4085c66c07f483f84796e48a87a026c.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-aff389fd28994ab9bc613b1da586d4c8.html" target="element"> BizDevOps Team </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-c1ab7028b4df4c42b6a321fbb733c5b8.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-c1ab7028b4df4c42b6a321fbb733c5b8.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-29d37b5c1e394d31900ca03fb2a39f6a.html" target="element"> Alignment Manager </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-50707c3d0a4846c0a5d8f031bdd772b3.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-50707c3d0a4846c0a5d8f031bdd772b3.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-59f1c07c667940229680c755e145ba70.html" target="element"> IT/Business Alignment </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-f047a373c57441a29f31f60d226191a4.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-f047a373c57441a29f31f60d226191a4.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-92b6c73cce414b8bbab9d6d9bd15e90d.html" target="element"> Agile Software Development </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-c5005f6e07354bc2b953045455e3dd49.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-c5005f6e07354bc2b953045455e3dd49.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-32fb06e68c7244d88f1fbd4d4006ec6b.html" target="element"> Agility is Maintained </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-a0e4d98903ac41d3a5c968e67fdc4dae.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-a0e4d98903ac41d3a5c968e67fdc4dae.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-e5789e2ce1c248e7882bbf28c67d0464.html" target="element"> IT and business are aligned </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-9d65b87d98774d5592b5fcf467d9ff32.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-9d65b87d98774d5592b5fcf467d9ff32.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-67da45af635a4dcf9aeeda2b1de4f938.html" target="element"> Scrum Master </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-cab8db340c404e3791b71841600e6afc.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-cab8db340c404e3791b71841600e6afc.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-19057048e7a64ee09dffb0a16b154445.html" target="element"> Product Owner </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-8d941fa3cc7b41a28f5ad889443db31e.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-8d941fa3cc7b41a28f5ad889443db31e.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-ed97e4c130db4ee5a9b412e0e3a6a015.html" target="element"> BizDevOps Software Development Function </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-01a5037505134ba1a2611886a551a5c9.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-01a5037505134ba1a2611886a551a5c9.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-4695032c62d248d3b1d7c685aa1c3a27.html" target="element"> BizDevOps Bus Service </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-f7e33e06c5b345d3abf25ad48e261c38.html" target="element">  </a> </td>
+																		<td> <a href="../elements/id-f7e33e06c5b345d3abf25ad48e261c38.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-4e52b5e3f0f047329365be8f7c41a8e9.html" target="element"> To-Be </a> </td>
+																		<td> <a href="../elements/id-ff47fc5667094621b77de85a8ff0ff8d.html" target="element"> Headquarter </a> </td>
+																	</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-c441d00a847f478389e6e9f4f559e8a7.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-c441d00a847f478389e6e9f4f559e8a7.html" target="element" class="i18n-elementtype-AccessRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-cf9dc81b38a54b5c9403163b7ebd5114.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																				<td> <a href="../elements/id-a65deb84ccdf48bd8722bf75ed3c9d10.html" target="element"> Prepaid Card Information </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-acee35878a4e403a90635d6d427f74b5.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-acee35878a4e403a90635d6d427f74b5.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-cf9dc81b38a54b5c9403163b7ebd5114.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																				<td> <a href="../elements/id-bec43a9dea5c4e9d96cd346802f7cafc.html" target="element"> Managing expense limits </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-bf206200b4044da680184641c322575c.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-bf206200b4044da680184641c322575c.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-cf9dc81b38a54b5c9403163b7ebd5114.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																				<td> <a href="../elements/id-51460714fbbc431494e150bd5a6e288f.html" target="element"> Issuing prepaid cards </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-6847415465af41b793c4326552842597.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-6847415465af41b793c4326552842597.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-cf9dc81b38a54b5c9403163b7ebd5114.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																				<td> <a href="../elements/id-6efb2fbca5cf47e49d3c91729497223f.html" target="element"> Manage the transactions, the balances, accept/decline authorizations </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-99f4a1747d664e3b9b3998891d69c5a9.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-99f4a1747d664e3b9b3998891d69c5a9.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-cf9dc81b38a54b5c9403163b7ebd5114.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																				<td> <a href="../elements/id-81766b76b8364f49ba42d358b9bdcfb6.html" target="element"> Tracking and reporting on transactions </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-5f891534c7434eefafef3ac65a8243c8.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-5f891534c7434eefafef3ac65a8243c8.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-cf9dc81b38a54b5c9403163b7ebd5114.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																				<td> <a href="../elements/id-0f0731b7e5bc49999d638c4acc0356e8.html" target="element"> Manage payments and virtual-cards </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-3f0b4675f71e499c93ee5c726b170dea.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-3f0b4675f71e499c93ee5c726b170dea.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-cf9dc81b38a54b5c9403163b7ebd5114.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																				<td> <a href="../elements/id-dd8b8839d2ea4055b3d5c2258f7adeea.html" target="element"> Monitoring/approval by the accounting departments </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-a14df84cdf9248e8ae42b5492e6e9caa.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-a14df84cdf9248e8ae42b5492e6e9caa.html" target="element" class="i18n-elementtype-ServingRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-cc494d9229da4f6d980a97aac4bb35f0.html" target="element"> Front-End Servic </a> </td>
+																				<td> <a href="../elements/id-cf9dc81b38a54b5c9403163b7ebd5114.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-4e0247e3485c4821b64ca463f8d7f79d.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-4e0247e3485c4821b64ca463f8d7f79d.html" target="element" class="i18n-elementtype-ServingRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-14b68e300b42477a89aa7cbec5e8a649.html" target="element"> Back-End Service </a> </td>
+																				<td> <a href="../elements/id-6406598dc9c34adc867a9622e9890e2e.html" target="element"> Mobile Service </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-47ee19ca5fb148dcbca949e1f164bd8b.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-47ee19ca5fb148dcbca949e1f164bd8b.html" target="element" class="i18n-elementtype-AccessRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-14b68e300b42477a89aa7cbec5e8a649.html" target="element"> Back-End Service </a> </td>
+																				<td> <a href="../elements/id-1e645babb4f1453d910e83f1117dd985.html" target="element"> Prepaid Card Information </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-6adddf6a95574844a20c1bf348919d5c.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-6adddf6a95574844a20c1bf348919d5c.html" target="element" class="i18n-elementtype-ServingRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-14b68e300b42477a89aa7cbec5e8a649.html" target="element"> Back-End Service </a> </td>
+																				<td> <a href="../elements/id-cc494d9229da4f6d980a97aac4bb35f0.html" target="element"> Front-End Servic </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-8b0803d74682415495754f9d752d32cf.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-8b0803d74682415495754f9d752d32cf.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-1e645babb4f1453d910e83f1117dd985.html" target="element"> Prepaid Card Information </a> </td>
+																				<td> <a href="../elements/id-a65deb84ccdf48bd8722bf75ed3c9d10.html" target="element"> Prepaid Card Information </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-186e51cda8f6497097b0dddfea0c61d1.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-186e51cda8f6497097b0dddfea0c61d1.html" target="element" class="i18n-elementtype-ServingRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-6406598dc9c34adc867a9622e9890e2e.html" target="element"> Mobile Service </a> </td>
+																				<td> <a href="../elements/id-cf9dc81b38a54b5c9403163b7ebd5114.html" target="element"> Manage all aspects of a prepaid card for business expenses </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-3eb21ab61ee941168c929b6d04692f63.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-3eb21ab61ee941168c929b6d04692f63.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-2df8f29b98e042978fd05fc7cc768bac.html" target="element"> Zero downtime during maintenance and releases (copy) </a> </td>
+																				<td> <a href="../elements/id-6406598dc9c34adc867a9622e9890e2e.html" target="element"> Mobile Service </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-14e53530751d4ef2a995accd6a560fc1.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-14e53530751d4ef2a995accd6a560fc1.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-2df8f29b98e042978fd05fc7cc768bac.html" target="element"> Zero downtime during maintenance and releases (copy) </a> </td>
+																				<td> <a href="../elements/id-cc494d9229da4f6d980a97aac4bb35f0.html" target="element"> Front-End Servic </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-7091fe9d72354c88aa1aefd488f7b4eb.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-7091fe9d72354c88aa1aefd488f7b4eb.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-2df8f29b98e042978fd05fc7cc768bac.html" target="element"> Zero downtime during maintenance and releases (copy) </a> </td>
+																				<td> <a href="../elements/id-14b68e300b42477a89aa7cbec5e8a649.html" target="element"> Back-End Service </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-9f4d2816228546a6a0d8fc765e0b42a6.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-9f4d2816228546a6a0d8fc765e0b42a6.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-0c15221655ac4a62b3b301ece638ef4b.html" target="element"> Prepaid Cards MVP </a> </td>
+																				<td> <a href="../elements/id-51460714fbbc431494e150bd5a6e288f.html" target="element"> Issuing prepaid cards </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-f09d3b8325724b75ab7b6901048e03de.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-f09d3b8325724b75ab7b6901048e03de.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-0c15221655ac4a62b3b301ece638ef4b.html" target="element"> Prepaid Cards MVP </a> </td>
+																				<td> <a href="../elements/id-81766b76b8364f49ba42d358b9bdcfb6.html" target="element"> Tracking and reporting on transactions </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-dffe54ce170d49f2a3564f3f3511eb0d.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-dffe54ce170d49f2a3564f3f3511eb0d.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-0c15221655ac4a62b3b301ece638ef4b.html" target="element"> Prepaid Cards MVP </a> </td>
+																				<td> <a href="../elements/id-bec43a9dea5c4e9d96cd346802f7cafc.html" target="element"> Managing expense limits </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-93f7c460775e48ba898b004fc7c22120.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-93f7c460775e48ba898b004fc7c22120.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-0c15221655ac4a62b3b301ece638ef4b.html" target="element"> Prepaid Cards MVP </a> </td>
+																				<td> <a href="../elements/id-08d31e567d3349a69a9bf00cd2029a2c.html" target="element"> Release every two weeks </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-9c2933ed40dc41f0b866a3983f98d58b.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-9c2933ed40dc41f0b866a3983f98d58b.html" target="element" class="i18n-elementtype-ServingRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-6589247bbd1a46388391fad72fec7de4.html" target="element"> Back-End Component </a> </td>
+																				<td> <a href="../elements/id-14b68e300b42477a89aa7cbec5e8a649.html" target="element"> Back-End Service </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-cbeb936f4d504ddfa7e04bf60d081fd3.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-cbeb936f4d504ddfa7e04bf60d081fd3.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-289b9509c9284a05907882161314ab1f.html" target="element"> High availability </a> </td>
+																				<td> <a href="../elements/id-6406598dc9c34adc867a9622e9890e2e.html" target="element"> Mobile Service </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-39f95f0b9ac24e48b76abeb9c700cb7f.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-39f95f0b9ac24e48b76abeb9c700cb7f.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-289b9509c9284a05907882161314ab1f.html" target="element"> High availability </a> </td>
+																				<td> <a href="../elements/id-cc494d9229da4f6d980a97aac4bb35f0.html" target="element"> Front-End Servic </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-f76fa9228eb541e596110b3f23d50b11.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-f76fa9228eb541e596110b3f23d50b11.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-289b9509c9284a05907882161314ab1f.html" target="element"> High availability </a> </td>
+																				<td> <a href="../elements/id-14b68e300b42477a89aa7cbec5e8a649.html" target="element"> Back-End Service </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-60084c5d3bfd4ebf8043031ab815b245.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-60084c5d3bfd4ebf8043031ab815b245.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-1b4fd46de8744478bffae988c5d5e713.html" target="element"> PCI DSS compliance </a> </td>
+																				<td> <a href="../elements/id-14b68e300b42477a89aa7cbec5e8a649.html" target="element"> Back-End Service </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-0b30c28dda554cbb9517f6b482849a3b.html" target="element">  </a> </td>
+																				<td> <a href="../elements/id-0b30c28dda554cbb9517f6b482849a3b.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-ff47fc5667094621b77de85a8ff0ff8d.html" target="element"> Headquarter </a> </td>
+																				<td> <a href="../elements/id-aff389fd28994ab9bc613b1da586d4c8.html" target="element"> BizDevOps Team </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-ea2010c4f0bc421e85619562c775d622.html" target="element"> is part of </a> </td>
+																				<td> <a href="../elements/id-ea2010c4f0bc421e85619562c775d622.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-92d9561cf5bb4f4d95ca9f9893f677da.html" target="element"> Agility Manager </a> </td>
+																				<td> <a href="../elements/id-67da45af635a4dcf9aeeda2b1de4f938.html" target="element"> Scrum Master </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-d1d5cb97532e4360819108a1c9769ccb.html" target="element"> concerned for </a> </td>
+																				<td> <a href="../elements/id-d1d5cb97532e4360819108a1c9769ccb.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-92d9561cf5bb4f4d95ca9f9893f677da.html" target="element"> Agility Manager </a> </td>
+																				<td> <a href="../elements/id-92b6c73cce414b8bbab9d6d9bd15e90d.html" target="element"> Agile Software Development </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-a8debc68e8e348159d47c78ae19aa2f6.html" target="element"> composed of </a> </td>
+																				<td> <a href="../elements/id-a8debc68e8e348159d47c78ae19aa2f6.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-aff389fd28994ab9bc613b1da586d4c8.html" target="element"> BizDevOps Team </a> </td>
+																				<td> <a href="../elements/id-92d9561cf5bb4f4d95ca9f9893f677da.html" target="element"> Agility Manager </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-739c687fade74e26a4518d5c7775f668.html" target="element"> composed of </a> </td>
+																				<td> <a href="../elements/id-739c687fade74e26a4518d5c7775f668.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-aff389fd28994ab9bc613b1da586d4c8.html" target="element"> BizDevOps Team </a> </td>
+																				<td> <a href="../elements/id-19057048e7a64ee09dffb0a16b154445.html" target="element"> Product Owner </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-e8652bb5abf748c889f016855bcd4dd7.html" target="element"> responsible for </a> </td>
+																				<td> <a href="../elements/id-e8652bb5abf748c889f016855bcd4dd7.html" target="element" class="i18n-elementtype-AssignmentRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-aff389fd28994ab9bc613b1da586d4c8.html" target="element"> BizDevOps Team </a> </td>
+																				<td> <a href="../elements/id-ed97e4c130db4ee5a9b412e0e3a6a015.html" target="element"> BizDevOps Software Development Function </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-e4e27e6693f4496aa1cb77b95ad4475f.html" target="element"> concerned for </a> </td>
+																				<td> <a href="../elements/id-e4e27e6693f4496aa1cb77b95ad4475f.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-29d37b5c1e394d31900ca03fb2a39f6a.html" target="element"> Alignment Manager </a> </td>
+																				<td> <a href="../elements/id-59f1c07c667940229680c755e145ba70.html" target="element"> IT/Business Alignment </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-2d7d61c127b543ef80ccf586011554dd.html" target="element"> evaluates </a> </td>
+																				<td> <a href="../elements/id-2d7d61c127b543ef80ccf586011554dd.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-59f1c07c667940229680c755e145ba70.html" target="element"> IT/Business Alignment </a> </td>
+																				<td> <a href="../elements/id-e5789e2ce1c248e7882bbf28c67d0464.html" target="element"> IT and business are aligned </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-05483b89f17a4be1af6341f5b8d8db50.html" target="element"> evaluates </a> </td>
+																				<td> <a href="../elements/id-05483b89f17a4be1af6341f5b8d8db50.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-92b6c73cce414b8bbab9d6d9bd15e90d.html" target="element"> Agile Software Development </a> </td>
+																				<td> <a href="../elements/id-32fb06e68c7244d88f1fbd4d4006ec6b.html" target="element"> Agility is Maintained </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-8e9bebe36a3b4528bab3e38fb65a15ac.html" target="element"> assumes the responsibility of </a> </td>
+																				<td> <a href="../elements/id-8e9bebe36a3b4528bab3e38fb65a15ac.html" target="element" class="i18n-elementtype-AggregationRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-19057048e7a64ee09dffb0a16b154445.html" target="element"> Product Owner </a> </td>
+																				<td> <a href="../elements/id-29d37b5c1e394d31900ca03fb2a39f6a.html" target="element"> Alignment Manager </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-80b9fe2d623d4eb69cb232e5180be01a.html" target="element"> guides development of </a> </td>
+																				<td> <a href="../elements/id-80b9fe2d623d4eb69cb232e5180be01a.html" target="element" class="i18n-elementtype-ServingRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-ed97e4c130db4ee5a9b412e0e3a6a015.html" target="element"> BizDevOps Software Development Function </a> </td>
+																				<td> <a href="../elements/id-0c15221655ac4a62b3b301ece638ef4b.html" target="element"> Prepaid Cards MVP </a> </td>
+																			</tr>
+
+																			<tr>
+																				<td> <a href="../elements/id-d941f7f06233414aa88015e29fc5840d.html" target="element"> build/testing/deploy </a> </td>
+																				<td> <a href="../elements/id-d941f7f06233414aa88015e29fc5840d.html" target="element" class="i18n-elementtype-ServingRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-4695032c62d248d3b1d7c685aa1c3a27.html" target="element"> BizDevOps Bus Service </a> </td>
+																				<td> <a href="../elements/id-6589247bbd1a46388391fad72fec7de4.html" target="element"> Back-End Component </a> </td>
+																			</tr>
+																			<tr>
+																				<td> <a href="../elements/id-6fb82a56933d45619118164efb91a654.html" target="element"> serve </a> </td>
+																				<td> <a href="../elements/id-6fb82a56933d45619118164efb91a654.html" target="element" class="i18n-elementtype-ServingRelationship">
+																				</a> </td>
+																				<td> <a href="../elements/id-4695032c62d248d3b1d7c685aa1c3a27.html" target="element"> BizDevOps Bus Service </a> </td>
+																				<td> <a href="../elements/id-ed97e4c130db4ee5a9b412e0e3a6a015.html" target="element"> BizDevOps Software Development Function </a> </td>
+																			</tr>
+
+											
+																	<tr>
+																		<td> <a href="../elements/id-9e0e6bca7db54424b85991673808b47f.html" target="element"> migrate to </a> </td>
+																		<td> <a href="../elements/id-9e0e6bca7db54424b85991673808b47f.html" target="element" class="i18n-elementtype-TriggeringRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-57491fd102a84f7fb007b4a1bae2b96b.html" target="element"> Baseline (As-Is) </a> </td>
+																		<td> <a href="../elements/id-6d9ce05252b349f99222c2830126ccf9.html" target="element"> Using BizDevOps (To-Be) </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-5a9dd3befc004b438ab77ddc9179461d.html" target="element"> has </a> </td>
+																		<td> <a href="../elements/id-5a9dd3befc004b438ab77ddc9179461d.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-57491fd102a84f7fb007b4a1bae2b96b.html" target="element"> Baseline (As-Is) </a> </td>
+																		<td> <a href="../elements/id-584bb6d67d2349ce85ab2b891b8e9f1e.html" target="element"> Incorporate IT/Business alignment without sacrificing agility </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-c5544651e5ab46fdb0c037882d38a7ea.html" target="element"> is resolve by </a> </td>
+																		<td> <a href="../elements/id-c5544651e5ab46fdb0c037882d38a7ea.html" target="element" class="i18n-elementtype-AssociationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-584bb6d67d2349ce85ab2b891b8e9f1e.html" target="element"> Incorporate IT/Business alignment without sacrificing agility </a> </td>
+																		<td> <a href="../elements/id-6d9ce05252b349f99222c2830126ccf9.html" target="element"> Using BizDevOps (To-Be) </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-70cc60b2bd934159b17729b33da68ba1.html" target="element"> implement by </a> </td>
+																		<td> <a href="../elements/id-70cc60b2bd934159b17729b33da68ba1.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-5510fd8dfe544ad6b00f25c2590bb21e.html" target="element"> SW development with IT/Business alignment without compromising agility </a> </td>
+																		<td> <a href="../elements/id-6d9ce05252b349f99222c2830126ccf9.html" target="element"> Using BizDevOps (To-Be) </a> </td>
+																	</tr>
+
+																	<tr>
+																		<td> <a href="../elements/id-0366bf4e023a4178845f1f4a8ac10034.html" target="element"> part of </a> </td>
+																		<td> <a href="../elements/id-0366bf4e023a4178845f1f4a8ac10034.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-d2747272dc8748e09647b6b329d8e146.html" target="element"> Adopting BizDevOps software development approach </a> </td>
+																		<td> <a href="../elements/id-03ce5030c7474a8c8548366406622e47.html" target="element"> Establish a BizDevOps Team </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-c34a2d11492a4ec891358b4670591806.html" target="element"> part of </a> </td>
+																		<td> <a href="../elements/id-c34a2d11492a4ec891358b4670591806.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-d2747272dc8748e09647b6b329d8e146.html" target="element"> Adopting BizDevOps software development approach </a> </td>
+																		<td> <a href="../elements/id-2bd2755509c94c16abf454a002db0e54.html" target="element"> Adopt BizDevOps Principles </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-a50ba6769fec4a49a6f18403223bbff4.html" target="element"> part of </a> </td>
+																		<td> <a href="../elements/id-a50ba6769fec4a49a6f18403223bbff4.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-d2747272dc8748e09647b6b329d8e146.html" target="element"> Adopting BizDevOps software development approach </a> </td>
+																		<td> <a href="../elements/id-9911602d4d8a412a9379078dd0c774bc.html" target="element"> Adopting software development processes from the BizDevOps approach </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-6872fd0a1b9d41efb9fc46d9c9292059.html" target="element"> part of </a> </td>
+																		<td> <a href="../elements/id-6872fd0a1b9d41efb9fc46d9c9292059.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-d2747272dc8748e09647b6b329d8e146.html" target="element"> Adopting BizDevOps software development approach </a> </td>
+																		<td> <a href="../elements/id-4c07316220284667a6d432bb78484311.html" target="element"> Evaluation of IT/Business alignment and maintenance of agility </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-665357a1e2074202a74fcbd972ec2f37.html" target="element"> allow to carry out </a> </td>
+																		<td> <a href="../elements/id-665357a1e2074202a74fcbd972ec2f37.html" target="element" class="i18n-elementtype-RealizationRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-d2747272dc8748e09647b6b329d8e146.html" target="element"> Adopting BizDevOps software development approach </a> </td>
+																		<td> <a href="../elements/id-5510fd8dfe544ad6b00f25c2590bb21e.html" target="element"> SW development with IT/Business alignment without compromising agility </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-c52857c9afbf48f095ea11504a697192.html" target="element"> part of </a> </td>
+																		<td> <a href="../elements/id-c52857c9afbf48f095ea11504a697192.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-d2747272dc8748e09647b6b329d8e146.html" target="element"> Adopting BizDevOps software development approach </a> </td>
+																		<td> <a href="../elements/id-a399023ff7ea4694af53619f432b3ef5.html" target="element"> Adopting BizDevOps Services Needed </a> </td>
+																	</tr>
+																	<tr>
+																		<td> <a href="../elements/id-c52857c9afbf48f095ea11504a697192.html" target="element"> part of </a> </td>
+																		<td> <a href="../elements/id-c52857c9afbf48f095ea11504a697192.html" target="element" class="i18n-elementtype-CompositionRelationship">
+																		</a> </td>
+																		<td> <a href="../elements/id-d2747272dc8748e09647b6b329d8e146.html" target="element"> Adopting BizDevOps software development approach </a> </td>
+																		<td> <a href="../elements/id-a399023ff7ea4694af53619f432b3ef5.html" target="element"> Adopting BizDevOps Services Needed </a> </td>
+																	</tr>
+
+											
+
+								</tbody>
+							</table>
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>

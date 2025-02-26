@@ -713,28 +713,28 @@ ABB Name: BDO:Location</documentation>
     <element xsi:type="archimate:RealizationRelationship" name="realization" id="id-c10912b0a43347aabd212fa3d3af7f35" source="id-6bd4226dfba84fcb930713dcbaaa6b9f" target="id-7d59f5d957834902998d179075c14e0d"/>
     <element xsi:type="archimate:CompositionRelationship" id="id-3528d571b721411c925b70c6f2205e65" source="id-6a58ff3958dd4b7a9244536284baf035" target="id-de8808419c1b45c2abc2ec5853fa59ba"/>
     <element xsi:type="archimate:CompositionRelationship" id="id-fc2dc223d5594f0a963726ac2e2add8a" source="id-6a58ff3958dd4b7a9244536284baf035" target="id-6c717a1c21f74c8b8aecc09b73edf046"/>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-2d5091a3d54946b3b480ab12d6cc749d" source="id-1fab151c6d7c4e0ca9b0857875a0d43a" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-2d5091a3d54946b3b480ab12d6cc749d" source="id-1fab151c6d7c4e0ca9b0857875a0d43a" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
       <documentation>[Alignment] gives realization to [BizDevOps Principles]</documentation>
     </element>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-47a14dfe57374f56944d703a1e2ecd56" source="id-3ed9f5ddb899446a95d776bf9451bfea" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-47a14dfe57374f56944d703a1e2ecd56" source="id-3ed9f5ddb899446a95d776bf9451bfea" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
       <documentation>[Agility] gives realization to [BizDevOps Principles]</documentation>
     </element>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-7b6d787a9c3440a6850531cd9132b20e" source="id-9987886f5f934cb3b39537285a16a6b1" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-7b6d787a9c3440a6850531cd9132b20e" source="id-9987886f5f934cb3b39537285a16a6b1" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
       <documentation>[Integrated Team] gives realization to [BizDevOps Principles]</documentation>
     </element>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-56304a1207c143278ef773c2546f83d0" source="id-c644b158eca74afc8cb8d9d5b9109a62" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-56304a1207c143278ef773c2546f83d0" source="id-c644b158eca74afc8cb8d9d5b9109a62" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
       <documentation>[Business First] gives realization to [BizDevOps Principles]</documentation>
     </element>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-01f9cd74df804a228d725d01c9971d0e" source="id-2210391fb73641d8a8b633571aa69a57" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-01f9cd74df804a228d725d01c9971d0e" source="id-2210391fb73641d8a8b633571aa69a57" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
       <documentation>[Customer Focus] gives realization to [BizDevOps Principles]</documentation>
     </element>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-339ddc02eb774a13b5456d0d6ef37c24" source="id-11a2b6a8926e4f0da156e948e2141656" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-339ddc02eb774a13b5456d0d6ef37c24" source="id-11a2b6a8926e4f0da156e948e2141656" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
       <documentation>[Shift-Left] gives realization to [BizDevOps Principles]</documentation>
     </element>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-deebfb3c4b394d8694489c54b7fd1957" source="id-5cd738654e314996ba901b9de73984d6" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-deebfb3c4b394d8694489c54b7fd1957" source="id-5cd738654e314996ba901b9de73984d6" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
       <documentation>[Continuity in Everything] gives realization to [BizDevOps Principles]</documentation>
     </element>
-    <element xsi:type="archimate:SpecializationRelationship" name="realization" id="id-f7ec17142c4044eca14b107ce7116057" source="id-e17f136c4d344e14b5b2cb578a9ce6f4" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
+    <element xsi:type="archimate:SpecializationRelationship" name="specialization" id="id-f7ec17142c4044eca14b107ce7116057" source="id-e17f136c4d344e14b5b2cb578a9ce6f4" target="id-1e851b836e9c4be09c39ba7591ffc6b1">
       <documentation>[Systems Thinking] gives realization to [BizDevOps Principles]</documentation>
     </element>
     <element xsi:type="archimate:CompositionRelationship" name="composed for" id="id-b36bf5410c6e42d7bcab887598bdfe51" source="id-6bd4226dfba84fcb930713dcbaaa6b9f" target="id-de8808419c1b45c2abc2ec5853fa59ba">
@@ -1152,64 +1152,68 @@ By following these processes, the [BizDevOps Team] can effectively fulfill the [
         <sourceConnection xsi:type="archimate:Connection" id="id-6aee66512f2d4afa81321c8e8f5f8a85" source="id-90f6763d6d2f43f292f7245139e7d8e1" target="id-a9fad2c2d464431b9e3b3b22c29f1afb" archimateRelationship="id-a020de5fdacc412c8aaaf9b69a35d6d0"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-e0254f8971f64500970a655e28261c50" archimateElement="id-1fab151c6d7c4e0ca9b0857875a0d43a">
-        <bounds x="120" y="418" width="120" height="55"/>
+        <bounds x="120" y="360" width="120" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-90d3aaccb1da4721af4fb9affa7fa202" source="id-e0254f8971f64500970a655e28261c50" target="id-90f6763d6d2f43f292f7245139e7d8e1" archimateRelationship="id-2d5091a3d54946b3b480ab12d6cc749d">
           <bendpoint startX="-108" startY="-3" endX="-300" endY="247"/>
           <bendpoint startX="-108" startY="-255" endX="-300" endY="-5"/>
         </sourceConnection>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-403f81f688e8418590a535ba789f6587" archimateElement="id-3ed9f5ddb899446a95d776bf9451bfea">
-        <bounds x="252" y="418" width="120" height="55"/>
+        <bounds x="252" y="360" width="120" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-134dbe77a39d41e69b5b1d8899cd8edb" source="id-403f81f688e8418590a535ba789f6587" target="id-90f6763d6d2f43f292f7245139e7d8e1" archimateRelationship="id-47a14dfe57374f56944d703a1e2ecd56">
-          <bendpoint startY="57" endX="-60" endY="307"/>
-          <bendpoint startX="-216" startY="57" endX="-276" endY="307"/>
+          <bendpoint startY="45" endX="-60" endY="237"/>
+          <bendpoint startX="-216" startY="45" endX="-276" endY="237"/>
           <bendpoint startX="-216" startY="-243" endX="-276" endY="7"/>
         </sourceConnection>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-a33804fbc7984e43b339750dbff3d933" archimateElement="id-9987886f5f934cb3b39537285a16a6b1">
-        <bounds x="120" y="334" width="120" height="55"/>
+        <bounds x="120" y="276" width="120" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-d82a6e6907f946e99ce39db53c560570" source="id-a33804fbc7984e43b339750dbff3d933" target="id-90f6763d6d2f43f292f7245139e7d8e1" archimateRelationship="id-7b6d787a9c3440a6850531cd9132b20e">
           <bendpoint startY="-87" endX="-192" endY="79"/>
         </sourceConnection>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-eed69b11eddf42298a474c3f753adbb4" archimateElement="id-c644b158eca74afc8cb8d9d5b9109a62">
-        <bounds x="252" y="334" width="120" height="55"/>
-        <sourceConnection xsi:type="archimate:Connection" id="id-74fdb5e2ece94d26975ee0d06fdef283" source="id-eed69b11eddf42298a474c3f753adbb4" target="id-90f6763d6d2f43f292f7245139e7d8e1" archimateRelationship="id-56304a1207c143278ef773c2546f83d0"/>
+        <bounds x="252" y="276" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-74fdb5e2ece94d26975ee0d06fdef283" source="id-eed69b11eddf42298a474c3f753adbb4" target="id-90f6763d6d2f43f292f7245139e7d8e1" archimateRelationship="id-56304a1207c143278ef773c2546f83d0">
+          <bendpoint startX="12" startY="-51" endX="-48" endY="57"/>
+        </sourceConnection>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-ca2be4d8b78c49dbb38ae2dda59e94c3" archimateElement="id-2210391fb73641d8a8b633571aa69a57">
-        <bounds x="384" y="334" width="120" height="55"/>
-        <sourceConnection xsi:type="archimate:Connection" id="id-d16721d6f7f84be89f25d71011d24a0f" source="id-ca2be4d8b78c49dbb38ae2dda59e94c3" target="id-90f6763d6d2f43f292f7245139e7d8e1" archimateRelationship="id-01f9cd74df804a228d725d01c9971d0e"/>
+        <bounds x="384" y="276" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-d16721d6f7f84be89f25d71011d24a0f" source="id-ca2be4d8b78c49dbb38ae2dda59e94c3" target="id-90f6763d6d2f43f292f7245139e7d8e1" archimateRelationship="id-01f9cd74df804a228d725d01c9971d0e">
+          <bendpoint startX="-24" startY="-51" endX="48" endY="57"/>
+        </sourceConnection>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-f50923993e524c49a47c9b77116e4c03" archimateElement="id-11a2b6a8926e4f0da156e948e2141656">
-        <bounds x="516" y="334" width="120" height="55"/>
+        <bounds x="516" y="276" width="120" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-d7e05b37993b4b71975e7351d3f8754a" source="id-f50923993e524c49a47c9b77116e4c03" target="id-90f6763d6d2f43f292f7245139e7d8e1" archimateRelationship="id-339ddc02eb774a13b5456d0d6ef37c24">
           <bendpoint startY="-87" endX="204" endY="79"/>
         </sourceConnection>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-2957b1a479374fbcaa663db2ab07fe11" archimateElement="id-5cd738654e314996ba901b9de73984d6">
-        <bounds x="384" y="418" width="120" height="55"/>
+        <bounds x="384" y="360" width="120" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-6ca347f4ce414692a8a4cf812a64094f" source="id-2957b1a479374fbcaa663db2ab07fe11" target="id-90f6763d6d2f43f292f7245139e7d8e1" archimateRelationship="id-deebfb3c4b394d8694489c54b7fd1957">
-          <bendpoint startY="57" endX="72" endY="307"/>
-          <bendpoint startX="204" startY="57" endX="276" endY="307"/>
+          <bendpoint startY="45" endX="72" endY="237"/>
+          <bendpoint startX="204" startY="45" endX="276" endY="237"/>
           <bendpoint startX="204" startY="-243" endX="276" endY="7"/>
         </sourceConnection>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-615ff852c4c54af9b4e669e0bc21c000" archimateElement="id-e17f136c4d344e14b5b2cb578a9ce6f4">
-        <bounds x="516" y="418" width="120" height="55"/>
+        <bounds x="516" y="360" width="120" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-d0cea5278b9b4de5ba33739206cc8a73" source="id-615ff852c4c54af9b4e669e0bc21c000" target="id-90f6763d6d2f43f292f7245139e7d8e1" archimateRelationship="id-f7ec17142c4044eca14b107ce7116057">
           <bendpoint startX="96" startY="-3" endX="300" endY="247"/>
           <bendpoint startX="96" startY="-255" endX="300" endY="-5"/>
         </sourceConnection>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-a9fad2c2d464431b9e3b3b22c29f1afb" targetConnections="id-6aee66512f2d4afa81321c8e8f5f8a85" archimateElement="id-f0d499572d4c42e3bb67f3e800aa8fa9">
-        <bounds x="312" y="46" width="120" height="55"/>
+        <bounds x="311" y="72" width="120" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-a2298f7594664296ba988823c411837b" source="id-a9fad2c2d464431b9e3b3b22c29f1afb" target="id-315ad8f2997b4f65b1fba2ad13f4b48d" archimateRelationship="id-fb25aff0ff084d1493c56da6e6245870"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-315ad8f2997b4f65b1fba2ad13f4b48d" targetConnections="id-a2298f7594664296ba988823c411837b" archimateElement="id-6bd4226dfba84fcb930713dcbaaa6b9f">
-        <bounds x="529" y="46" width="120" height="55"/>
+        <bounds x="528" y="72" width="120" height="55"/>
       </child>
       <child xsi:type="archimate:DiagramObject" id="id-03465cfa1fab4d28bcc3a200974a711a" archimateElement="id-9a1c599326714f49a6625346e6d584f4">
-        <bounds x="107" y="46" width="120" height="55"/>
+        <bounds x="106" y="72" width="120" height="55"/>
         <sourceConnection xsi:type="archimate:Connection" id="id-2518589a477f4c3db328a21fe5955aea" source="id-03465cfa1fab4d28bcc3a200974a711a" target="id-90f6763d6d2f43f292f7245139e7d8e1" archimateRelationship="id-84da5939cb2b4bfd9cb42d1b9249a5fc"/>
       </child>
       <documentation>Narrative:&#xD;

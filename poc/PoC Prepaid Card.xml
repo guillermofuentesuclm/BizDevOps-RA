@@ -1266,7 +1266,7 @@ ABB Name: BDO:BizDevOpsPrinciple</documentation>
     <relationship identifier="id-c5005f6e07354bc2b953045455e3dd49" source="id-4e52b5e3f0f047329365be8f7c41a8e9" target="id-32fb06e68c7244d88f1fbd4d4006ec6b" xsi:type="Composition" />
     <relationship identifier="id-a0e4d98903ac41d3a5c968e67fdc4dae" source="id-4e52b5e3f0f047329365be8f7c41a8e9" target="id-e5789e2ce1c248e7882bbf28c67d0464" xsi:type="Composition" />
     <relationship identifier="id-f8a6843220524ba1a78470480a144d6b" source="id-48a4959c69bc4f3fa2c1e226f8d0a34a" target="id-a4b79de166c0427e922da4325202852d" xsi:type="Specialization">
-      <name xml:lang="en">realization</name>
+      <name xml:lang="en">specialization</name>
       <documentation xml:lang="en">[Shift-Left] gives realization to [BizDevOps Principles]</documentation>
     </relationship>
     <relationship identifier="id-638d050fa9624327abdcdfb5d5557231" source="id-34d675937db24a84820274636770e164" target="id-a4b79de166c0427e922da4325202852d" xsi:type="Influence" modifier="+">
@@ -1276,7 +1276,7 @@ ABB Name: BDO:BizDevOpsPrinciple</documentation>
 [BizDevOps Principles] are based on the [DevOps Principles]. They are considered part of their guidelines.</documentation>
     </relationship>
     <relationship identifier="id-9a8c514a23b64c37b7964aa91a4c61e9" source="id-cb17a93a4be34917ae3892ba5f1218c4" target="id-a4b79de166c0427e922da4325202852d" xsi:type="Specialization">
-      <name xml:lang="en">realization</name>
+      <name xml:lang="en">specialization</name>
       <documentation xml:lang="en">[Alignment] gives realization to [BizDevOps Principles]</documentation>
     </relationship>
     <relationship identifier="id-deba7f274541483296f9de484b283ebd" source="id-a4b79de166c0427e922da4325202852d" target="id-0e24528854e64efabb5960840bc469bc" xsi:type="Aggregation">
@@ -1284,30 +1284,30 @@ ABB Name: BDO:BizDevOpsPrinciple</documentation>
       <documentation xml:lang="en">[BizDevOps Principles] build upon [Architecture Principle] by integrating these guidelines into the collaborative processes of business, development, and operations.</documentation>
     </relationship>
     <relationship identifier="id-6cbe489578754998b055bd3287a0d0a9" source="id-6815b50b2db048a1ac38ce76059cd865" target="id-a4b79de166c0427e922da4325202852d" xsi:type="Specialization">
-      <name xml:lang="en">realization</name>
+      <name xml:lang="en">specialization</name>
       <documentation xml:lang="en">[Agility] gives realization to [BizDevOps Principles]</documentation>
     </relationship>
     <relationship identifier="id-5d604023a45a4a57b487fc70d164bd0c" source="id-a993f050555845b991d6a2d50baea003" target="id-a4b79de166c0427e922da4325202852d" xsi:type="Specialization">
-      <name xml:lang="en">realization</name>
+      <name xml:lang="en">specialization</name>
       <documentation xml:lang="en">[Integrated Team] gives realization to [BizDevOps Principles]</documentation>
     </relationship>
     <relationship identifier="id-0774799114fb4853a75cd6094085d130" source="id-0e24528854e64efabb5960840bc469bc" target="id-f25ebcfcb5744fc6bb1fe48633103fe0" xsi:type="Influence">
       <name xml:lang="en">influences</name>
     </relationship>
     <relationship identifier="id-6468a669808c44eebfdf9203b64f6128" source="id-e6f1ba7c12ec4248b3a95e9b885e8270" target="id-a4b79de166c0427e922da4325202852d" xsi:type="Specialization">
-      <name xml:lang="en">realization</name>
+      <name xml:lang="en">specialization</name>
       <documentation xml:lang="en">[Business First] gives realization to [BizDevOps Principles]</documentation>
     </relationship>
     <relationship identifier="id-5f5f1746d89649aab1489d7b725a0032" source="id-4debfc677fd045aa803767c17a5ea7e2" target="id-a4b79de166c0427e922da4325202852d" xsi:type="Specialization">
-      <name xml:lang="en">realization</name>
+      <name xml:lang="en">specialization</name>
       <documentation xml:lang="en">[Systems Thinking] gives realization to [BizDevOps Principles]</documentation>
     </relationship>
     <relationship identifier="id-65078a3fad1142c591822aa9edba2f35" source="id-1c46b34920e549b98884ba2f997327f8" target="id-a4b79de166c0427e922da4325202852d" xsi:type="Specialization">
-      <name xml:lang="en">realization</name>
+      <name xml:lang="en">specialization</name>
       <documentation xml:lang="en">[Customer Focus] gives realization to [BizDevOps Principles]</documentation>
     </relationship>
     <relationship identifier="id-a70668e1d1de4f0cbdf0182d92abe094" source="id-28b567045f914301b51da7621fff7c21" target="id-a4b79de166c0427e922da4325202852d" xsi:type="Specialization">
-      <name xml:lang="en">realization</name>
+      <name xml:lang="en">specialization</name>
       <documentation xml:lang="en">[Continuity in Everything] gives realization to [BizDevOps Principles]</documentation>
     </relationship>
     <relationship identifier="id-0f467ab8db874703976ed540541bf32a" source="id-4e52b5e3f0f047329365be8f7c41a8e9" target="id-a4b79de166c0427e922da4325202852d" xsi:type="Composition" />
