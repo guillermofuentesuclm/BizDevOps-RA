@@ -8,9 +8,6 @@ This study examines the transition from DevOps to BizDevOps through the use of a
 - We have developed a Proof of Concept to validate the applicability of the BizDevOps Reference Architecture, which you can access [here](/poc/) and you can browse this proof of concept from [here](https://guillermofuentesuclm.github.io/BizDevOps-RA/poc/).
 
 ## Contacts
-
-Guillermo Fuentes-Quijada <[guillermo.fuentes@uclm](mailto:guillermo.fuentes@uclm?subject=BizDevOps-BC%20Research)>
-
-Francisco Ruiz-González <[francisco.ruizg@uclm](mailto:francisco.ruizg@uclm?subject=BizDevOps-BC%20Research)>
-
-Angélica Caro <[mcaro@ubiobio.cl](mailto:mcaro@ubiobio.cl?subject=BizDevOps-BC%20Research)>
+- Guillermo Fuentes-Quijada <[guillermo.fuentes@uclm.es](mailto:guillermo.fuentes@uclm.es?subject=BizDevOps-RA%20Research)>
+- Francisco Ruiz-González <[francisco.ruizg@uclm.es](mailto:francisco.ruizg@uclm.es?subject=BizDevOps-RA%20Research)>
+- Angélica Caro <[mcaro@ubiobio.cl](mailto:mcaro@ubiobio.cl?subject=BizDevOps-RA%20Research)>
