@@ -1,11 +1,11 @@
 # BizDevOps Reference Architecture
-This study examines the transition from DevOps to BizDevOps through the use of a reference architecture, emphasizing the role of business capabilities in enhancing IT and business alignment. The objective is to develop a structured approach that facilitates this transition, ensuring greater coherence between IT operations and business strategies.
+This reference architecture for BizDevOps supports the transition from DevOps by emphasizing the role of business capabilities in enhancing IT and business alignment. It provides a structured approach aimed at fostering greater coherence between IT and business throughout the development of software projects following the BizDevOps approach.
 
 ## Details
-- We have developed a document that details the reference architecture, which you can access [here](/files/BizDevOps%20Reference%20Architecture.pdf).
-- We have developed a web version of the reference architecture, which you can visit from [here](https://guillermofuentesuclm.github.io/BizDevOps-RA/).
-- We have made the BizDevOps reference architecture available in both [Archi tool format](/files/BizDevOps%20Reference%20Architecture.archimate) and [Open Exchange format](/files/BizDevOps%20Reference%20Architecture.xml).
-- We have developed a Proof of Concept to validate the applicability of the BizDevOps Reference Architecture, which you can access [here](/poc/) and you can browse this proof of concept from [here](https://guillermofuentesuclm.github.io/BizDevOps-RA/poc/).
+- The BizDevOps Reference Architecture is documented in detail and available [here](/files/BizDevOps%20Reference%20Architecture.pdf).
+- A web-based version of the reference architecture can be accessed [here](https://guillermofuentesuclm.github.io/BizDevOps-RA/).
+- The architecture is also available in both [Archi tool format](/files/BizDevOps%20Reference%20Architecture.archimate) and [Open Exchange format](/files/BizDevOps%20Reference%20Architecture.xml).
+- A Proof of Concept has been implemented to demonstrate the applicability of the BizDevOps Reference Architecture. It is available [here](/poc/) and can be browsed[here](https://guillermofuentesuclm.github.io/BizDevOps-RA/poc/).
 
 ## Structure
 
